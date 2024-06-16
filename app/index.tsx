@@ -1,621 +1,204 @@
-import { useActionSheet } from '@expo/react-native-action-sheet';
-import { useHeaderHeight } from '@react-navigation/elements';
-import { Icon } from '@roninoss/icons';
-import { FlashList } from '@shopify/flash-list';
-import * as StoreReview from 'expo-store-review';
-import { cssInterop } from 'nativewind';
 import * as React from 'react';
-import {
-  Alert,
-  Button as RNButton,
-  ButtonProps,
-  Linking,
-  Platform,
-  Pressable,
-  Share,
-  useWindowDimensions,
-  View,
-} from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import * as ContextMenu from 'zeego/context-menu';
-import * as DropdownMenu from 'zeego/dropdown-menu';
-
-import { ActivityIndicator } from '~/components/nativewindui/ActivityIndicator';
-import { Avatar, AvatarFallback, AvatarImage } from '~/components/nativewindui/Avatar';
-import { DatePicker } from '~/components/nativewindui/DatePicker';
-import { Picker, PickerItem } from '~/components/nativewindui/Picker';
-import { ProgressIndicator } from '~/components/nativewindui/ProgressIndicator';
-import { SegmentedControl } from '~/components/nativewindui/SegmentedControl';
-import { Sheet, useSheetRef } from '~/components/nativewindui/Sheet';
-import { Slider } from '~/components/nativewindui/Slider';
+import { Icon } from '@roninoss/icons';
+import { View, Pressable, useWindowDimensions, ImageSourcePropType } from 'react-native';
 import { Text } from '~/components/nativewindui/Text';
-import { Toggle } from '~/components/nativewindui/Toggle';
-import { useColorScheme } from '~/lib/useColorScheme';
-import { useHeaderSearchBar } from '~/lib/useHeaderSearchBar';
+import { Link, router } from 'expo-router';
+import { FlashList } from '@shopify/flash-list';
+import { cssInterop } from 'nativewind';
+import SectionCard from '~/components/interface/cards/SectionCard';
+
+import BffIllustration from '~/components/illustrations/Bff';
+import MoneyIllustration from '~/components/illustrations/Money';
+import VibesIllustration from '~/components/illustrations/Vibes';
+import TechieIllustration from '~/components/illustrations/Techie';
+import FamilyIllustration from '~/components/illustrations/Family';
+import ShoppingIllustration from '~/components/illustrations/Shopping';
+import TopAppBar from '~/components/interface/AppBar';
 
 cssInterop(FlashList, {
-  className: 'style',
-  contentContainerClassName: 'contentContainerStyle',
+    className: 'style',
+    contentContainerClassName: 'contentContainerStyle',
 });
 
-function DefaultButton({ color, ...props }: ButtonProps) {
-  const { colors } = useColorScheme();
-  return <RNButton color={color ?? colors.primary} {...props} />;
-}
-
 export default function Screen() {
-  const searchValue = useHeaderSearchBar({ hideWhenScrolling: COMPONENTS.length === 0 });
-
-  const data = searchValue
-    ? COMPONENTS.filter((c) => c.name.toLowerCase().includes(searchValue.toLowerCase()))
-    : COMPONENTS;
-
-  return (
-    <FlashList
-      contentInsetAdjustmentBehavior="automatic"
-      keyboardShouldPersistTaps="handled"
-      data={data}
-      estimatedItemSize={200}
-      contentContainerClassName="py-4 android:pb-12"
-      extraData={searchValue}
-      removeClippedSubviews={false} // used for selecting text on android
-      keyExtractor={keyExtractor}
-      ItemSeparatorComponent={renderItemSeparator}
-      renderItem={renderItem}
-      ListEmptyComponent={COMPONENTS.length === 0 ? ListEmptyComponent : undefined}
-    />
-  );
-}
-
-function ListEmptyComponent() {
-  const insets = useSafeAreaInsets();
-  const dimensions = useWindowDimensions();
-  const headerHeight = useHeaderHeight();
-  const { colors } = useColorScheme();
-  const height = dimensions.height - headerHeight - insets.bottom - insets.top;
-
-  return (
-    <View style={{ height }} className="flex-1 items-center justify-center gap-1 px-12">
-      <Icon name="file-plus-outline" size={42} color={colors.grey} />
-      <Text variant="title3" className="pb-1 text-center font-semibold">
-        No Components Installed
-      </Text>
-      <Text color="tertiary" variant="subhead" className="pb-4 text-center">
-        You can install any of the free components from the{' '}
-        <Text
-          onPress={() => Linking.openURL('https://nativewindui.com')}
-          variant="subhead"
-          className="text-primary">
-          NativeWindUI
-        </Text>
-        {' website.'}
-      </Text>
-    </View>
-  );
-}
-
-type ComponentItem = { name: string; component: React.FC };
-
-function keyExtractor(item: ComponentItem) {
-  return item.name;
+    return (
+        <View className="flex-1">
+            <TopAppBar />
+            <FlashList
+                contentInsetAdjustmentBehavior="automatic"
+                keyboardShouldPersistTaps="handled"
+                data={SECTIONS}
+                estimatedItemSize={132}
+                contentContainerClassName='py-0 android:pb-12'
+                keyExtractor={keyExtractor}
+                renderItem={({ item }) => <SectionCard section={item} />}
+                showsVerticalScrollIndicator={false}
+                // ListHeaderComponent={<TopAppBar />}
+            /**ItemSeparatorComponent={renderItemSeparator*/
+            />
+        </View>
+    );
 }
 
 function renderItemSeparator() {
-  return <View className="p-2" />;
+    return <View className="p-1" />;
 }
 
-function renderItem({ item }: { item: ComponentItem }) {
-  return (
-    <Card title={item.name}>
-      <item.component />
-    </Card>
-  );
+function keyExtractor(item: Section) {
+    return item.id;
 }
 
-function Card({ children, title }: { children: React.ReactNode; title: string }) {
-  return (
-    <View className="px-4">
-      <View className="gap-4 rounded-xl border border-border bg-card p-4 pb-6 shadow-sm shadow-black/10 dark:shadow-none">
-        <Text className="text-center text-sm font-medium tracking-wider opacity-60">{title}</Text>
-        {children}
-      </View>
-    </View>
-  );
+export interface SectionItem {
+    id: string;
+    title: string;
+    href: string;
+    description: string[];
+    illustration?: React.ReactNode;
+    image?: ImageSourcePropType; // OR { uri: string }
+    label: string;
 }
 
-let hasRequestedReview = false;
+export interface Section {
+    id: string;
+    title: string;
+    subtitle: string;
+    href: string;
+    items: SectionItem[];
+}
 
-const COMPONENTS: ComponentItem[] = [
-  {
-    name: 'Picker',
-    component: function PickerExample() {
-      const { colors } = useColorScheme();
-      const [picker, setPicker] = React.useState('blue');
-      return (
-        <Picker selectedValue={picker} onValueChange={(itemValue) => setPicker(itemValue)}>
-          <PickerItem
-            label="Red"
-            value="red"
-            color={colors.foreground}
-            style={{
-              backgroundColor: colors.root,
-            }}
-          />
-          <PickerItem
-            label="Blue"
-            value="blue"
-            color={colors.foreground}
-            style={{
-              backgroundColor: colors.root,
-            }}
-          />
-          <PickerItem
-            label="Green"
-            value="green"
-            color={colors.foreground}
-            style={{
-              backgroundColor: colors.root,
-            }}
-          />
-        </Picker>
-      );
-    },
-  },
-
-  {
-    name: 'Date Picker',
-    component: function DatePickerExample() {
-      const [date, setDate] = React.useState(new Date());
-      return (
-        <View className="items-center">
-          <DatePicker
-            value={date}
-            mode="datetime"
-            onChange={(ev) => {
-              setDate(new Date(ev.nativeEvent.timestamp));
-            }}
-          />
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Segmented Controls',
-    component: function SegmentedControlsExample() {
-      const [segment, setSegment] = React.useState(0);
-      return (
-        <SegmentedControl
-          values={['red', 'green', 'blue']}
-          selectedIndex={segment}
-          onChange={(event) => {
-            setSegment(event.nativeEvent.selectedSegmentIndex);
-          }}
-        />
-      );
-    },
-  },
-
-  {
-    name: 'Slider',
-    component: function SliderExample() {
-      const [sliderValue, setSliderValue] = React.useState(0.5);
-      return <Slider value={sliderValue} onValueChange={setSliderValue} />;
-    },
-  },
-
-  {
-    name: 'Toggle',
-    component: function ToggleExample() {
-      const [switchValue, setSwitchValue] = React.useState(true);
-      return (
-        <View className="items-center">
-          <Toggle value={switchValue} onValueChange={setSwitchValue} />
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Context Menu',
-    component: function ContextMenuExample() {
-      const [isChecked, setIsChecked] = React.useState(true);
-      return (
-        <View>
-          <ContextMenu.Root style={{ borderRadius: 12 }}>
-            <ContextMenu.Trigger>
-              <View className="h-36 w-full items-center justify-center rounded-xl border border-dashed border-foreground">
-                <Text>Press and hold me</Text>
-              </View>
-            </ContextMenu.Trigger>
-            <ContextMenu.Content>
-              <ContextMenu.Label children="Label 1" />
-              <ContextMenu.Item key="item-1">
-                <ContextMenu.ItemTitle>Item 1</ContextMenu.ItemTitle>
-              </ContextMenu.Item>
-              <ContextMenu.Group>
-                <ContextMenu.Item key="item-2">
-                  <ContextMenu.ItemTitle>Item 2</ContextMenu.ItemTitle>
-                </ContextMenu.Item>
-                <ContextMenu.CheckboxItem
-                  key="checkbox-example"
-                  value={isChecked}
-                  onValueChange={(val) => {
-                    setIsChecked(val === 'on');
-                  }}>
-                  <ContextMenu.ItemTitle>Item 3</ContextMenu.ItemTitle>
-                  <ContextMenu.ItemIndicator />
-                </ContextMenu.CheckboxItem>
-              </ContextMenu.Group>
-              <ContextMenu.Separator />
-            </ContextMenu.Content>
-          </ContextMenu.Root>
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Dropdown Menu',
-    component: function DropdownMenuExample() {
-      const { colors } = useColorScheme();
-      const [menu, setMenu] = React.useState<'primary' | 'destructive'>('primary');
-
-      return (
-        <View className="items-center">
-          <DropdownMenu.Root>
-            <DropdownMenu.Trigger>
-              <Pressable className="android:gap-3 flex-row items-center gap-1.5">
-                <Text>
-                  Selected: <Text style={{ color: colors[menu] }}>{menu}</Text>
-                </Text>
-                <View className="pl-0.5 opacity-70">
-                  <Icon name="chevron-down" color={colors.foreground} size={21} />
-                </View>
-              </Pressable>
-            </DropdownMenu.Trigger>
-            <DropdownMenu.Content>
-              <DropdownMenu.CheckboxItem
-                key="destructive"
-                value={menu === 'destructive'}
-                onValueChange={() => {
-                  setMenu('destructive');
-                }}>
-                <DropdownMenu.ItemIndicator />
-                <DropdownMenu.ItemTitle children="destructive" />
-              </DropdownMenu.CheckboxItem>
-              <DropdownMenu.CheckboxItem
-                key="primary"
-                value={menu === 'primary'}
-                onValueChange={() => {
-                  setMenu('primary');
-                }}>
-                <DropdownMenu.ItemIndicator />
-                <DropdownMenu.ItemTitle children="primary" />
-              </DropdownMenu.CheckboxItem>
-            </DropdownMenu.Content>
-          </DropdownMenu.Root>
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Progress Indicator',
-    component: function ProgressIndicatorExample() {
-      const [progress, setProgress] = React.useState(13);
-      let id: ReturnType<typeof setInterval> | null = null;
-      React.useEffect(() => {
-        if (!id) {
-          id = setInterval(() => {
-            setProgress((prev) => (prev >= 99 ? 0 : prev + 5));
-          }, 1000);
-        }
-        return () => {
-          if (id) clearInterval(id);
-        };
-      }, []);
-      return (
-        <View className="p-4">
-          <ProgressIndicator value={progress} />
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Activity Indicator',
-    component: function ActivityIndicatorExample() {
-      return (
-        <View className="items-center p-4">
-          <ActivityIndicator />
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Alert',
-    component: function AlertExample() {
-      const { colors } = useColorScheme();
-      return (
-        <View className="items-center">
-          <DefaultButton
-            color={colors.destructive}
-            onPress={() => {
-              if (Platform.OS === 'ios') {
-                Alert.prompt(
-                  'Delete account?',
-                  'Enter your password to delete your account.',
-                  [
-                    {
-                      text: 'Cancel',
-                      onPress: () => console.log('Cancel Pressed'),
-                      style: 'cancel',
-                    },
-                    {
-                      text: 'Delete',
-                      style: 'destructive',
-                      onPress: () => console.log('Delete Pressed'),
-                    },
-                  ],
-                  'secure-text',
-                  '',
-                  'default'
-                );
-              } else {
-                Alert.alert('Delete account?', 'Enter your password to delete your account.', [
-                  {
-                    text: 'Cancel',
-                    onPress: () => console.log('Cancel Pressed'),
-                    style: 'cancel',
-                  },
-                  {
-                    text: 'Delete',
-                    style: 'destructive',
-                    onPress: () => console.log('Delete Pressed'),
-                  },
-                ]);
-              }
-            }}
-            title="Delete account"
-          />
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Action Sheet',
-    component: function ActionSheetExample() {
-      const { colorScheme, colors } = useColorScheme();
-      const { showActionSheetWithOptions } = useActionSheet();
-      return (
-        <View className="items-center">
-          <DefaultButton
-            color="grey"
-            onPress={async () => {
-              const options = ['Delete', 'Save', 'Cancel'];
-              const destructiveButtonIndex = 0;
-              const cancelButtonIndex = 2;
-
-              showActionSheetWithOptions(
-                {
-                  options,
-                  cancelButtonIndex,
-                  destructiveButtonIndex,
-                  containerStyle: {
-                    backgroundColor: colorScheme === 'dark' ? 'black' : 'white',
-                  },
-                  textStyle: {
-                    color: colors.foreground,
-                  },
-                },
-                (selectedIndex) => {
-                  switch (selectedIndex) {
-                    case 1:
-                      // Save
-                      break;
-
-                    case destructiveButtonIndex:
-                      // Delete
-                      break;
-
-                    case cancelButtonIndex:
-                    // Canceled
-                  }
-                }
-              );
-            }}
-            title="Open action sheet"
-          />
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Text',
-    component: function TextExample() {
-      return (
-        <View className="gap-2">
-          <Text variant="largeTitle" className="text-center">
-            Large Title
-          </Text>
-          <Text variant="title1" className="text-center">
-            Title 1
-          </Text>
-          <Text variant="title2" className="text-center">
-            Title 2
-          </Text>
-          <Text variant="title3" className="text-center">
-            Title 3
-          </Text>
-          <Text variant="heading" className="text-center">
-            Heading
-          </Text>
-          <Text variant="body" className="text-center">
-            Body
-          </Text>
-          <Text variant="callout" className="text-center">
-            Callout
-          </Text>
-          <Text variant="subhead" className="text-center">
-            Subhead
-          </Text>
-          <Text variant="footnote" className="text-center">
-            Footnote
-          </Text>
-          <Text variant="caption1" className="text-center">
-            Caption 1
-          </Text>
-          <Text variant="caption2" className="text-center">
-            Caption 2
-          </Text>
-        </View>
-      );
-    },
-  },
-
-  {
-    name: 'Selectable Text',
-    component: function SelectableTextExample() {
-      return (
-        <Text uiTextView selectable>
-          Long press or double press this text
-        </Text>
-      );
-    },
-  },
-
-  {
-    name: 'Ratings Indicator',
-    component: function RatingsIndicatorExample() {
-      React.useEffect(() => {
-        async function showRequestReview() {
-          if (hasRequestedReview) return;
-          try {
-            if (await StoreReview.hasAction()) {
-              await StoreReview.requestReview();
+const SECTIONS: Section[] = [
+    {
+        id: 'captions',
+        title: 'Captions',
+        subtitle: 'Browse tons of catchy captions curated for you', // Catchy captions to make your photos and videos viral
+        href: '/captions',
+        items: [
+            {
+                id: 'good-vibes',
+                title: 'Good Vibes',
+                href: '/captions/[category]', // OR /captions/good-vibes
+                description: ['fun', 'happy', 'cheerful', 'vibes', 'entertainment'],
+                illustration: <VibesIllustration width={66} height={66} />,
+                label: 'Trending'
+            },
+            {
+                id: 'bffs',
+                title: 'BFFs',
+                href: '/captions/[category]', // OR /captions/bffs
+                description: ['friends', 'friendship', 'mate', 'bestie', 'squad'],
+                illustration: <BffIllustration width={66} height={66} />,
+                label: 'Most Used'
+            },
+            {
+                id: 'money',
+                title: 'Money',
+                href: '/captions/[category]', // OR /captions/money
+                description: ['finance', 'rich', 'spending'],
+                illustration: <MoneyIllustration width={66} height={66} />,
+                label: 'New for you'
             }
-          } catch (error) {
-            console.log(
-              'FOR ANDROID: Make sure you meet all conditions to be able to test and use it: https://developer.android.com/guide/playcore/in-app-review/test#troubleshooting',
-              error
-            );
-          } finally {
-            hasRequestedReview = true;
-          }
-        }
-        const timeout = setTimeout(() => {
-          showRequestReview();
-        }, 1000);
-
-        return () => clearTimeout(timeout);
-      }, []);
-
-      return (
-        <View className="gap-3">
-          <Text className="pb-2 text-center font-semibold">Please follow the guidelines.</Text>
-          <View className="flex-row">
-            <Text className="w-6 text-center text-muted-foreground">·</Text>
-            <View className="flex-1">
-              <Text variant="caption1" className="text-muted-foreground">
-                Don't call StoreReview.requestReview() from a button
-              </Text>
-            </View>
-          </View>
-          <View className="flex-row">
-            <Text className="w-6 text-center text-muted-foreground">·</Text>
-            <View className="flex-1">
-              <Text variant="caption1" className="text-muted-foreground">
-                Don't request a review when the user is doing something time sensitive.
-              </Text>
-            </View>
-          </View>
-          <View className="flex-row">
-            <Text className="w-6 text-center text-muted-foreground">·</Text>
-            <View className="flex-1">
-              <Text variant="caption1" className="text-muted-foreground">
-                Don't ask the user any questions before or while presenting the rating button or
-                card.
-              </Text>
-            </View>
-          </View>
-        </View>
-      );
+        ]
     },
-  },
-
-  {
-    name: 'Activity View',
-    component: function ActivityViewExample() {
-      return (
-        <View className="items-center">
-          <DefaultButton
-            onPress={async () => {
-              try {
-                const result = await Share.share({
-                  message: 'NativeWindUI | Familiar interface, native feel.',
-                });
-                if (result.action === Share.sharedAction) {
-                  if (result.activityType) {
-                    // shared with activity type of result.activityType
-                  } else {
-                    // shared
-                  }
-                } else if (result.action === Share.dismissedAction) {
-                  // dismissed
-                }
-              } catch (error: any) {
-                Alert.alert(error.message);
-              }
-            }}
-            title="Share a message"
-          />
-        </View>
-      );
+    {
+        id: 'hashtags',
+        title: 'Hashtags',
+        subtitle: 'Popular hashtags curated to boost your posts',
+        href: '/hashtags',
+        items: [
+            {
+                id: 'techie',
+                title: 'Techie',
+                href: '/hashtags/[category]', // OR /hashtags/techie
+                description: ['Tech', 'TechTrends', 'Coding', 'TechLife', 'Innovation'],
+                illustration: <TechieIllustration width={66} height={66} />,
+                label: '24K Posts'
+            },
+            {
+                id: 'family',
+                title: 'Family',
+                href: '/hashtags/[category]', // OR /hashtags/family
+                description: ['FamilyLife', 'FamilyTime', 'FamilyLove', 'FamilyGoals'],
+                illustration: <FamilyIllustration width={66} height={66} />,
+                label: 'Popular'
+            },
+            {
+                id: 'shopping',
+                title: 'Shopping',
+                href: '/hashtags/[category]', // OR /hashtags/shopping
+                description: ['Shopaholic', 'ShopNow', 'BuyNow', 'ShopOnline',],
+                illustration: <ShoppingIllustration width={66} height={66} />,
+                label: 'New for you'
+            }
+        ]
     },
-  },
-
-  {
-    name: 'Bottom Sheet',
-    component: function BottomSheetExample() {
-      const { colorScheme } = useColorScheme();
-      const bottomSheetModalRef = useSheetRef();
-
-      return (
-        <View className="items-center">
-          <DefaultButton
-            color={colorScheme === 'dark' && Platform.OS === 'ios' ? 'white' : 'black'}
-            title="Open Bottom Sheet"
-            onPress={() => bottomSheetModalRef.current?.present()}
-          />
-          <Sheet ref={bottomSheetModalRef} snapPoints={[200]}>
-            <View className="flex-1 items-center justify-center pb-8">
-              <Text>@gorhom/bottom-sheet 🎉</Text>
-            </View>
-          </Sheet>
-        </View>
-      );
+    {
+        id: 'discovery',
+        title: 'Discovery',
+        subtitle: 'Explore what\'s trending and join the buzz', // Jump on the latest content trending on social media
+        href: '/discovery',
+        items: [
+            {
+                id: 'discovery-one',
+                title: 'A TikTok Challenge',
+                href: '/discovery/[content]', // OR /discovery/discovery-one
+                description: ['This content is now trending content on TikTok...'],
+                // illustration: <TechieIllustration width={66} height={66} />,
+                label: 'Trending on TikTok',
+                image: { uri: "https://cdn.pixabay.com/photo/2020/07/10/08/39/tiktok-5390055_1280.jpg" }
+            },
+            {
+                id: 'discovery-two',
+                title: 'An Instagram Challenge',
+                href: '/discovery/[content]', // OR /discovery/discovery-two
+                description: ['This content is now trending content on Instagram...'],
+                // illustration: <FamilyIllustration width={66} height={66} />,
+                label: 'Trending on Instagram',
+                image: { uri: 'https://img.freepik.com/free-photo/creative-reels-composition_23-2149711505.jpg?t=st=1718263563~exp=1718267163~hmac=653841155c318521c5e36b8eba200cb41781760c527371bfc92250777c03847b&w=1060' }
+            },
+            {
+                id: 'discovery-three',
+                title: 'Latest Snapchat Filter',
+                href: '/discovery/[content]', // OR /discovery/trending-three
+                description: ['This content is now trending content on Snapchat...',],
+                // illustration: <ShoppingIllustration width={66} height={66} />,
+                label: 'Trending on Snapchat',
+                image: { uri: 'https://images.unsplash.com/photo-1616041041954-5d9d57fc31cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c25hcGNoYXR8ZW58MHx8MHx8fDA%3D' }
+            }
+        ]
     },
-  },
-
-  {
-    name: 'Avatar',
-    component: function AvatarExample() {
-      const TWITTER_AVATAR_URI =
-        'https://pbs.twimg.com/profile_images/1782428433898708992/1voyv4_A_400x400.jpg';
-      return (
-        <View className="items-center">
-          <Avatar alt="NativeWindUI Avatar">
-            <AvatarImage source={{ uri: TWITTER_AVATAR_URI }} />
-            <AvatarFallback>
-              <Text>NUI</Text>
-            </AvatarFallback>
-          </Avatar>
-        </View>
-      );
-    },
-  },
-];
+    {
+        id: 'templates',
+        title: 'Viral Content Kits', // Content Templates
+        subtitle: 'Templates to create content that spreads like wildfire',
+        href: '/templates',
+        items: [
+            {
+                id: 'meme-pack',
+                title: 'Meme Lord Pack',
+                href: '/templates/[theme]', // OR /templates/meme-pack
+                description: ['Become a meme lord. Make your friends laugh out loud and share like crazy.'],
+                // illustration: <TechieIllustration width={66} height={66} />,
+                label: 'Popular',
+                image: { uri: "https://img.freepik.com/free-photo/cheerful-adult-man-has-trauma-head-broken-nose-bruises-eyes_273609-48042.jpg?t=st=1718262953~exp=1718266553~hmac=2c1cefc102c7388bcd5c1dda6c8970136c5a617919a19a523fedb66008e43745&w=1060" }
+            },
+            {
+                id: 'tiktok-kit',
+                title: 'TikTok Takeover Kit',
+                href: '/templates/[theme]', // OR /templates/tiktok-kit
+                description: ['Trendy challenges, viral audio clips, and attention-grabbing effects'], // Conquer the TikTok game with our trendy dance challenges, viral audio clips, and attention-grabbing effects that will have you racking up views and followers in no time
+                // illustration: <FamilyIllustration width={66} height={66} />,
+                label: '119K Posts',
+                image: { uri: 'https://cdn.pixabay.com/photo/2020/06/04/17/26/iphone-5259712_1280.jpg' }
+            },
+            {
+                id: 'ig-essentials',
+                title: 'Insta-Famous Essentials',
+                href: '/templates/[theme]', // OR /templates/ig-essentials
+                description: ['Eye-catching filters, stunning presets, and engaging caption prompts',], // Elevate your Instagram game with our collection of eye-catching filters, stunning presets, and engaging caption prompts that will make your feed pop and attract a loyal following.
+                // illustration: <ShoppingIllustration width={66} height={66} />,
+                label: 'Trending',
+                image: { uri: 'https://cdn.pixabay.com/photo/2021/01/10/10/54/woman-5904731_1280.jpg' } // https://cdn.pixabay.com/photo/2017/03/22/22/26/instagram-2166645_1280.jpg
+            }
+        ]
+    }
+]

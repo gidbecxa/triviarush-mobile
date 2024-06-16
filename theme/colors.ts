@@ -15,7 +15,12 @@ const IOS_SYSTEM_COLORS = {
     root: 'rgb(255, 255, 255)',
     card: 'rgb(255, 255, 255)',
     destructive: 'rgb(255, 56, 43)',
-    primary: 'rgb(0, 123, 254)',
+    primary: 'rgb(255, 0, 110)',
+    secondary: 'rgb(58, 134, 255)',
+    tertiary: 'rgb(131, 56, 236)',
+    greyalpha1: 'rgba(210, 210, 215, 0.85)',
+    cardalpha1: 'rgba(255, 255, 255, 0.85)',
+    cardalpha2: 'rgba(255, 255, 255, 0.55)',
   },
   dark: {
     grey6: 'rgb(21, 21, 24)',
@@ -29,7 +34,12 @@ const IOS_SYSTEM_COLORS = {
     root: 'rgb(0, 0, 0)',
     card: 'rgb(28, 28, 30)',
     destructive: 'rgb(254, 67, 54)',
-    primary: 'rgb(3, 133, 255)',
+    primary: 'rgb(255, 0, 110)', // to be modified
+    secondary: 'rgb(58, 134, 255)', // to be modified
+    tertiary: 'rgb(131, 56, 236)', // to be modified
+    greyalpha1: 'rgba(16, 19, 27, 0.5)',
+    cardalpha1: 'rgba(28, 28, 30, 0.85)',
+    cardalpha2: 'rgba(28, 28, 30, 0.55)',
   },
 } as const;
 
@@ -37,7 +47,7 @@ const ANDROID_COLORS = {
   white: 'rgb(255, 255, 255)',
   black: 'rgb(0, 0, 0)',
   light: {
-    grey6: 'rgb(249, 249, 255)',
+    grey6: 'rgb(240, 240, 240)', // grey100 is 235
     grey5: 'rgb(215, 217, 228)',
     grey4: 'rgb(193, 198, 215)',
     grey3: 'rgb(113, 119, 134)',
@@ -48,7 +58,12 @@ const ANDROID_COLORS = {
     root: 'rgb(255, 255, 255)',
     card: 'rgb(255, 255, 255)',
     destructive: 'rgb(186, 26, 26)',
-    primary: 'rgb(0, 112, 233)',
+    primary: 'rgb(255, 0, 110)',
+    secondary: 'rgb(58, 134, 255)',
+    tertiary: 'rgb(131, 56, 236)',
+    greyalpha1: 'rgba(193, 198, 215, 0.85)',
+    cardalpha1: 'rgba(255, 255, 255, 0.85)',
+    cardalpha2: 'rgba(255, 255, 255, 0.55)',
   },
   dark: {
     grey6: 'rgb(16, 19, 27)',
@@ -62,10 +77,16 @@ const ANDROID_COLORS = {
     root: 'rgb(0, 0, 0)',
     card: 'rgb(16, 19, 27)',
     destructive: 'rgb(147, 0, 10)',
-    primary: 'rgb(3, 133, 255)',
+    primary: 'rgb(255, 0, 110)', // to be modified
+    secondary: 'rgb(58, 134, 255)', // to be modified
+    tertiary: 'rgb(131, 56, 236)', // to be modified
+    greyalpha1: 'rgba(16, 19, 27, 0.5)',
+    cardalpha1: 'rgba(16, 19, 27, 0.85)',
+    cardalpha2: 'rgba(16, 19, 27, 0.8)',
   },
 } as const;
 
 const COLORS = Platform.OS === 'ios' ? IOS_SYSTEM_COLORS : ANDROID_COLORS;
 
 export { COLORS };
+

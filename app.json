@@ -3,7 +3,6 @@
     "name": "captions-bank",
     "slug": "captions-bank",
     "version": "1.0.0",
-
     "scheme": "captions-bank",
     "web": {
       "bundler": "metro",
@@ -15,34 +14,43 @@
       [
         "expo-dev-launcher",
         {
-          "launchModeExperimental": "most-recent"
+          "launchMode": "most-recent"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
-
       "tsconfigPaths": true
     },
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "automatic",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.captionsbank.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.captionsbank.app"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d885afe9-7a87-4a53-b0fa-68c8b73da0cf"
       }
     }
   }
