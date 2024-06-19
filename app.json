@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "captions-bank",
+    "name": "Sociagram",
     "slug": "captions-bank",
     "version": "1.0.0",
-    "scheme": "captions-bank",
+    "scheme": "sociagran-mobile",
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -40,7 +40,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "icon":"./assets/app icon toolkit/android/ic_launcher_1024.png",
+        "foregroundImage": "./assets/hashtag-fg.png",
+        "backgroundImage": "./assets/gradient-bg.png",
+        "monochromeImage": "./assets/icon-hash-monochrome.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.captionsbank.app"

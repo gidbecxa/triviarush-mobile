@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FlatList, View, StyleSheet, useWindowDimensions, TextInput, TouchableOpacity, } from 'react-native';
-import { useRouter } from 'expo-router';
+import { router } from 'expo-router';
 import { Card, } from 'react-native-paper';
 import { FlashList } from '@shopify/flash-list';
 import { useColorScheme } from '~/lib/useColorScheme';
@@ -10,20 +10,26 @@ import { Feather } from '@expo/vector-icons';
 import TopAppBar from '~/components/interface/AppBar';
 import { fontStyles } from '../_layout';
 import { TrendingArticle } from '~/data/types';
-import TRENDING_ARTICLES from '~/data/trending';
+import ARTICLES_DATA from '~/data/discovery';
 import Thumbnail from '~/components/interface/Thumbnail';
+import articlesMetaData from '~/assets/content/articles.json';
 
 function keyExtractor(item: TrendingArticle) {
-    return item.id;
+    return String(item.id);
 }
 
 const TrendingFrontPage = () => {
-    const route = useRouter();
     const { width, height } = useWindowDimensions();
     const { colors } = useColorScheme();
 
+    const [articles, setArticles] = React.useState<TrendingArticle[]>([]);
+
     const [searchTerm, setSearchTerm] = React.useState('');
     const [selectedTag, setSelectedTag] = React.useState('All');
+
+    useEffect(() => {
+        setArticles(articlesMetaData);
+    }, []);
 
     const handleSearch = (text: string) => {
         setSearchTerm(text);
@@ -35,8 +41,8 @@ const TrendingFrontPage = () => {
 
     const searchField = () => {
         return (
-            <View style={[styles.searchContainer, { backgroundColor: colors.card }]} className='mx-4 my-2 px-2 py-2.5 rounded-xl'>
-                <Feather name="search" size={20} color={colors.grey2} style={styles.searchIcon} />
+            <View style={[styles.searchContainer, { backgroundColor: colors.card }]} className='mx-4 my-2 px-2 py-2.5 rounded-2xl'>
+                <Feather name="search" size={18} color={colors.grey3} style={styles.searchIcon} />
                 <TextInput
                     style={styles.searchInput}
                     placeholder="Search content..."
@@ -44,27 +50,23 @@ const TrendingFrontPage = () => {
                     onChangeText={handleSearch}
                 />
                 {searchTerm.length > 0 && (
-                    <Feather name="x" size={20} color="gray" style={styles.cancelIcon} onPress={clearSearch} />
+                    <Feather name="x" size={20} color={colors.grey3} style={styles.cancelIcon} onPress={clearSearch} />
                 )}
             </View>
         )
     };
 
     const data = selectedTag === 'All'
-        ? TRENDING_ARTICLES.filter((article) =>
+        ? articles.filter((article) =>
             article.title.toLowerCase().includes(searchTerm.toLowerCase())
         )
-        : TRENDING_ARTICLES.filter(
+        : articles.filter(
             (article) =>
                 article.tags.includes(selectedTag) &&
                 article.title.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
-    /* const data = searchTerm.length > 0
-        ? TRENDING_ARTICLES.filter((c) => c.title.toLowerCase().includes(searchTerm.toLowerCase()))
-        : TRENDING_ARTICLES; */
-
-    const tags = ['All', ...new Set(TRENDING_ARTICLES.flatMap((article) => article.tags))];
+    const tags = ['All', ...new Set(articles.flatMap((article) => article.tags))];
 
     const handleTagSelect = (tag: string) => {
         setSelectedTag(tag);
@@ -76,7 +78,7 @@ const TrendingFrontPage = () => {
             className='mr-1 px-2 py-1 rounded-xl border-0 border-border'
             onPress={() => handleTagSelect(item)}
         >
-            <Text style={[fontStyles.dmSansRegular, selectedTag === item && [fontStyles.dmSansMedium, {fontSize: 15}],]} variant="footnote">{item}</Text>
+            <Text style={[fontStyles.dmSansRegular, selectedTag === item && [fontStyles.dmSansMedium, { fontSize: 15 }],]} variant="footnote">{item}</Text>
         </TouchableOpacity>
     );
 
@@ -84,10 +86,22 @@ const TrendingFrontPage = () => {
         return str.replace(/\b\w/g, (match) => match.toUpperCase());
     };
 
+    const navigateToArticle = (item: TrendingArticle) => {
+        router.push({
+            pathname: item.href,
+            params: { article: item.resourceId }
+        })
+    };
+
     const renderCard = ({ item }: { item: TrendingArticle }) => (
-        <Card elevation={0} style={[styles.card, { height: height / 8, backgroundColor: colors.card }]} className='border-border'>
+        <Card
+            elevation={0}
+            style={[styles.card, { height: height / 8, backgroundColor: colors.card }]}
+            className='border-border'
+            onPress={() => navigateToArticle(item)}
+        >
             <View style={styles.cardContent} className='p-1 border-0 border-border'>
-                <Thumbnail source={item.image} width={height / 9} height={height / 9} backgroundColor={colors.grey6} />
+                <Thumbnail source={{ uri: item.image }} width={height / 9} height={height / 9} backgroundColor={colors.grey6} />
 
                 <View style={[styles.textContainer, { height: height / 9 }]} className='border-0 border-border'>
                     <Text variant="caption2" style={fontStyles.dmSansMedium}>
@@ -170,7 +184,7 @@ const styles = StyleSheet.create({
     },
     searchInput: {
         flex: 1,
-        fontSize: 15,
+        fontSize: 16,
     },
     cancelIcon: {
         marginLeft: 8,

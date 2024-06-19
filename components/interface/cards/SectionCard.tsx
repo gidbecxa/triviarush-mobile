@@ -1,26 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Pressable, FlatList, useWindowDimensions } from "react-native";
 import { Link, useRouter } from "expo-router";
 import { Text } from "../../nativewindui/Text";
 import { Icon } from "@roninoss/icons";
-import { Section, SectionItem } from "~/app";
+import { Section } from "~/app";
 import { StyleSheet } from "nativewind";
 import { useColorScheme } from "~/lib/useColorScheme";
 import { fontStyles } from "~/app/_layout";
 import SectionItemCard from "./SectionItemCard";
+import { SectionItem } from "~/data/types";
+
+import articlesMetaData from '~/assets/content/articles.json';
+import captionsCategories from '~/assets/content/captions-categories.json';
+import hashtagsCategories from '~/assets/content/hashtags-categories.json';
 
 interface SectionCardProps {
     section: Section;
 }
 
 function keyExtractor(item: SectionItem) {
-    return item.id;
+    return String(item.id);
 }
 
 const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
     const router = useRouter();
     const { colors } = useColorScheme();
     const { width, height } = useWindowDimensions();
+    // console.log(`Items for section ${section.id}: `, section.items);
+
+    const [data, setData] = React.useState<SectionItem[]>(section.items);
+
+    useEffect(() => {
+        if (section.id === 'discovery') {
+            setData(articlesMetaData);
+        } else if (section.id === 'captions') {
+            setData(captionsCategories);
+        } else if (section.id === 'hashtags') {
+            setData(hashtagsCategories)
+        }
+    }, [section.id])
 
     return (
         <View style={styles.sectionCard} className="bg-card border-t-0 border-border">
@@ -35,9 +53,9 @@ const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
                 </View>
 
                 {/* <Link href={`/${section.id}`}> */}
-                <Link 
-                href={section.href} 
-                asChild>
+                <Link
+                    href={section.href}
+                    asChild>
                     <Pressable className="p-1">
                         <Icon name="chevron-right" size={25} color={colors.grey} />
                     </Pressable>
@@ -45,7 +63,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
             </View>
 
             <FlatList
-                data={section.items}
+                data={data}
                 keyExtractor={keyExtractor}
                 horizontal
                 showsHorizontalScrollIndicator={false}

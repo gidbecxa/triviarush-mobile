@@ -1,0 +1,295 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Content Block Schema",
+    "type": "object",
+    "properties": {
+        "content": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "oneOf": [
+                    {
+                        "title": "Title Block",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "title"
+                                ]
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "style": {
+                                "type": "object",
+                                "properties": {
+                                    "fontStyle": {
+                                        "type": "string",
+                                        "enum": [
+                                            "italic",
+                                            "normal"
+                                        ]
+                                    },
+                                    "fontWeight": {
+                                        "type": "string",
+                                        "enum": [
+                                            "bold",
+                                            "normal"
+                                        ]
+                                    },
+                                    "color": {
+                                        "type": "string",
+                                        "format": "color"
+                                    },
+                                    "fontSize": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "content"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "title": "Subtitle Block",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "subtitle"
+                                ]
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "style": {
+                                "type": "object",
+                                "properties": {
+                                    "fontStyle": {
+                                        "type": "string",
+                                        "enum": [
+                                            "italic",
+                                            "normal"
+                                        ]
+                                    },
+                                    "fontWeight": {
+                                        "type": "string",
+                                        "enum": [
+                                            "bold",
+                                            "normal"
+                                        ]
+                                    },
+                                    "color": {
+                                        "type": "string",
+                                        "format": "color"
+                                    },
+                                    "fontSize": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "content"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "title": "Paragraph Block",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "paragraph"
+                                ]
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "style": {
+                                "type": "object",
+                                "properties": {
+                                    "fontStyle": {
+                                        "type": "string",
+                                        "enum": [
+                                            "italic",
+                                            "normal"
+                                        ]
+                                    },
+                                    "fontWeight": {
+                                        "type": "string",
+                                        "enum": [
+                                            "bold",
+                                            "normal"
+                                        ]
+                                    },
+                                    "color": {
+                                        "type": "string",
+                                        "format": "color"
+                                    },
+                                    "fontSize": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "content"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "title": "Image Block",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "image"
+                                ]
+                            },
+                            "content": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "style": {
+                                "type": "object",
+                                "properties": {
+                                    "width": {
+                                        "type": "number"
+                                    },
+                                    "height": {
+                                        "type": "number"
+                                    },
+                                    "altText": {
+                                        "type": "string"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "content"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "title": "Link Block",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "link"
+                                ]
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "href": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "style": {
+                                "type": "object",
+                                "properties": {
+                                    "fontStyle": {
+                                        "type": "string",
+                                        "enum": [
+                                            "italic",
+                                            "normal"
+                                        ]
+                                    },
+                                    "fontWeight": {
+                                        "type": "string",
+                                        "enum": [
+                                            "bold",
+                                            "normal"
+                                        ]
+                                    },
+                                    "color": {
+                                        "type": "string",
+                                        "format": "color"
+                                    },
+                                    "fontSize": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "content",
+                            "href"
+                        ],
+                        "additionalProperties": false
+                    },
+                    {
+                        "title": "Footnote Block",
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "footnote"
+                                ]
+                            },
+                            "content": {
+                                "type": "string"
+                            },
+                            "style": {
+                                "type": "object",
+                                "properties": {
+                                    "fontStyle": {
+                                        "type": "string",
+                                        "enum": [
+                                            "italic",
+                                            "normal"
+                                        ]
+                                    },
+                                    "fontWeight": {
+                                        "type": "string",
+                                        "enum": [
+                                            "bold",
+                                            "normal"
+                                        ]
+                                    },
+                                    "color": {
+                                        "type": "string",
+                                        "format": "color"
+                                    },
+                                    "fontSize": {
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "content"
+                        ],
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        }
+    },
+    "required": [
+        "content"
+    ],
+    "additionalProperties": false
+}

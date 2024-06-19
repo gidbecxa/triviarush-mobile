@@ -43,6 +43,7 @@
     "expo-store-review": "~7.0.2",
     "expo-system-ui": "~3.0.4",
     "expo-web-browser": "~13.0.3",
+    "fs": "^0.0.1-security",
     "nativewind": "^4.0.1",
     "prop-types": "^15.8.1",
     "react": "18.2.0",

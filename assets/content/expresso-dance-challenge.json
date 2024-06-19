@@ -1,0 +1,75 @@
+{
+    "content": [
+        {
+            "type": "title",
+            "content": "Espresso dance challenge",
+            "style": {
+                "fontWeight": "bold"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The \"Espresso Dance Challenge\" is the latest craze on TikTok, driven by Sabrina Carpenter's catchy summer hit. This challenge is all about fun, easy-to-follow dance moves that anyone can master. Join the trend by learning the simple choreography and adding your own unique twist. Whether you're a beginner or a seasoned dancer, this challenge is your chance to shine on social media!.",
+            "style": {
+                "fontWeight": "normal"
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Get Inspired and Join In",
+            "style": {
+                "fontWeight": "bold"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Watch how top TikTok creators are adding their flair to the dance. Use props like coffee cups or try different settings to make your video stand out. Explore trending hashtags like #EspressoDance and #SabrinaCarpenter to see what others are doing and to get your video noticed.",
+            "style": {
+                "fontWeight": "normal"
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Customize Your Moves",
+            "style": {
+                "fontWeight": "bold"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Don't be afraid to add your personal touch. Whether it’s a cool filter or a creative location, make the dance your own. The key is to have fun and enjoy the process, so grab a friend and start dancing!",
+            "style": {
+                "fontWeight": "normal"
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Connect and Share",
+            "style": {
+                "fontWeight": "bold"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Post your version of the dance using the trending sounds and tags to reach a wider audience. Engage with other users by liking, commenting, and sharing their videos. This not only boosts your visibility but also helps you connect with the TikTok community.",
+            "style": {
+                "fontWeight": "normal"
+            }
+        },
+        {
+            "type": "link",
+            "content": "Discover More",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "footnote",
+            "content": "Keep exploring our Discovery page for the latest trends and challenges. Sociagram is your go-to app for staying updated on what's hot and helping you create content that captures attention. Dive in and join the fun!",
+            "style": {
+                "fontWeight": "normal"
+            }
+        }
+    ]
+}

@@ -3,12 +3,13 @@ import { View, Pressable, FlatList, useWindowDimensions } from "react-native";
 import { Link, useRouter } from "expo-router";
 import { Text } from "../../nativewindui/Text";
 import { Icon } from "@roninoss/icons";
-import { SectionItem } from "~/app";
+import { SectionItem } from "~/data/types";
 import { StyleSheet } from "nativewind";
 import { useColorScheme } from "~/lib/useColorScheme";
 import { Fontisto } from "@expo/vector-icons";
 import { fontStyles } from "~/app/_layout";
 import { Card } from "react-native-paper";
+import ImageIllustration from "../ImageIllustration";
 
 const capitalizeWords = (str: string) => {
     return str.replace(/\b\w/g, (match) => match.toUpperCase());
@@ -25,26 +26,26 @@ const CategoryItemCard: React.FC<CategoryItemCardProps> = ({ item, onPress }) =>
 
     return (
         <Card
-            elevation={0}
-            style={{ backgroundColor: colors.background, width: width * 0.7, marginRight: 12, borderRadius: 15, borderWidth: 1.5 }}
+            elevation={1}
+            style={{ backgroundColor: colors.card, width: width * 0.7, borderWidth: 1.25, borderColor: colors.grey3, borderRadius: 15, marginRight: 12 }}
             contentStyle={styles.itemCard}
-            className="border-border"
+            // className="mr-3"
             onPress={onPress}
             accessibilityHint="Tap to view category details"
         >
-            <View className="flex-col" style={styles.content}>
-                <Text variant="caption1" style={fontStyles.dmSansMedium} accessibilityLabel={`Category: ${item.label}`}>
-                    <Fontisto name="hashtag" size={10} color={colors.foreground} />
+            <View className="flex-col border-0 border-border" style={styles.content}>
+                <Text variant="caption1" style={[fontStyles.dmSansMedium, {color:colors.tertiary}]} accessibilityLabel={`Category: ${item.label}`}>
+                    <Fontisto name="hashtag" size={10} color={colors.tertiary} />
                     {" "}{item.label}
                 </Text>
                 <Text variant="body" style={[fontStyles.dmSansSemiBold, styles.itemTitle]} className="leading-loose">{item.title}</Text>
-                <Text variant="caption1" style={fontStyles.dmSansRegular}>
-                    {item.description.map((desc) => capitalizeWords(desc)).join(', ')}
+                <Text variant="caption1" style={fontStyles.dmSansRegular} className="border-0 border-border">
+                    {item.tags?.map((desc) => capitalizeWords(desc)).join(', ')}
                 </Text>
             </View>
 
-            <View style={[styles.illustrationContainer, { backgroundColor: "#FFF" }]}>
-                {item.illustration}
+            <View style={[styles.illustrationContainer, { backgroundColor: "#FFF" }]} className="border-0 border-border">
+                {<ImageIllustration source={{uri: item?.image}} width={48} height={48} />}
             </View>
         </Card>
     );
@@ -79,8 +80,8 @@ const styles = StyleSheet.create({
         // borderColor: "#333",
         borderRadius: 100,
         padding: 4,
-        position: "relative",
-        left: -5
+        /* position: "relative",
+        left: -5 */
 
     }
 });

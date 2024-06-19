@@ -3,7 +3,7 @@ import { View, Pressable, FlatList, useWindowDimensions } from "react-native";
 import { Link, useRouter } from "expo-router";
 import { Text } from "../../nativewindui/Text";
 import { Icon } from "@roninoss/icons";
-import { SectionItem } from "~/app";
+import { SectionItem } from "~/data/types";
 import { StyleSheet } from "nativewind";
 import { useColorScheme } from "~/lib/useColorScheme";
 import { Fontisto } from "@expo/vector-icons";
@@ -26,6 +26,7 @@ const SectionItemCard: React.FC<SectionItemCardProps> = ({ item, section }) => {
     const router = useRouter();
     const { colors } = useColorScheme();
     const { width, height } = useWindowDimensions();
+    // console.log(`Items for section ${section}: `, item);
 
     const handleItemPress = () => {
         router.push({ pathname: item.href, params: { category: item.id } })

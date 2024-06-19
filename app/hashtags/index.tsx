@@ -50,8 +50,8 @@ const HashtagsFrontPage = () => {
                 <ImageIllustration source={item.illustration} width={40} height={40} backgroundColor={colors.grey6} />
                 <View style={styles.textContainer} className='border-0 border-border'>
                     <Text variant="heading" style={fontStyles.dmSansSemiBold} className='text-text'>{item.title}</Text>
-                    <Text variant="caption1" style={fontStyles.dmSansRegular} className='text-text'>
-                        {truncatedDescription(item)}
+                    <Text variant="caption1" style={fontStyles.dmSansRegular} numberOfLines={1} className='text-text'>
+                        {item.description.map((desc) => capitalizeWords(desc)).join(', ')}
                     </Text>
                 </View>
                 <Pressable

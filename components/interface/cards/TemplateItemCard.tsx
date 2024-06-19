@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ImageBackground, Pressable, Image, useWindowDimensions } from 'react-native';
-import { SectionItem } from '~/app';
+import { SectionItem } from '~/data/types';
 import { Text } from '../../nativewindui/Text';
 import { fontStyles } from '~/app/_layout';
 import { Fontisto } from '@expo/vector-icons';
@@ -26,7 +26,7 @@ const TemplatesItemCard: React.FC<TemplatesItemCardProps> = ({ item, onPress }) 
       className='p-1.5 rounded-xl'
       accessibilityHint="Tap to view category details"
     >
-      <Image source={item.image} style={styles.image} className='rounded-lg' />
+      <Image source={{ uri: item.image }} style={styles.image} className='rounded-lg' />
       <Text variant="caption1" style={[fontStyles.dmSansMedium, styles.label, { color: colors.foreground, backgroundColor: colors.cardalpha1 }]} className='py-1 px-2 rounded-full'>
         <Fontisto name="hashtag" size={10} color={colors.tertiary} />
         {" "}{item.label}
