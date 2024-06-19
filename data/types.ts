@@ -36,3 +36,36 @@ export interface SectionItem {
   tags?: string[];
   label?: string;
 }
+
+// model for a category, primarily categories for captions
+export interface Category {
+  id: number;
+  slug: string;
+  title: string;
+  href: string;
+  description?: string;
+  illustration: string;
+  subCategories?: [];
+  label?: string;
+}
+
+// model for a sub-category which serves as a label that any post could identify as
+export interface SubCategory {
+  id: number;
+  slug?: string;
+  parentId: number;
+  title: string;
+  href: string;
+  description?: string;
+  illustration?: string;
+  tags?: string[];
+  label?: string;
+  captions?: Caption[];
+}
+
+export interface Caption {
+  id: number;
+  key: string; // a human readable UID
+  value?: string;
+  SubCategoryId: number;
+}
