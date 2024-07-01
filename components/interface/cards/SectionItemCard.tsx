@@ -1,21 +1,10 @@
 import React from "react";
-import { View, Pressable, FlatList, useWindowDimensions } from "react-native";
 import { Link, useRouter } from "expo-router";
-import { Text } from "../../nativewindui/Text";
-import { Icon } from "@roninoss/icons";
 import { SectionItem } from "~/data/types";
-import { StyleSheet } from "nativewind";
-import { useColorScheme } from "~/lib/useColorScheme";
-import { Fontisto } from "@expo/vector-icons";
-import { fontStyles } from "~/app/_layout";
 import TrendingItemCard from "./TrendingItemCard";
 import CategoryItemCard from "./CategoryItemCard";
 // import CategoryItemCard from "./CategoryItemCard3";
 import TemplatesItemCard from "./TemplateItemCard";
-
-const capitalizeWords = (str: string) => {
-    return str.replace(/\b\w/g, (match) => match.toUpperCase());
-};
 
 interface SectionItemCardProps {
     item: SectionItem;
@@ -24,12 +13,14 @@ interface SectionItemCardProps {
 
 const SectionItemCard: React.FC<SectionItemCardProps> = ({ item, section }) => {
     const router = useRouter();
-    const { colors } = useColorScheme();
-    const { width, height } = useWindowDimensions();
     // console.log(`Items for section ${section}: `, item);
 
     const handleItemPress = () => {
-        router.push({ pathname: item.href, params: { category: item.id } })
+        if (section === 'captions') {
+            router.push({ pathname: item.href, params: { category: item.id } })
+        } else if (section === 'hashtags') {
+            router.push({ pathname: item.href, params: { topic: item.id } })
+        }
     };
 
     return (

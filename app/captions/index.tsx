@@ -2,7 +2,6 @@ import React from 'react';
 import { FlatList, View, StyleSheet, useWindowDimensions, Pressable } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { Card, Title, Paragraph } from 'react-native-paper';
-import { captionsData, Caption, CaptionCategory } from '~/data/captions';
 import { FlashList } from '@shopify/flash-list';
 import ImageIllustration from '~/components/interface/ImageIllustration';
 import TopAppBar from '~/components/interface/AppBar';
@@ -10,60 +9,75 @@ import { useColorScheme } from '~/lib/useColorScheme';
 import { Text } from '~/components/nativewindui/Text';
 import { fontStyles } from '../_layout';
 import { Icon } from '@roninoss/icons';
-import { FontAwesome, FontAwesome5 } from '@expo/vector-icons';
+import { Entypo, FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 
-function keyExtractor(item: CaptionCategory) {
-    return item.id;
+import categories from "~/assets/content/categories-all.json"
+import { Category } from '~/data/types';
+import { router } from 'expo-router';
+
+function keyExtractor(item: Category) {
+    return String(item.id);
 }
 
 const CaptionsFrontPage = () => {
     const navigation = useNavigation();
     const route = useRoute();
     const { width, height } = useWindowDimensions();
-    const { colors, isDarkColorScheme } = useColorScheme();
+    const { colors, } = useColorScheme();
 
     const capitalizeWords = (str: string) => {
         return str.replace(/\b\w/g, (match) => match.toUpperCase());
     };
 
-    const truncatedDescription = (item: CaptionCategory) => {
-        const joinedDescription = item.description.map((desc) => capitalizeWords(desc)).join(', ');
-        return joinedDescription.length > 35 ? `${joinedDescription.slice(0, 35)}...` : joinedDescription;
-    };
+    function extractTags(item: Category): string[] {
+        const allTags: string[] = [];
 
+        if (item.subCategories) { // Check if subCategories exist
+            item.subCategories.forEach(
+                (subcategory) => {
+                    if (
+                        subcategory.label && subcategory.label.toLowerCase() === "top choice"
+                        || subcategory.label.toLowerCase() === "coming soon"
+                    ) {
+                        if (subcategory.tags) { // Check if tags exist
+                            subcategory.tags.forEach((tag) => {
+                                if (!allTags.includes(tag)) {
+                                    allTags.push(tag);
+                                }
+                            });
+                        }
+                    }
+                });
+        }
 
-    const renderColoredCard = ({ item }: { item: CaptionCategory }) => (
-        <Card elevation={1} style={[styles.card, { height: height / 9, backgroundColor: colors.secondary }]} className='border-0 border-border'>
+        return allTags;
+    }
+
+    const renderCard = ({ item }: { item: Category }) => (
+        <Card
+            elevation={0}
+            style={[styles.card, { height: height / 9, backgroundColor: colors.background }]}
+            className='border-border'
+            onPress={() => {
+                router.navigate({ pathname: item.href, params: { category: item.id } })
+            }}
+        >
             <View style={styles.cardContent} className='px-2 border-0 border-border'>
-                <ImageIllustration source={item.illustration} width={40} height={40} />
+                <ImageIllustration source={{ uri: item.illustration }} width={36} height={36} backgroundColor={"transparent"} />
                 <View style={styles.textContainer} className='border-0 border-border'>
-                    <Text variant="heading" style={fontStyles.dmSansSemiBold} className='text-white'>{item.title}</Text>
-                    <Text variant="caption1" style={fontStyles.dmSansRegular} className='text-white'>
-                        {item.description.map((desc) => capitalizeWords(desc)).join(', ')}
-                    </Text>
-                </View>
-            </View>
-        </Card>
-    );
-
-    const renderCard = ({ item }: { item: CaptionCategory }) => (
-        <Card elevation={1} style={[styles.card, { height: height / 9, backgroundColor: colors.card }]} className='border-border'>
-            <View style={styles.cardContent} className='px-2 border-0 border-border'>
-                <ImageIllustration source={item.illustration} width={40} height={40} backgroundColor={colors.grey6} />
-                <View style={styles.textContainer} className='border-0 border-border'>
-                    <Text variant="heading" style={fontStyles.dmSansSemiBold} className='text-text'>{item.title}</Text>
-                    <Text variant="caption1" style={fontStyles.dmSansRegular} className='text-text'>
-                        {truncatedDescription(item)}
+                    <Text variant="callout" style={fontStyles.dmSansMedium} className='text-text'>{item.title}</Text>
+                    <Text variant="caption1" style={fontStyles.dmSansRegular} className='text-text' numberOfLines={1}>
+                        {extractTags(item).map((desc) => capitalizeWords(desc)).join(', ')}
                     </Text>
                 </View>
                 <Pressable
-                    style={{
+                    /* style={{
                         backgroundColor: isDarkColorScheme ? "white" : colors.grey6,
-                        width: 40,
-                        height: 40,
-                    }}
-                    className='overflow-hidden rounded-lg p-2 flex-row items-center justify-center border-0 border-border'>
-                    <FontAwesome5 name="long-arrow-alt-right" size={24} color={colors.grey2} />
+                        width: 32,
+                        height: 32,
+                    }} */
+                    className='overflow-hidden rounded-lg p-1 flex-row items-center justify-center border-0 border-border'>
+                    <Entypo name="chevron-small-right" size={24} color={colors.grey2} />
                 </Pressable>
             </View>
         </Card>
@@ -76,11 +90,11 @@ const CaptionsFrontPage = () => {
             <FlashList
                 contentInsetAdjustmentBehavior="automatic"
                 keyboardShouldPersistTaps="handled"
-                data={captionsData}
+                data={categories}
                 estimatedItemSize={200}
                 contentContainerClassName='py-0 android:pb-12 px-3'
                 keyExtractor={keyExtractor}
-                renderItem={renderColoredCard}
+                renderItem={renderCard}
                 showsVerticalScrollIndicator={false}
             />
         </View>
@@ -93,7 +107,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     card: {
-        borderRadius: 20,
+        borderRadius: 15,
         marginVertical: 6,
         justifyContent: "center",
         // borderWidth: 1.5
@@ -101,7 +115,7 @@ const styles = StyleSheet.create({
     cardContent: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 12
+        gap: 8
     },
     illustration: {
         width: 64,

@@ -82,7 +82,7 @@ const SECTIONS: Section[] = [
                 title: 'Good Vibes',
                 href: '/captions/[category]', // OR /captions/good-vibes
                 tags: ['fun', 'happy', 'cheerful', 'vibes', 'entertainment'],
-                illustration: <VibesIllustration width={66} height={66} />,
+                illustration: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z",
                 label: 'Trending',
                 image: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z"
             },
@@ -92,7 +92,7 @@ const SECTIONS: Section[] = [
                 title: 'BFFs',
                 href: '/captions/[category]', // OR /captions/bffs
                 tags: ['friends', 'friendship', 'mate', 'bestie', 'squad'],
-                illustration: <BffIllustration width={66} height={66} />,
+                illustration: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z",
                 label: 'Most Used',
                 image: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z"
             },
@@ -102,7 +102,7 @@ const SECTIONS: Section[] = [
                 title: 'Money',
                 href: '/captions/[category]', // OR /captions/money
                 tags: ['finance', 'rich', 'spending'],
-                illustration: <MoneyIllustration width={66} height={66} />,
+                illustration: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z",
                 label: 'New for you',
                 image: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z"
             }
@@ -121,7 +121,7 @@ const SECTIONS: Section[] = [
                 title: 'Techie',
                 href: '/hashtags/[category]', // OR /hashtags/techie
                 tags: ['Tech', 'TechTrends', 'Coding', 'TechLife', 'Innovation'],
-                illustration: <TechieIllustration width={66} height={66} />,
+                illustration: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z",
                 label: '24K Posts',
                 image: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z"
             },
@@ -131,7 +131,7 @@ const SECTIONS: Section[] = [
                 title: 'Family',
                 href: '/hashtags/[category]', // OR /hashtags/family
                 tags: ['FamilyLife', 'FamilyTime', 'FamilyLove', 'FamilyGoals'],
-                illustration: <FamilyIllustration width={66} height={66} />,
+                illustration: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z",
                 label: 'Popular',
                 image: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z"
             },
@@ -141,7 +141,7 @@ const SECTIONS: Section[] = [
                 title: 'Shopping',
                 href: '/hashtags/[category]', // OR /hashtags/shopping
                 tags: ['Shopaholic', 'ShopNow', 'BuyNow', 'ShopOnline',],
-                illustration: <ShoppingIllustration width={66} height={66} />,
+                illustration: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z",
                 label: 'New for you',
                 image: "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/rectangle-svgrepo-com.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvcmVjdGFuZ2xlLXN2Z3JlcG8tY29tLnBuZyIsImlhdCI6MTcxODY4Mjk1NiwiZXhwIjoxNzUwMjE4OTU2fQ.44FfYU1yr-xEBCGYI8ZHuPcN-8IF-Z8LbBXHji4TE9M&t=2024-06-18T03%3A55%3A56.947Z"
             }

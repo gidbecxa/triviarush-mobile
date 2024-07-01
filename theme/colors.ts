@@ -1,4 +1,5 @@
 import { Platform } from 'react-native';
+import { tagColors } from './tagColors';
 
 const IOS_SYSTEM_COLORS = {
   white: 'rgb(255, 255, 255)',
@@ -41,6 +42,9 @@ const IOS_SYSTEM_COLORS = {
     cardalpha1: 'rgba(28, 28, 30, 0.85)',
     cardalpha2: 'rgba(28, 28, 30, 0.55)',
   },
+  tagColors: {
+    ...tagColors
+  }
 } as const;
 
 const ANDROID_COLORS = {
@@ -57,10 +61,10 @@ const ANDROID_COLORS = {
     foreground: 'rgb(0, 0, 0)',
     root: 'rgb(255, 255, 255)',
     card: 'rgb(255, 255, 255)',
-    destructive: 'rgb(186, 26, 26)',
-    primary: 'rgb(255, 0, 110)',
-    secondary: 'rgb(58, 134, 255)',
-    tertiary: 'rgb(131, 56, 236)',
+    destructive: 'rgb(237, 28, 36)', // changed. To be modified for the others
+    primary: 'rgb(58, 134, 255)',
+    secondary: 'rgb(131, 56, 236)',
+    tertiary: 'rgb(255, 0, 110)',
     greyalpha1: 'rgba(193, 198, 215, 0.85)',
     cardalpha1: 'rgba(255, 255, 255, 0.85)',
     cardalpha2: 'rgba(255, 255, 255, 0.55)',
@@ -84,6 +88,9 @@ const ANDROID_COLORS = {
     cardalpha1: 'rgba(16, 19, 27, 0.85)',
     cardalpha2: 'rgba(16, 19, 27, 0.8)',
   },
+  tagColors: {
+    ...tagColors
+  }
 } as const;
 
 const COLORS = Platform.OS === 'ios' ? IOS_SYSTEM_COLORS : ANDROID_COLORS;

@@ -10,7 +10,7 @@ const TopAppBar = () => {
     const pathname = usePathname();
     const { colors } = useColorScheme();
 
-    // console.log('Route and params', pathname);
+    console.log('Route and params', pathname);
     const isIndexRoute = pathname === '/';
 
     return (

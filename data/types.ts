@@ -31,13 +31,13 @@ export interface SectionItem {
   title: string;
   href: string;
   description?: string;
-  illustration?: React.ReactNode;
+  illustration?: string;
   image?: string;
   tags?: string[];
   label?: string;
 }
 
-// model for a category, primarily categories for captions
+// model for a category, primarily categories for captions and templates
 export interface Category {
   id: number;
   slug: string;
@@ -45,27 +45,55 @@ export interface Category {
   href: string;
   description?: string;
   illustration: string;
-  subCategories?: [];
+  subCategories?: SubCategory[];
   label?: string;
 }
 
 // model for a sub-category which serves as a label that any post could identify as
 export interface SubCategory {
   id: number;
-  slug?: string;
+  slug: string;
   parentId: number;
   title: string;
-  href: string;
-  description?: string;
-  illustration?: string;
-  tags?: string[];
-  label?: string;
+  href?: string;
+  description?: string;   // not relavant atm
+  illustration?: string;  // not relavant atm
+  label?: string;         // not relavant atm
+  tags?: string[];        // experimenting
   captions?: Caption[];
 }
 
 export interface Caption {
   id: number;
-  key: string; // a human readable UID
-  value?: string;
-  SubCategoryId: number;
+  value?: string; // the caption
+  subCategoryId: number;
+  categoryId: number;
 }
+
+// model for a hashtag topic
+export interface Topic {
+  id: number;
+  slug: string;
+  title: string;
+  href: string;
+  description?: string;
+  illustration: string;
+  label?: string;
+  hashtags?: Hashtag[];
+}
+
+export interface Hashtag {
+  id: number;
+  value?: string; // the hashtag
+  topicId: number;
+  stat?: string;
+  tag?: string | string[];
+}
+
+/**
+ * The Algorithm for fetching captions: 
+ * Get [an array of] all IDs of sub-categories of a given category [specified by its `id`].
+ * Browse through all captions. 
+ * Fetch every caption where the `subCategoryId` matches any `id` of the collected sub-categories.
+ * An array of all these captions make all captions belonging to a given category
+ *  */ 

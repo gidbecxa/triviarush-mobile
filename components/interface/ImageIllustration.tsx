@@ -30,7 +30,7 @@ const ImageIllustration: React.FC<RoundedImageProps> = ({ source, width, height,
                         height,
                     }
                 ]}
-                resizeMode="cover"
+                resizeMode="contain"
             />
         </View>
     );

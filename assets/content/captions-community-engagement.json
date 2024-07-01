@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "value": "Let's get the conversation started! What are your burning questions? 🔥",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 2,
+        "value": "Ready to dive deep? Join me for a live Q&A session where I'll answer all your questions. 🎤",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 3,
+        "value": "Let's chat! What's on your mind today? 🤔",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 4,
+        "value": "I'm here to answer your questions and connect with you. Drop a comment below! 👇",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 5,
+        "value": "Let's get interactive! Share your thoughts and opinions in the comments. 💬",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 6,
+        "value": "I'm all ears! What do you want to know?👂",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 7,
+        "value": "Let's build a community where we can learn and grow together. What are your biggest challenges? 💪",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 8,
+        "value": "I'm passionate about connecting with you. Let's have a meaningful conversation. 🙏",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 9,
+        "value": "Your voice matters! Share your thoughts and ideas in the comments. 🗣️",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 10,
+        "value": "Let's get real! What are your biggest struggles and how can we overcome them together? 💪",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 11,
+        "value": "I'm here to listen and support you. What's on your heart today? 💕",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 12,
+        "value": "Let's build a space where we can share our experiences and learn from each other. 🤝",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 13,
+        "value": "I'm excited to hear your perspectives! What are your thoughts on this topic? 🤔",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 14,
+        "value": "Let's get the conversation flowing! What are your questions and comments? 💬",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 15,
+        "value": "I'm here to engage with you and answer your questions. Let's connect! 🤝",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 16,
+        "value": "Let's have an open and honest discussion. What are your thoughts and feelings? 🙏",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 17,
+        "value": "I'm here to support you and provide guidance. What are your biggest goals? 🚀",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 18,
+        "value": "Let's build a community where we can empower and inspire each other. What are your dreams and aspirations? ✨",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 19,
+        "value": "I'm here to celebrate your successes and offer support in your challenges. What are you grateful for today? 🙏",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 20,
+        "value": "Let's create a space where we can share our stories and connect on a deeper level. What are your experiences? 📖",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 21,
+        "value": "I'm here to listen and learn from you. What are your insights and wisdom? 🦉",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 22,
+        "value": "Let's build a community where we can grow and evolve together. What are your lessons learned? 🌱",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 23,
+        "value": "I'm here to encourage and motivate you. What are your passions and dreams? 🔥",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 24,
+        "value": "Let's create a space where we can celebrate each other's wins and offer support in our losses. What are you working towards? 💪",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 25,
+        "value": "I'm here to connect with you and build meaningful relationships. What are your values and beliefs? 🤝",
+        "subCategoryId": 47,
+        "categoryId": 6
+    },
+    {
+        "id": 26,
+        "value": "Let's hear your voice! What do you think about this? 🤔 Cast your vote in the poll below!",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 27,
+        "value": "We're curious to know your opinion! Take our quick survey and share your thoughts. 📝",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 28,
+        "value": "Help us understand your needs better! Your feedback is valuable to us. Participate in our survey now. 🤝",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 29,
+        "value": "We want to hear from you! What are your thoughts on this topic? Share your opinion in the poll below. 💬",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 30,
+        "value": "Your voice matters! Take a moment to answer our survey and help us improve. 🙏",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 31,
+        "value": "Let's get your insights! What are your preferences? Vote in the poll and share your thoughts in the comments. 🗳️",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 32,
+        "value": "We value your opinion! Take our survey and help us shape the future of our content. ✍️",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 33,
+        "value": "Your feedback is important to us! What are your thoughts on this product/service? Share your honest review in the poll below. ⭐️",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 34,
+        "value": "Let's make decisions together! What do you think is the best option? Cast your vote in the poll and let us know! 🤝",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 35,
+        "value": "We're always looking for ways to improve. Take our survey and help us understand your needs better. 📈",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 36,
+        "value": "Your opinion matters! What are your thoughts on this issue? Share your perspective in the poll and let's discuss. 🗣️",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 37,
+        "value": "We want to create content that resonates with you. Take our survey and help us understand your interests. 💡",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 38,
+        "value": "Let's get your feedback! What are your thoughts on our latest project? Share your honest review in the poll below. 📝",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 39,
+        "value": "We're always looking for ways to grow. Take our survey and help us identify areas for improvement. 🚀",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 40,
+        "value": "Your voice is powerful! What are your thoughts on this important topic? Share your opinion in the poll and let's make a difference. ✊",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 41,
+        "value": "We're committed to providing you with the best possible experience. Take our survey and help us understand your needs better. 🙏",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 42,
+        "value": "Let's make decisions together! What do you think is the best course of action? Cast your vote in the poll and let us know! 🤝",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 43,
+        "value": "We're always looking for ways to improve. Take our survey and help us understand your needs better. 📈",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 44,
+        "value": "Your opinion matters! What are your thoughts on this issue? Share your perspective in the poll and let's discuss. 🗣️",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 45,
+        "value": "We want to create content that resonates with you. Take our survey and help us understand your interests. 💡",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 46,
+        "value": "Let's get your feedback! What are your thoughts on our latest project? Share your honest review in the poll below. 📝",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 47,
+        "value": "We're always looking for ways to grow. Take our survey and help us identify areas for improvement. 🚀",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 48,
+        "value": "Your voice is powerful! What are your thoughts on this important topic? Share your opinion in the poll and let's make a difference. ✊",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 49,
+        "value": "We're committed to providing you with the best possible experience. Take our survey and help us understand your needs better. 🙏",
+        "subCategoryId": 48,
+        "categoryId": 6
+    },
+    {
+        "id": 50,
+        "value": "Let's make decisions together! What do you think is the best course of action? Cast your vote in the poll and let us know! 🤝",
+        "subCategoryId": 48,
+        "categoryId": 6
+    }
+]

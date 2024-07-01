@@ -11,8 +11,8 @@ import SectionItemCard from "./SectionItemCard";
 import { SectionItem } from "~/data/types";
 
 import articlesMetaData from '~/assets/content/articles.json';
-import captionsCategories from '~/assets/content/captions-categories.json';
-import hashtagsCategories from '~/assets/content/hashtags-categories.json';
+import captionsCategories from '~/assets/content/categories-all.json';
+import hashtagsTopics from '~/assets/content/hashtags.json';
 
 interface SectionCardProps {
     section: Section;
@@ -34,9 +34,14 @@ const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
         if (section.id === 'discovery') {
             setData(articlesMetaData);
         } else if (section.id === 'captions') {
-            setData(captionsCategories);
+            const filtered = captionsCategories.filter(
+                (category) =>
+                    category.label.toLowerCase() === "for you" || category.label.toLowerCase() === "top choice"
+            );
+            setData(filtered);
         } else if (section.id === 'hashtags') {
-            setData(hashtagsCategories)
+            const topFourTopics = hashtagsTopics.slice(0, 4);
+            setData(topFourTopics);
         }
     }, [section.id])
 

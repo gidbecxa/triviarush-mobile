@@ -2,17 +2,21 @@ import React from 'react';
 import { FlatList, View, StyleSheet, useWindowDimensions, Pressable } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { Card, Title, Paragraph } from 'react-native-paper';
-import { hashtagsData, HashtagCategory } from '~/data/hashtags';
+import { hashtagsData } from '~/data/hashtags';
 import { FlashList } from '@shopify/flash-list';
 import ImageIllustration from '~/components/interface/ImageIllustration';
 import TopAppBar from '~/components/interface/AppBar';
 import { useColorScheme } from '~/lib/useColorScheme';
 import { Text } from '~/components/nativewindui/Text';
 import { fontStyles } from '../_layout';
-import { FontAwesome5 } from '@expo/vector-icons';
+import { Entypo, FontAwesome5 } from '@expo/vector-icons';
 
-function keyExtractor(item: HashtagCategory) {
-    return item.id;
+import topics from "~/assets/content/hashtags.json"
+import { Topic } from '~/data/types';
+import { router } from 'expo-router';
+
+function keyExtractor(item: Topic) {
+    return String(item.id);
 }
 
 const HashtagsFrontPage = () => {
@@ -21,47 +25,31 @@ const HashtagsFrontPage = () => {
     const { width, height } = useWindowDimensions();
     const { colors, isDarkColorScheme } = useColorScheme();
 
-    const capitalizeWords = (str: string) => {
-        return str.replace(/\b\w/g, (match) => match.toUpperCase());
-    };
-
-    const truncatedDescription = (item: HashtagCategory) => {
-        const joinedDescription = item.description.map((desc) => capitalizeWords(desc)).join(', ');
-        return joinedDescription.length > 35 ? `${joinedDescription.slice(0, 35)}...` : joinedDescription;
-    };
-
-    const renderColoredCard = ({ item }: { item: HashtagCategory }) => (
-        <Pressable style={[styles.card, { height: height / 9, backgroundColor: colors.secondary }]} className='border-0 border-border'>
-            <View style={styles.cardContent} className='px-2.5 border-0 border-border'>
-                <ImageIllustration source={item.illustration} width={40} height={40} />
-                <View style={styles.textContainer} className='border-0 border-border'>
-                    <Text variant="heading" style={fontStyles.dmSansSemiBold} className='text-white'>{item.title}</Text>
-                    <Text variant="caption1" style={fontStyles.dmSansRegular} className='text-white'>
-                        {item.description.map((desc) => capitalizeWords(desc)).join(', ')}
-                    </Text>
-                </View>
-            </View>
-        </Pressable>
-    );
-
-    const renderCard = ({ item }: { item: HashtagCategory }) => (
-        <Card elevation={1} style={[styles.card, { height: height / 9, backgroundColor: colors.card }]} className='border-border'>
+    const renderCard = ({ item }: { item: Topic }) => (
+        <Card
+            elevation={0}
+            style={[styles.card, { height: height / 9, backgroundColor: colors.background }]}
+            className='border-border'
+            onPress={() => {
+                router.navigate({ pathname: item.href, params: { topic: item.id } })
+            }}
+        >
             <View style={styles.cardContent} className='px-2 border-0 border-border'>
-                <ImageIllustration source={item.illustration} width={40} height={40} backgroundColor={colors.grey6} />
+                <ImageIllustration source={{ uri: item.illustration }} width={40} height={40} backgroundColor={"transparent"} />
                 <View style={styles.textContainer} className='border-0 border-border'>
-                    <Text variant="heading" style={fontStyles.dmSansSemiBold} className='text-text'>{item.title}</Text>
-                    <Text variant="caption1" style={fontStyles.dmSansRegular} numberOfLines={1} className='text-text'>
-                        {item.description.map((desc) => capitalizeWords(desc)).join(', ')}
+                    <Text variant="callout" style={fontStyles.dmSansMedium} className='text-text'>{item.title}</Text>
+                    <Text variant="caption1" style={[fontStyles.dmSansRegular, { marginTop: 1 }]} numberOfLines={2} className='text-text leading-tight'>
+                        {item.description}
                     </Text>
                 </View>
                 <Pressable
-                    style={{
+                    /* style={{
                         backgroundColor: isDarkColorScheme ? "white" : colors.grey6,
                         width: 40,
                         height: 40,
-                    }}
-                    className='overflow-hidden rounded-lg p-2 flex-row items-center justify-center border-0 border-border'>
-                    <FontAwesome5 name="long-arrow-alt-right" size={24} color={colors.grey2} />
+                    }} */
+                    className='overflow-hidden rounded-lg p-1 flex-row items-center justify-center border-0 border-border'>
+                    <Entypo name="chevron-small-right" size={24} color={colors.grey2} />
                 </Pressable>
             </View>
         </Card>
@@ -70,11 +58,11 @@ const HashtagsFrontPage = () => {
     return (
         <View className='flex-1'>
             <TopAppBar />
-            <Text variant="heading" style={fontStyles.dmSansSemiBold} className='text-text mt-4 mb-2 mx-4'>Hashtags Categories</Text>
+            <Text variant="heading" style={fontStyles.dmSansSemiBold} className='text-text mt-4 mb-2 mx-4'>Hashtags Topics</Text>
             <FlashList
                 contentInsetAdjustmentBehavior="automatic"
                 keyboardShouldPersistTaps="handled"
-                data={hashtagsData}
+                data={topics}
                 estimatedItemSize={200}
                 contentContainerClassName='py-0 android:pb-12 px-3'
                 keyExtractor={keyExtractor}
@@ -98,8 +86,8 @@ const styles = StyleSheet.create({
     },
     cardContent: {
         flexDirection: 'row',
-        alignItems: 'center',
-        gap: 12
+        alignItems: "flex-end",
+        gap: 8
     },
     illustration: {
         width: 64,

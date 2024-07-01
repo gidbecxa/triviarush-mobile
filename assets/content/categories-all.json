@@ -1,0 +1,1302 @@
+[
+    {
+        "id": 1,
+        "slug": "personal-life",
+        "title": "Personal Life",
+        "href": "/captions/[category]",
+        "description": "Captions related to personal life and experiences.",
+        "label": "For You",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/family.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvZmFtaWx5LnBuZyIsImlhdCI6MTcxOTA3MjU4NywiZXhwIjoxNzUwNjA4NTg3fQ.AyWyXLDEJQfqS9RCP5asDnrXox8zECL_LPm8aRnmssM&t=2024-06-22T16%3A09%3A47.614Z",
+        "subCategories": [
+            {
+                "id": 1,
+                "slug": "love-couple",
+                "parentId": 1,
+                "title": "Love & Couple",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for couples and love-related posts.",
+                "illustration": "https://example.com/love-couple.png",
+                "label": "Top Choice",
+                "tags": [
+                    "love",
+                    "couple"
+                ]
+            },
+            {
+                "id": 2,
+                "slug": "family-friends",
+                "parentId": 1,
+                "title": "Family & Friends",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for family and friends.",
+                "illustration": "https://example.com/family-friends.png",
+                "label": "Top Choice",
+                "tags": [
+                    "family",
+                    "friends"
+                ]
+            },
+            {
+                "id": 3,
+                "slug": "travel-adventure",
+                "parentId": 1,
+                "title": "Travel & Adventure",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for travel and adventure posts.",
+                "illustration": "https://example.com/travel-adventure.png",
+                "label": "New for you",
+                "tags": [
+                    "travel",
+                    "adventure"
+                ]
+            },
+            {
+                "id": 4,
+                "slug": "birthday-celebrations",
+                "parentId": 1,
+                "title": "Birthday & Celebrations",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for birthdays and celebrations.",
+                "illustration": "https://example.com/birthday-celebrations.png",
+                "label": "Popular",
+                "tags": [
+                    "birthday",
+                    "celebrations"
+                ]
+            },
+            {
+                "id": 5,
+                "slug": "wishes-gratitude",
+                "parentId": 1,
+                "title": "Well Wishes & Gratitude",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for well wishes and gratitude.",
+                "illustration": "https://example.com/well-wishes-gratitude.png",
+                "label": "New for you",
+                "tags": [
+                    "wishes",
+                    "gratitude"
+                ]
+            },
+            {
+                "id": 6,
+                "slug": "achievements-milestones",
+                "parentId": 1,
+                "title": "Personal Achievements & Milestones",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for personal achievements and milestones.",
+                "illustration": "https://example.com/personal-achievements-milestones.png",
+                "label": "New for you",
+                "tags": [
+                    "achievements",
+                    "milestones"
+                ]
+            },
+            {
+                "id": 7,
+                "slug": "fitness-health",
+                "parentId": 1,
+                "title": "Fitness & Health",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for fitness and health posts.",
+                "illustration": "https://example.com/fitness-health.png",
+                "label": "Popular",
+                "tags": [
+                    "fitness",
+                    "health"
+                ]
+            },
+            {
+                "id": 8,
+                "slug": "hobbies-interests",
+                "parentId": 1,
+                "title": "Hobbies & Interests",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for hobbies and interests.",
+                "illustration": "https://example.com/hobbies-interests.png",
+                "label": "New for you",
+                "tags": [
+                    "hobbies",
+                    "interests"
+                ]
+            },
+            {
+                "id": 9,
+                "slug": "fashion-beauty",
+                "parentId": 1,
+                "title": "Fashion & Beauty",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for fashion and beauty posts.",
+                "illustration": "https://example.com/fashion-beauty.png",
+                "label": "Top Choice",
+                "tags": [
+                    "fashion",
+                    "beauty"
+                ]
+            },
+            {
+                "id": 10,
+                "slug": "food-cooking",
+                "parentId": 1,
+                "title": "Food & Cooking",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for food and cooking posts.",
+                "illustration": "https://example.com/food-cooking.png",
+                "label": "Top Choice",
+                "tags": [
+                    "food",
+                    "cooking"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "slug": "business-marketing",
+        "title": "Business & Marketing",
+        "href": "/captions/[category]",
+        "description": "Captions related to business and marketing.",
+        "label": "Coming Soon",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/financial-profit.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvZmluYW5jaWFsLXByb2ZpdC5wbmciLCJpYXQiOjE3MTkwNzI3MzIsImV4cCI6MTc1MDYwODczMn0.DqKkgcvSgH8GkdfdszXlmB9PwY99C7Q7yEpgunxDnjo&t=2024-06-22T16%3A12%3A12.744Z",
+        "subCategories": [
+            {
+                "id": 11,
+                "slug": "product-announcements-updates",
+                "parentId": 2,
+                "title": "Product Announcements & Updates",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for product announcements and updates.",
+                "illustration": "https://example.com/product-announcements-updates.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "product",
+                    "updates"
+                ]
+            },
+            {
+                "id": 12,
+                "slug": "company-news-events",
+                "parentId": 2,
+                "title": "Company News & Events",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for company news and events.",
+                "illustration": "https://example.com/company-news-events.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "news",
+                    "events"
+                ]
+            },
+            {
+                "id": 13,
+                "slug": "industry-insights-trends",
+                "parentId": 2,
+                "title": "Industry Insights & Trends",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for industry insights and trends.",
+                "illustration": "https://example.com/industry-insights-trends.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "industry",
+                    "trends"
+                ]
+            },
+            {
+                "id": 14,
+                "slug": "customer-testimonials-reviews",
+                "parentId": 2,
+                "title": "Customer Testimonials & Reviews",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for customer testimonials and reviews.",
+                "illustration": "https://example.com/customer-testimonials-reviews.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "testimonials",
+                    "reviews"
+                ]
+            },
+            {
+                "id": 15,
+                "slug": "marketing-campaigns-promotions",
+                "parentId": 2,
+                "title": "Marketing Campaigns & Promotions",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for marketing campaigns and promotions.",
+                "illustration": "https://example.com/marketing-campaigns-promotions.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "campaigns",
+                    "promotions"
+                ]
+            },
+            {
+                "id": 16,
+                "slug": "business-tips-advice",
+                "parentId": 2,
+                "title": "Business Tips & Advice",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for business tips and advice.",
+                "illustration": "https://example.com/business-tips-advice.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "business",
+                    "advice"
+                ]
+            },
+            {
+                "id": 17,
+                "slug": "entrepreneurship-success",
+                "parentId": 2,
+                "title": "Entrepreneurship & Success",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for entrepreneurship and success.",
+                "illustration": "https://example.com/entrepreneurship-success.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "entrepreneurship",
+                    "success"
+                ]
+            },
+            {
+                "id": 18,
+                "slug": "branding-design",
+                "parentId": 2,
+                "title": "Branding & Design",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for branding and design.",
+                "illustration": "https://example.com/branding-design.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "branding",
+                    "design"
+                ]
+            },
+            {
+                "id": 19,
+                "slug": "social-media-marketing",
+                "parentId": 2,
+                "title": "Social Media Marketing",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for social media marketing.",
+                "illustration": "https://example.com/social-media-marketing.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "social media",
+                    "marketing"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "slug": "entertainment-fun",
+        "title": "Entertainment & Fun",
+        "href": "/captions/[category]",
+        "description": "Captions related to entertainment and humor.",
+        "label": "Top Choice",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/cinema.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvY2luZW1hLnBuZyIsImlhdCI6MTcxOTA3MzE2OCwiZXhwIjoxNzUwNjA5MTY4fQ._3dOcnvvs7NQGnZ3ccUy-MBSGYdxdcc84nvR0LmjC-I&t=2024-06-22T16%3A19%3A29.048Z",
+        "subCategories": [
+            {
+                "id": 20,
+                "slug": "funny-videos-memes",
+                "parentId": 3,
+                "title": "Funny Videos & Memes",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for funny videos and memes.",
+                "illustration": "https://example.com/funny-videos-memes.png",
+                "label": "Trendy",
+                "tags": [
+                    "funny",
+                    "memes"
+                ]
+            },
+            {
+                "id": 21,
+                "slug": "entertainment-news-updates",
+                "parentId": 3,
+                "title": "Entertainment Updates",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for entertainment news and updates.",
+                "illustration": "https://example.com/entertainment-news-updates.png",
+                "label": "Popular",
+                "tags": [
+                    "entertainment",
+                    "trending"
+                ]
+            },
+            {
+                "id": 22,
+                "slug": "movies-tv-shows",
+                "parentId": 3,
+                "title": "Movies & TV Shows",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for movies and TV shows.",
+                "illustration": "https://example.com/movies-tv-shows.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "movies",
+                    "tv shows"
+                ]
+            },
+            {
+                "id": 23,
+                "slug": "jokes-pranks",
+                "parentId": 3,
+                "title": "Jokes & Pranks",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for jokes and pranks.",
+                "illustration": "https://example.com/jokes-pranks.png",
+                "label": "Top Choice",
+                "tags": [
+                    "jokes",
+                    "pranks"
+                ]
+            },
+            {
+                "id": 24,
+                "slug": "viral-content",
+                "parentId": 3,
+                "title": "Viral Content",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for viral content.",
+                "illustration": "https://example.com/viral-content.png",
+                "label": "Trendy",
+                "tags": [
+                    "viral",
+                    "content"
+                ]
+            },
+            {
+                "id": 25,
+                "slug": "gaming-live-streams",
+                "parentId": 3,
+                "title": "Gaming & Live Streams",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for gaming and live streams.",
+                "illustration": "https://example.com/gaming-live-streams.png",
+                "label": "Coming Soon",
+                "tags": [
+                    "gaming",
+                    "streams"
+                ]
+            },
+            {
+                "id": 26,
+                "slug": "music-dance",
+                "parentId": 3,
+                "title": "Music & Dance",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for music and dance.",
+                "illustration": "https://example.com/music-dance.png",
+                "label": "Trending",
+                "tags": [
+                    "music",
+                    "dance"
+                ]
+            },
+            {
+                "id": 27,
+                "slug": "art-creativity",
+                "parentId": 3,
+                "title": "Art & Creativity",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for art and creativity.",
+                "illustration": "https://example.com/art-creativity.png",
+                "label": "New for you",
+                "tags": [
+                    "art",
+                    "creativity"
+                ]
+            },
+            {
+                "id": 28,
+                "slug": "sports-fitness",
+                "parentId": 3,
+                "title": "Sports & Fitness",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for sports and fitness.",
+                "illustration": "https://example.com/sports-fitness.png",
+                "tags": [
+                    "sports",
+                    "fitness"
+                ],
+                "label": "New for you"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "slug": "education-inspiration",
+        "title": "Education & Inspiration",
+        "href": "/captions/[category]",
+        "label": "New for you",
+        "description": "Captions related to education and inspiration.",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/inspiration.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvaW5zcGlyYXRpb24ucG5nIiwiaWF0IjoxNzE5MDczMzM1LCJleHAiOjE3NTA2MDkzMzV9.IXbSITrs0aB3_p3QehzFFeRNhL9QD019ehx3d5m3yEg&t=2024-06-22T16%3A22%3A15.505Z",
+        "subCategories": [
+            {
+                "id": 29,
+                "slug": "how-to-videos-guides",
+                "parentId": 4,
+                "title": "How-to Videos & Guides",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for how-to videos and guides.",
+                "illustration": "https://example.com/how-to-videos-guides.png",
+                "tags": [
+                    "how-to",
+                    "guides"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 30,
+                "slug": "explainer-videos",
+                "parentId": 4,
+                "title": "Explainer Videos",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for explainer videos.",
+                "illustration": "https://example.com/explainer-videos.png",
+                "tags": [
+                    "explainer",
+                    "videos"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 31,
+                "slug": "educational-content",
+                "parentId": 4,
+                "title": "Educational Content",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for educational content.",
+                "illustration": "https://example.com/educational-content.png",
+                "tags": [
+                    "educational",
+                    "content"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 32,
+                "slug": "diy-projects-tutorials",
+                "parentId": 4,
+                "title": "DIY Projects & Tutorials",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for DIY projects and tutorials.",
+                "illustration": "https://example.com/diy-projects-tutorials.png",
+                "tags": [
+                    "diy",
+                    "tutorials"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 33,
+                "slug": "life-hacks-tips",
+                "parentId": 4,
+                "title": "Life Hacks & Tips",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for life hacks and tips.",
+                "illustration": "https://example.com/life-hacks-tips.png",
+                "tags": [
+                    "life hacks",
+                    "tips"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 34,
+                "slug": "inspirational-stories",
+                "parentId": 4,
+                "title": "Inspirational Stories",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for inspirational stories.",
+                "illustration": "https://example.com/inspirational-stories.png",
+                "tags": [
+                    "inspirational",
+                    "stories"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 35,
+                "slug": "personal-growth-development",
+                "parentId": 4,
+                "title": "Personal Growth & Development",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for personal growth and development.",
+                "illustration": "https://example.com/personal-growth-development.png",
+                "tags": [
+                    "personal growth",
+                    "development"
+                ],
+                "label": "New for you"
+            },
+            {
+                "id": 36,
+                "slug": "mental-health-wellness",
+                "parentId": 4,
+                "title": "Mental Health & Wellness",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for mental health and wellness.",
+                "illustration": "https://example.com/mental-health-wellness.png",
+                "tags": [
+                    "mental health",
+                    "wellness"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 37,
+                "slug": "career-education",
+                "parentId": 4,
+                "title": "Career & Education",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for career and education.",
+                "illustration": "https://example.com/career-education.png",
+                "tags": [
+                    "career",
+                    "education"
+                ],
+                "label": "Coming Soon"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "slug": "news-current-events",
+        "title": "News & Current Events",
+        "href": "/captions/[category]",
+        "description": "Captions related to news and current events.",
+        "label": "Coming Soon",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/interview.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvaW50ZXJ2aWV3LnBuZyIsImlhdCI6MTcxOTA4MDgzOCwiZXhwIjoxNzUwNjE2ODM4fQ.y9KsMY1eMko89VAOwG89gTGcFLwgTirbA3_-8qQDxYA&t=2024-06-22T18%3A27%3A17.758Z",
+        "subCategories": [
+            {
+                "id": 38,
+                "slug": "breaking-news-updates",
+                "parentId": 5,
+                "title": "Breaking News Updates",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for breaking news updates.",
+                "illustration": "https://example.com/breaking-news-updates.png",
+                "tags": [
+                    "breaking news",
+                    "updates"
+                ]
+            },
+            {
+                "id": 39,
+                "slug": "political-commentary",
+                "parentId": 5,
+                "title": "Political Commentary",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for political commentary.",
+                "illustration": "https://example.com/political-commentary.png",
+                "tags": [
+                    "political",
+                    "commentary"
+                ]
+            },
+            {
+                "id": 40,
+                "slug": "social-issues-activism",
+                "parentId": 5,
+                "title": "Social Issues & Activism",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for social issues and activism.",
+                "illustration": "https://example.com/social-issues-activism.png",
+                "tags": [
+                    "social issues",
+                    "activism"
+                ]
+            },
+            {
+                "id": 41,
+                "slug": "environmental-news",
+                "parentId": 5,
+                "title": "Environmental News",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for environmental news.",
+                "illustration": "https://example.com/environmental-news.png",
+                "tags": [
+                    "environmental",
+                    "news"
+                ]
+            },
+            {
+                "id": 42,
+                "slug": "sports-entertainment-news",
+                "parentId": 5,
+                "title": "Sports & Entertainment News",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for sports and entertainment news.",
+                "illustration": "https://example.com/sports-entertainment-news.png",
+                "tags": [
+                    "sports",
+                    "entertainment"
+                ]
+            },
+            {
+                "id": 43,
+                "slug": "technology-innovation",
+                "parentId": 5,
+                "title": "Technology & Innovation",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for technology and innovation.",
+                "illustration": "https://example.com/technology-innovation.png",
+                "tags": [
+                    "technology",
+                    "innovation"
+                ]
+            },
+            {
+                "id": 44,
+                "slug": "science-discovery",
+                "parentId": 5,
+                "title": "Science & Discovery",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for science and discovery.",
+                "illustration": "https://example.com/science-discovery.png",
+                "tags": [
+                    "science",
+                    "discovery"
+                ]
+            },
+            {
+                "id": 45,
+                "slug": "history-culture",
+                "parentId": 5,
+                "title": "History & Culture",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for history and culture.",
+                "illustration": "https://example.com/history-culture.png",
+                "tags": [
+                    "history",
+                    "culture"
+                ]
+            },
+            {
+                "id": 46,
+                "slug": "travel-exploration",
+                "parentId": 5,
+                "title": "Travel & Exploration",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for travel and exploration.",
+                "illustration": "https://example.com/travel-exploration.png",
+                "tags": [
+                    "travel",
+                    "exploration"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "slug": "community-engagement",
+        "title": "Community & Engagement",
+        "href": "/captions/[category]",
+        "label": "New for you",
+        "description": "Captions related to community and engagement.",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/engagement.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvZW5nYWdlbWVudC5wbmciLCJpYXQiOjE3MTkwODA5NTAsImV4cCI6MTc1MDYxNjk1MH0.ms9WtOw5MXYZlmtx5DX4rijjAIrGYoVatQtCKrbCfEo&t=2024-06-22T18%3A29%3A10.601Z",
+        "subCategories": [
+            {
+                "id": 47,
+                "slug": "qa-sessions-live-chats",
+                "parentId": 6,
+                "title": "Q&A Sessions & Live Chats",
+                "label": "New",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for Q&A sessions and live chats.",
+                "illustration": "https://example.com/q-a-sessions-live-chats.png",
+                "tags": [
+                    "Q&A",
+                    "live chats"
+                ]
+            },
+            {
+                "id": 48,
+                "slug": "polls-surveys",
+                "parentId": 6,
+                "title": "Polls & Surveys",
+                "label": "New",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for polls and surveys.",
+                "illustration": "https://example.com/polls-surveys.png",
+                "tags": [
+                    "polls",
+                    "surveys"
+                ]
+            },
+            {
+                "id": 49,
+                "slug": "user-generated-content-challenges",
+                "parentId": 6,
+                "title": "User-Generated Content Challenges",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for user-generated content challenges.",
+                "illustration": "https://example.com/user-generated-content-challenges.png",
+                "tags": [
+                    "user-generated",
+                    "challenges"
+                ]
+            },
+            {
+                "id": 50,
+                "slug": "behind-the-scenes-glimpses",
+                "parentId": 6,
+                "title": "Behind-the-Scenes Glimpses",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for behind-the-scenes glimpses.",
+                "illustration": "https://example.com/behind-the-scenes-glimpses.png",
+                "tags": [
+                    "behind the scenes",
+                    "glimpses"
+                ]
+            },
+            {
+                "id": 51,
+                "slug": "collaborations-other-creators",
+                "parentId": 6,
+                "title": "Collaborations with Other Creators",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for collaborations with other creators.",
+                "illustration": "https://example.com/collaborations-other-creators.png",
+                "tags": [
+                    "collaborations",
+                    "creators"
+                ]
+            },
+            {
+                "id": 52,
+                "slug": "social-activism-advocacy",
+                "parentId": 6,
+                "title": "Social Activism & Advocacy",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for social activism and advocacy.",
+                "illustration": "https://example.com/social-activism-advocacy.png",
+                "tags": [
+                    "social activism",
+                    "advocacy"
+                ]
+            },
+            {
+                "id": 53,
+                "slug": "charity-fundraising",
+                "parentId": 6,
+                "title": "Charity & Fundraising",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for charity and fundraising.",
+                "illustration": "https://example.com/charity-fundraising.png",
+                "tags": [
+                    "charity",
+                    "fundraising"
+                ]
+            },
+            {
+                "id": 54,
+                "slug": "local-community-news-events",
+                "parentId": 6,
+                "title": "Local Community News & Events",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for local community news and events.",
+                "illustration": "https://example.com/local-community-news-events.png",
+                "tags": [
+                    "local news",
+                    "events"
+                ]
+            },
+            {
+                "id": 55,
+                "slug": "fan-stories-shoutouts",
+                "parentId": 6,
+                "title": "Fan Stories & Shoutouts",
+                "label": "Coming Soon",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for fan stories and shoutouts.",
+                "illustration": "https://example.com/fan-stories-shoutouts.png",
+                "tags": [
+                    "fan stories",
+                    "shoutouts"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "slug": "religious-spiritual",
+        "title": "Religious & Spiritual",
+        "href": "/captions/[category]",
+        "label": "Coming Soon",
+        "description": "Captions related to religious and spiritual themes.",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/cross.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvY3Jvc3MucG5nIiwiaWF0IjoxNzE5MDgwMTU3LCJleHAiOjE3NTA2MTYxNTd9.aGT1S0D4osJ1NSm9Is3MUINnfFoa3s9znZb8dtB6J-c&t=2024-06-22T18%3A15%3A57.334Z",
+        "subCategories": [
+            {
+                "id": 65,
+                "slug": "religious-celebrations-holidays",
+                "parentId": 7,
+                "title": "Religious Celebrations & Holidays",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for religious celebrations and holidays.",
+                "illustration": "https://example.com/religious-celebrations-holidays.png",
+                "tags": [
+                    "celebrations",
+                    "holidays"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 66,
+                "slug": "inspirational-quotes-verses",
+                "parentId": 7,
+                "title": "Inspirational Quotes & Verses",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for inspirational quotes and verses.",
+                "illustration": "https://example.com/inspirational-quotes-verses.png",
+                "tags": [
+                    "inspirational",
+                    "quotes"
+                ],
+                "label": "New for you"
+            },
+            {
+                "id": 67,
+                "slug": "spiritual-reflections-practices",
+                "parentId": 7,
+                "title": "Spiritual Reflections & Practices",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for spiritual reflections and practices.",
+                "illustration": "https://example.com/spiritual-reflections-practices.png",
+                "tags": [
+                    "spiritual",
+                    "reflections"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 68,
+                "slug": "faith-belief",
+                "parentId": 7,
+                "title": "Faith & Belief",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for faith and belief.",
+                "illustration": "https://example.com/faith-belief.png",
+                "tags": [
+                    "faith",
+                    "belief"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 69,
+                "slug": "mindfulness-meditation",
+                "parentId": 7,
+                "title": "Mindfulness & Meditation",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for mindfulness and meditation.",
+                "illustration": "https://example.com/mindfulness-meditation.png",
+                "tags": [
+                    "mindfulness",
+                    "meditation"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 70,
+                "slug": "gratitude-appreciation",
+                "parentId": 7,
+                "title": "Gratitude & Appreciation",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for gratitude and appreciation.",
+                "illustration": "https://example.com/gratitude-appreciation.png",
+                "tags": [
+                    "gratitude",
+                    "appreciation"
+                ],
+                "label": "Top Choice"
+            },
+            {
+                "id": 71,
+                "slug": "hope-healing",
+                "parentId": 7,
+                "title": "Hope & Healing",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for hope and healing.",
+                "illustration": "https://example.com/hope-healing.png",
+                "tags": [
+                    "hope",
+                    "healing"
+                ],
+                "label": "For You"
+            },
+            {
+                "id": 72,
+                "slug": "peace-love",
+                "parentId": 7,
+                "title": "Peace & Love",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for peace and love.",
+                "illustration": "https://example.com/peace-love.png",
+                "tags": [
+                    "peace",
+                    "love"
+                ],
+                "label": "Top Choice"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "slug": "seasonal-holiday",
+        "title": "Seasonal & Holiday",
+        "href": "/captions/[category]",
+        "label": "Coming Soon",
+        "description": "Captions for seasonal and holiday events.",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/4-seasons.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvNC1zZWFzb25zLnBuZyIsImlhdCI6MTcxOTA4MDMwNiwiZXhwIjoxNzUwNjE2MzA2fQ.eoElkdTBQCBgGk-9iCAorSqWup26yIC9G15Y_HF9aDM&t=2024-06-22T18%3A18%3A25.964Z",
+        "subCategories": [
+            {
+                "id": 73,
+                "slug": "spring-summer-fall-winter",
+                "parentId": 8,
+                "title": "Spring, Summer, Fall, Winter",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for spring, summer, fall, and winter.",
+                "illustration": "https://example.com/spring-summer-fall-winter.png",
+                "tags": [
+                    "seasonal",
+                    "seasons"
+                ],
+                "label": "Top Choice"
+            },
+            {
+                "id": 74,
+                "slug": "christmas-hanukkah-diwali",
+                "parentId": 8,
+                "title": "Christmas, Hanukkah, Diwali",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for Christmas, Hanukkah, and Diwali.",
+                "illustration": "https://example.com/christmas-hanukkah-diwali.png",
+                "tags": [
+                    "Christmas",
+                    "Hanukkah",
+                    "Diwali"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 75,
+                "slug": "thanksgiving-easter",
+                "parentId": 8,
+                "title": "Thanksgiving, Easter",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for Thanksgiving and Easter.",
+                "illustration": "https://example.com/thanksgiving-easter.png",
+                "tags": [
+                    "Thanksgiving",
+                    "Easter"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 76,
+                "slug": "mothers-day-fathers-day",
+                "parentId": 8,
+                "title": "Mother's Day, Father's Day",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for Mother's Day and Father's Day.",
+                "illustration": "https://example.com/mothers-day-fathers-day.png",
+                "tags": [
+                    "Mother's Day",
+                    "Father's Day"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 77,
+                "slug": "valentines-day",
+                "parentId": 8,
+                "title": "Valentine's Day",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for Valentine's Day.",
+                "illustration": "https://example.com/valentines-day.png",
+                "tags": [
+                    "Valentine's Day"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 78,
+                "slug": "national-holidays-events",
+                "parentId": 8,
+                "title": "National Holidays & Events",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for national holidays and events.",
+                "illustration": "https://example.com/national-holidays-events.png",
+                "tags": [
+                    "national holidays",
+                    "events"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 79,
+                "slug": "seasonal-activities-trends",
+                "parentId": 8,
+                "title": "Seasonal Activities & Trends",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for seasonal activities and trends.",
+                "illustration": "https://example.com/seasonal-activities-trends.png",
+                "tags": [
+                    "seasonal activities",
+                    "trends"
+                ],
+                "label": "Coming Soon"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "slug": "throwback-nostalgia",
+        "title": "Throwback & Nostalgia",
+        "href": "/captions/[category]",
+        "label":"Top Choice",
+        "description": "Captions for throwback and nostalgic themes.",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/camera.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvY2FtZXJhLnBuZyIsImlhdCI6MTcxOTA4MDQzOCwiZXhwIjoxNzUwNjE2NDM4fQ.ZfbEusaTCb6Bdxf_2bRw-xI2SjvbUAYuGwYVgPeqcHo&t=2024-06-22T18%3A20%3A38.405Z",
+        "subCategories": [
+            {
+                "id": 80,
+                "slug": "childhood-memories",
+                "parentId": 9,
+                "title": "Childhood Memories",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for childhood memories.",
+                "illustration": "https://example.com/childhood-memories.png",
+                "tags": [
+                    "childhood",
+                    "memories"
+                ],
+                "label": "Popular"
+            },
+            {
+                "id": 81,
+                "slug": "old-photos-videos",
+                "parentId": 9,
+                "title": "Old Photos & Videos",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for old photos and videos.",
+                "illustration": "https://example.com/old-photos-videos.png",
+                "tags": [
+                    "old photos",
+                    "videos"
+                ],
+                "label": "Top Choice"
+            },
+            {
+                "id": 82,
+                "slug": "past-experiences-milestones",
+                "parentId": 9,
+                "title": "Past Experiences & Milestones",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for past experiences and milestones.",
+                "illustration": "https://example.com/past-experiences-milestones.png",
+                "tags": [
+                    "experiences",
+                    "milestones"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 83,
+                "slug": "throwback-trends-fads",
+                "parentId": 9,
+                "title": "Throwback Trends & Fads",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for throwback trends and fads.",
+                "illustration": "https://example.com/throwback-trends-fads.png",
+                "tags": [
+                    "trends",
+                    "fads"
+                ],
+                "label": "Trendy"
+            },
+            {
+                "id": 84,
+                "slug": "historical-events-figures",
+                "parentId": 9,
+                "title": "Historical Events & Figures",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for historical events and figures.",
+                "illustration": "https://example.com/historical-events-figures.png",
+                "tags": [
+                    "historical",
+                    "events"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 85,
+                "slug": "vintage-inspiration",
+                "parentId": 9,
+                "title": "Vintage Inspiration",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for vintage inspiration.",
+                "illustration": "https://example.com/vintage-inspiration.png",
+                "tags": [
+                    "vintage",
+                    "inspiration"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 86,
+                "slug": "sentimental-reflections",
+                "parentId": 9,
+                "title": "Sentimental Reflections",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for sentimental reflections.",
+                "illustration": "https://example.com/sentimental-reflections.png",
+                "tags": [
+                    "sentimental",
+                    "reflections"
+                ],
+                "label": "New for you"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "slug": "affirmations-motivation",
+        "title": "Affirmations & Motivation",
+        "href": "/captions/[category]",
+        "label":"For You",
+        "description": "Captions for affirmations and motivational themes.",
+        "illustration": "https://tykfitdqyvyygrnkykou.supabase.co/storage/v1/object/sign/sociagram-icons/captions/motivation.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb2NpYWdyYW0taWNvbnMvY2FwdGlvbnMvbW90aXZhdGlvbi5wbmciLCJpYXQiOjE3MTkwODExOTMsImV4cCI6MTc1MDYxNzE5M30.bsd3Yo81XvZFg1dYjUUvBNoNEIoihzLIGDa-2B-qWxI&t=2024-06-22T18%3A33%3A13.116Z",
+        "subCategories": [
+            {
+                "id": 87,
+                "slug": "positive-quotes-sayings",
+                "parentId": 10,
+                "title": "Positive Quotes & Sayings",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for positive quotes and sayings.",
+                "illustration": "https://example.com/positive-quotes-sayings.png",
+                "tags": [
+                    "positive",
+                    "quotes"
+                ],
+                "label": "Popular"
+            },
+            {
+                "id": 88,
+                "slug": "inspirational-stories-examples",
+                "parentId": 10,
+                "title": "Inspirational Stories & Examples",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for inspirational stories and examples.",
+                "illustration": "https://example.com/inspirational-stories-examples.png",
+                "tags": [
+                    "inspirational",
+                    "stories"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 89,
+                "slug": "self-love-acceptance",
+                "parentId": 10,
+                "title": "Self-Love & Acceptance",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for self-love and acceptance.",
+                "illustration": "https://example.com/self-love-acceptance.png",
+                "tags": [
+                    "self-love",
+                    "acceptance"
+                ],
+                "label": "Top Choice"
+            },
+            {
+                "id": 90,
+                "slug": "goal-setting-achievement",
+                "parentId": 10,
+                "title": "Goal Setting & Achievement",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for goal setting and achievement.",
+                "illustration": "https://example.com/goal-setting-achievement.png",
+                "tags": [
+                    "goal setting",
+                    "achievement"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 91,
+                "slug": "personal-growth-development",
+                "parentId": 10,
+                "title": "Personal Growth & Development",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for personal growth and development.",
+                "illustration": "https://example.com/personal-growth-development.png",
+                "tags": [
+                    "personal growth",
+                    "development"
+                ],
+                "label": "Coming Soon"
+            },
+            {
+                "id": 92,
+                "slug": "overcoming-challenges",
+                "parentId": 10,
+                "title": "Overcoming Challenges",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for overcoming challenges.",
+                "illustration": "https://example.com/overcoming-challenges.png",
+                "tags": [
+                    "overcoming",
+                    "challenges"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 93,
+                "slug": "building-confidence-self-esteem",
+                "parentId": 10,
+                "title": "Building Confidence & Self-Esteem",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for building confidence and self-esteem.",
+                "illustration": "https://example.com/building-confidence-self-esteem.png",
+                "tags": [
+                    "confidence",
+                    "self-esteem"
+                ],
+                "label": "New"
+            },
+            {
+                "id": 94,
+                "slug": "gratitude-mindfulness",
+                "parentId": 10,
+                "title": "Gratitude & Mindfulness",
+                "href": "/captions/[category]/[sub-category]",
+                "description": "Captions for gratitude and mindfulness.",
+                "illustration": "https://example.com/gratitude-mindfulness.png",
+                "tags": [
+                    "gratitude",
+                    "mindfulness"
+                ],
+                "label": "Top Choice"
+            }
+        ]
+    }
+]

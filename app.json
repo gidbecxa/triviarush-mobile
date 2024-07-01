@@ -40,10 +40,9 @@
     },
     "android": {
       "adaptiveIcon": {
-        "icon":"./assets/app icon toolkit/android/ic_launcher_1024.png",
-        "foregroundImage": "./assets/hashtag-fg.png",
-        "backgroundImage": "./assets/gradient-bg.png",
-        "monochromeImage": "./assets/icon-hash-monochrome.png",
+        "icon":"./assets/icon.png",
+        "foregroundImage": "./assets/icon.png",
+        "monochromeImage": "./assets/ic_monochrome.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.captionsbank.app"

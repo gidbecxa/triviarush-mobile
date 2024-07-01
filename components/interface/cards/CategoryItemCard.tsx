@@ -27,25 +27,26 @@ const CategoryItemCard: React.FC<CategoryItemCardProps> = ({ item, onPress }) =>
     return (
         <Card
             elevation={1}
-            style={{ backgroundColor: colors.card, width: width * 0.7, borderWidth: 1.25, borderColor: colors.grey3, borderRadius: 15, marginRight: 12 }}
+            style={{ backgroundColor: colors.card, width: width * 0.7, height: height * 0.16, borderWidth: 1.25, borderColor: colors.grey3, borderRadius: 15, marginRight: 12 }}
             contentStyle={styles.itemCard}
             // className="mr-3"
             onPress={onPress}
             accessibilityHint="Tap to view category details"
         >
-            <View className="flex-col border-0 border-border" style={styles.content}>
-                <Text variant="caption1" style={[fontStyles.dmSansMedium, {color:colors.tertiary}]} accessibilityLabel={`Category: ${item.label}`}>
-                    <Fontisto name="hashtag" size={10} color={colors.tertiary} />
+            <View className="h-full border-0 border-border" style={styles.content}>
+                <Text variant="caption1" style={[fontStyles.dmSansMedium, { color: colors.primary, position: "absolute", top: 0 }]} accessibilityLabel={`Category: ${item.label}`}>
+                    <Fontisto name="hashtag" size={10} color={colors.primary} />
                     {" "}{item.label}
                 </Text>
-                <Text variant="body" style={[fontStyles.dmSansSemiBold, styles.itemTitle]} className="leading-loose">{item.title}</Text>
-                <Text variant="caption1" style={fontStyles.dmSansRegular} className="border-0 border-border">
-                    {item.tags?.map((desc) => capitalizeWords(desc)).join(', ')}
+                <Text variant="subhead" style={[fontStyles.dmSansSemiBold, styles.itemTitle]} className="leading-tight">{item.title}</Text>
+                <Text variant="caption1" style={[fontStyles.dmSansRegular, {marginTop: 4}]} className="border-0 border-border leading-tight">
+                    {/* {item.tags?.map((desc) => capitalizeWords(desc)).join(', ')} */}
+                    {item.description}
                 </Text>
             </View>
 
             <View style={[styles.illustrationContainer, { backgroundColor: "#FFF" }]} className="border-0 border-border">
-                {<ImageIllustration source={{uri: item?.image}} width={48} height={48} />}
+                {<ImageIllustration source={{ uri: item?.illustration }} width={48} height={48} />}
             </View>
         </Card>
     );
@@ -53,8 +54,13 @@ const CategoryItemCard: React.FC<CategoryItemCardProps> = ({ item, onPress }) =>
 
 const styles = StyleSheet.create({
     itemCard: {
+        height: "100%",
         paddingHorizontal: 8,
-        paddingVertical: 16,
+        paddingVertical: 8,
+        flexDirection: "row",
+        alignItems: "center",
+        /* borderColor: "#CCC",
+        borderWidth: 1, */
         /* shadowColor: "#ccc",
         shadowOffset: {
             width: 0,
@@ -63,12 +69,12 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.22,
         shadowRadius: 2.22,
         elevation: 3, */
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center"
+
     },
     content: {
         width: "70%",
+        flexDirection: "column",
+        justifyContent: "flex-end",
         /* borderColor: "#CCC",
         borderWidth: 1, */
     },
