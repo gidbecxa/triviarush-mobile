@@ -2,7 +2,7 @@
     "espresso-dance-challenge": [
         {
             "type": "title",
-            "content": "Espresso dance challenge",
+            "content": "The Espresso dance challenge",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 18
@@ -10,7 +10,7 @@
         },
         {
             "type": "paragraph",
-            "content": "The \"Espresso Dance Challenge\" is the latest craze on TikTok, driven by Sabrina Carpenter's catchy summer hit. This challenge is all about fun, easy-to-follow dance moves that anyone can master. Join the trend by learning the simple choreography and adding your own unique twist. Whether you're a beginner or a seasoned dancer, this challenge is your chance to shine on social media!.",
+            "content": "The latest sensation taking over TikTok is the Espresso Dance Challenge, set to Sabrina Carpenter's upbeat track, \"Espresso.\" This challenge has quickly become a favorite among TikTok users, capturing the spirit of fun and creativity.",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -18,15 +18,39 @@
         },
         {
             "type": "subtitle",
-            "content": "Get Inspired and Join In",
+            "content": "What’s the Hype?",
             "style": {
                 "fontWeight": "bold",
-                "fontSize": 16
+                "fontSize": 17
             }
         },
         {
             "type": "paragraph",
-            "content": "Watch how top TikTok creators are adding their flair to the dance. Use props like coffee cups or try different settings to make your video stand out. Explore trending hashtags like #EspressoDance and #SabrinaCarpenter to see what others are doing and to get your video noticed.",
+            "content": "The Espresso Dance Challenge revolves around a dynamic dance routine that pairs perfectly with the song's catchy beat. The dance includes energetic arm gestures, leg kicks, and body rolls, making it not only visually captivating but also a joy to perform.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Song: “Espresso” by Sabrina Carpenter",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Dance Elements: High-energy moves, synchronized steps, and a whole lot of fun.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Hashtags: #Espresso, #SabrinaCarpenter, #DanceChallenge, #DanceTrend, #EspressoDanceChallenge",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -34,7 +58,15 @@
         },
         {
             "type": "subtitle",
-            "content": "Customize Your Moves",
+            "content": "Join The Fun",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Learn The Dance",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 16
@@ -42,7 +74,7 @@
         },
         {
             "type": "paragraph",
-            "content": "Don't be afraid to add your personal touch. Whether it’s a cool filter or a creative location, make the dance your own. The key is to have fun and enjoy the process, so grab a friend and start dancing!",
+            "content": "Search for tutorial videos on TikTok using the challenge hashtags. There are plenty of creators who break down the steps, making it easy for anyone to join.",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -50,7 +82,7 @@
         },
         {
             "type": "subtitle",
-            "content": "Connect and Share",
+            "content": "Record Your Video",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 16
@@ -58,15 +90,71 @@
         },
         {
             "type": "paragraph",
-            "content": "Post your version of the dance using the trending sounds and tags to reach a wider audience. Engage with other users by liking, commenting, and sharing their videos. This not only boosts your visibility but also helps you connect with the TikTok community.",
+            "content": "Once you've mastered the moves, film yourself dancing to \"Espresso.\"",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
             }
         },
         {
+            "type": "subtitle",
+            "content": "Add Hashtags",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
             "type": "paragraph",
-            "content": "We've curated some of the best videos from this trend. Click the button below and enjoy!",
+            "content": "Use the relevant hashtags in your post to maximize visibility.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Share and Encourage",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Post your version of the dance using the trending sounds and tags to reach a wider audience. Engage with other users by inviting friends to participate too, liking, commenting and sharing their videos. This not only boosts your visibility but also helps you connect with the TikTok community.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Variations",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "While the original routine is a hit, many TikTokers have added their unique spins, from different dance styles to creative edits, making the challenge even more diverse and exciting.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Why Join?",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The Espresso Dance Challenge is more than just a dance; it's a movement that brings together social media users worldwide, fostering a sense of community and shared love for music and dance. Whether you’re a seasoned dancer or a beginner, it’s a great way to express yourself, connect with others, and enjoy some fun exercise.",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -97,10 +185,10 @@
             }
         }
     ],
-    "barbars-rhubarb-dance-challenge": [
+    "cottage-cheese-trend": [
         {
             "type": "title",
-            "content": "'Barbara’s Rhubarb Bar' dance challenge",
+            "content": "Discover the Latest Trend: Cottage Cheese Craze",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 18
@@ -108,7 +196,7 @@
         },
         {
             "type": "paragraph",
-            "content": "The \"Espresso Dance Challenge\" is the latest craze on TikTok, driven by Sabrina Carpenter's catchy summer hit. This challenge is all about fun, easy-to-follow dance moves that anyone can master. Join the trend by learning the simple choreography and adding your own unique twist. Whether you're a beginner or a seasoned dancer, this challenge is your chance to shine on social media!.",
+            "content": "Cottage cheese is taking the internet by storm, especially on TikTok! The hashtag #cottagecheese is buzzing with creative and healthy recipes that are capturing the attention of foodies and fitness enthusiasts alike. Let's dive into why this trend is the perfect blend of nutrition and versatility, and how you can join the movement!",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -116,15 +204,15 @@
         },
         {
             "type": "subtitle",
-            "content": "Get Inspired and Join In",
+            "content": "A Delicious and Nutritious Revolution",
             "style": {
                 "fontWeight": "bold",
-                "fontSize": 16
+                "fontSize": 17
             }
         },
         {
             "type": "paragraph",
-            "content": "Watch how top TikTok creators are adding their flair to the dance. Use props like coffee cups or try different settings to make your video stand out. Explore trending hashtags like #EspressoDance and #SabrinaCarpenter to see what others are doing and to get your video noticed.",
+            "content": "Cottage cheese has always been known for its high protein content and low carbohydrate count, but TikTok creators are pushing the boundaries with new and exciting ways to enjoy this dairy delight. Here’s what you need to know about this trend:",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -132,7 +220,7 @@
         },
         {
             "type": "subtitle",
-            "content": "Customize Your Moves",
+            "content": "Baked Cottage Cheese",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 16
@@ -140,7 +228,7 @@
         },
         {
             "type": "paragraph",
-            "content": "Don't be afraid to add your personal touch. Whether it’s a cool filter or a creative location, make the dance your own. The key is to have fun and enjoy the process, so grab a friend and start dancing!",
+            "content": "The latest hit involves spreading cottage cheese on a baking sheet and popping it in the oven. The result? A crispy, protein-packed snack that's perfect as a bread substitute, a wrap base, or even a standalone treat. This trend is a game-changer for those looking for low-carb alternatives without sacrificing taste or texture.",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -148,7 +236,7 @@
         },
         {
             "type": "subtitle",
-            "content": "Connect and Share",
+            "content": "Cottage Cheese in Desserts",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 16
@@ -156,7 +244,63 @@
         },
         {
             "type": "paragraph",
-            "content": "Post your version of the dance using the trending sounds and tags to reach a wider audience. Engage with other users by liking, commenting, and sharing their videos. This not only boosts your visibility but also helps you connect with the TikTok community.",
+            "content": "Who knew cottage cheese could be sweet? TikTokers are transforming this savory staple into delicious desserts like cottage cheese ice cream and pancakes. These recipes not only satisfy your sweet tooth but also pack a protein punch, making them ideal for a post-workout snack or a guilt-free dessert option.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "The Cottage Cheese Diet",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Some creators are even advocating for a “cottage cheese diet,” combining it with mustard, vegetables, and sausage for a balanced and filling meal. While this diet trend has its proponents, experts caution against overly restrictive eating plans. A balanced approach to nutrition is always the best way forward!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "How to Join the Cottage Cheese Trend",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "1. Explore Recipes",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Search for #cottagecheese on TikTok to discover an array of recipes, from baked snacks to decadent desserts.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "2. Create and Share",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Try your hand at one of the recipes and share your creations using the trending hashtags like #CottageCheeseCraze and #HealthyEating.",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -164,6 +308,822 @@
         },
         {
             "type": "link",
+            "content": "Discover More",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "footnote",
+            "content": "Keep up with the latest trends and challenges on our Discovery page. Stay ahead of the curve and find content ideas that captivate your audience. Sociagram is your ultimate guide to what's hot and how to make it your own. Dive in and get inspired!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        }
+    ],
+    "tiktok-red-trend": [
+        {
+            "type": "title",
+            "content": "Red Trend on TikTok: A Bold Splash in 2024",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 18
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "#RedTrendTikTok is taking TikTok by storm in 2024, racking up a staggering 444.6 million views! This trend isn't just a fleeting moment—it's a vibrant celebration of all things red, from fashion to home decor, and it's painting social media in bold, fiery hues.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Discover the Trend:",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The \"Red Trend\" is a kaleidoscope of creativity, encapsulating various sub-trends that all share one thing in common: a love for the color red. Here’s what’s setting the trend:",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Unexpected Red Theory",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Popularized by interior designer Taylor Simon, this trend encourages using red in surprising ways around your home. Think red walls in your bathroom or a crimson couch in your living room. It's all about making a bold statement and embracing unexpected color choices.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Red Outfits",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Fashion lovers are strutting in red, with TikTok videos showcasing everything from classic red dresses to bold red suits. It’s about making a splash and turning heads with your style choices.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Red Aesthetic",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Red lighting, makeup, and backgrounds are creating a striking visual impact across TikTok, embodying themes of passion, energy, and boldness.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Red, Blue, White Trend",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "This involves blending red with blue and white, often creating patriotic themes or visually striking contrasts that are hard to miss on your feed.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Content Ideas: Dive Into the Red Trend!",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Ready to make your mark on the #RedTrendTikTok? Here are some ideas to get you started:",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "1. Home Decor Hacks",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Show your followers how to incorporate the Unexpected Red Theory into their homes. Try a DIY tutorial on painting a red accent wall or revamping an old piece of furniture with a red finish.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "2. Fashion Forward",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Post a lookbook featuring your favorite red outfits. Mix and match with other colors to show how versatile red can be.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "3. Create a Red Aesthetic",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Use red lighting or makeup to create a captivating video. This is a great way to showcase your creativity and make your content stand out.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "4. Patriotic Palette",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Explore the Red, Blue, White Trend by creating content with these colors. This could be a fun makeup look, a themed party setup, or even a red, white, and blue recipe.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Want to join the trend? It’s easy! Just incorporate red in your next post, use the hashtag #RedTrendTikTok, and watch your engagement soar.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "link",
+            "content": "Discover More",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "footnote",
+            "content": "This article is part of our Trending Content Discovery series. Stay tuned for more trend alerts and creative content ideas! Explore more trending content and discover new ways to boost your social media presence with our app's Discovery feature!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        }
+    ],
+    "kitty-cut-haircut": [
+        {
+            "type": "title",
+            "content": "The Kitty Cut Haircut",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 18
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The \"Kitty Cut\" is taking 2024 by storm, emerging as the go-to hairstyle for those seeking a chic, low-maintenance look. Inspired by the edginess of the \"Wolf Cut\" and the nostalgia of the 1970s \"Shag,\" the Kitty Cut offers a softer, more refined take that suits a variety of face shapes and hair types. The Kitty Cut has taken social media by storm, with countless influencers and celebrities flaunting this chic look, making it a viral sensation.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Why It's Popular",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The Kitty Cut is celebrated for its versatility, suiting various hair types and face shapes. Its low-maintenance nature and flattering layers make it an appealing choice for anyone seeking a stylish yet effortless look.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Who Can Rock It?",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "This haircut is ideal for those wanting a manageable style that adds volume and frames the face beautifully. It's perfect for straight, wavy, or curly hair, making it adaptable to everyone's unique hair texture.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "How to Get the Look",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Consult Your Stylist",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Discuss your hair texture, length, and face shape. Share inspiration pictures to ensure the best outcome.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Styling Tips",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Use a blow dryer and styling mousse for a sophisticated look. Add waves or keep it straight, depending on your preference.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Daily Maintenance",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Minimal effort required—simply blow-dry and style with a few key products to maintain its sleek appearance.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Styles to Consider",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Textured and Side-Part Kitty Cut: Adds body and volume with a side part.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Face-Framing Layers: Accentuates facial features with soft layers around the face.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Kitty Cut with Bangs: Incorporates bangs for a fresh, trendy look.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Soft Waves: Adds drama and elegance with gentle waves.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Collarbone Length: Offers a chic, cascading length just below the collarbone.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Join the Trend:",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "To participate in the Kitty Cut trend, search for #KittyCut on TikTok and Instagram to see various styles and tutorials. Share your new look with the hashtag to join the community and inspire others.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "link",
+            "content": "Discover More",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "footnote",
+            "content": "This article is part of our Trending Content Discovery series. Stay tuned for more trend alerts and creative content ideas! Explore more trending content and discover new ways to boost your social media presence with our app's Discovery feature!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        }
+    ],
+    "reels-visual-replies": [
+        {
+            "type": "title",
+            "content": "Instagram Reels Visual Replies",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 18
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Instagram Reels Visual Replies is revolutionizing how users engage with comments on their Reels. Launched in December 2021, this feature has recently surged in popularity, becoming a must-try for Instagram enthusiasts and creators looking to boost their engagement.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Why It's Trending",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Enhanced Engagement: Reels Visual Replies allow users to respond to comments with a new Reel, fostering more interaction and creativity.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Rising Popularity: Although introduced in 2021, the feature is trending now, gaining traction as users seek new ways to connect and engage on the platform.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "How It Works",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Create a Reel",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Post a Reel on your Instagram account.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Reply with a Reel",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "When you receive a comment, tap the \"Reply\" button next to it.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Select Reels Option",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "A camera icon will appear. Tap this icon to start creating a new Reel.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Record Your Reply",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Include the commenter's comment as a sticker in your Reel.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Share Your Reel",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Post your Reel as a direct reply to the comment.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Key Features",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Direct Interaction: The replied Reel appears as a sticker in the comments section, creating a direct link to the comment it responds to.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Creative Replies: Each reply is a new Reel, allowing for personalized and creative interactions.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Comment Sticker: The original comment is added as a sticker in the reply Reel, making it easy to see the context.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Benefits",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Boosts Engagement: Visual Replies encourage more dynamic and engaging conversations around your content.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Fosters Creativity: This feature allows for more creative expression in replies.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Promotes Video Content: It drives the creation of more video content, enhancing your profile's visibility and appeal.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Join the Trend:",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Try It Out",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Start replying to comments on your Reels with new Reels. This not only engages your audience but also adds a fun, creative twist to your interactions.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Share Your Creativity",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Use the Reels Visual Replies feature to showcase your unique style and build stronger connections with your followers.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "link",
+            "content": "Discover More",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "footnote",
+            "content": "This article is part of our Trending Content Discovery series. Stay tuned for more trend alerts and creative content ideas! Explore more trending content and discover new ways to boost your social media presence with our app's Discovery feature!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        }
+    ],
+    "bridgerton-photo-filter-trend": [
+        {
+            "type": "title",
+            "content": "Bridgerton Filter Challenge",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 18
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Step into the Regency era with the Bridgerton Filter Challenge on TikTok! Inspired by the hit Netflix series \"Bridgerton\", this viral trend allows you to transform into an elegant character from the show using a stunning AI filter.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "What Is It?",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The Bridgerton Filter, officially named \"Bridgerton Portraits\", is a unique AI-powered effect available on TikTok. This trend has captured the hearts of fans by letting them see themselves as part of the Bridgerton universe, complete with historical hairstyles, makeup, and attire from the Regency period.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Why It's Popular",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "This filter offers an immersive experience, transporting users into the opulent world of \"Bridgerton\". It's perfect for fans of the series and those who love a touch of historical elegance. The filter's popularity soared with the release of Bridgerton's highly-anticipated third season, adding to the excitement.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "How to Join the Trend",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "1. Find the Filter",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Open TikTok, tap on the plus icon to access the camera, and go to the 'Effects' section. Search for \"Bridgerton Portraits\".",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "2. Apply the Filter",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Tap on the screen to activate the filter. It will analyze your facial features and instantly transform you into a Bridgerton-style portrait.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "3. Record and Share",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Record your video and share it on TikTok using hashtags like #BridgertonFilter to join the trend.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Tips for Success",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Experiment with Portraits: Try different portraits to see which character fits you best.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Get Creative: Add music, text overlays, or other effects to make your video stand out.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Embrace the Fun: Enjoy the process and let your Bridgerton persona shine through!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Join The Fun",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The Bridgerton Filter Challenge is not just about a fun transformation; it's about connecting with a global community of fans and celebrating a beloved show in a unique way. Dive into the trend, create your Bridgerton portrait, and share your masterpiece with the world!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "link",
+            "content": "Watch Videos",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "subtitle",
             "content": "Discover More",
             "style": {
                 "fontWeight": "bold",
@@ -179,10 +1139,10 @@
             }
         }
     ],
-    "rock-paper-scissors-food-challenge": [
+    "sabrina-please-please-please": [
         {
             "type": "title",
-            "content": "'Rock, paper, scissors, shoot' food challenge",
+            "content": "The \"Please Please Please\" Challenge",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 18
@@ -190,7 +1150,23 @@
         },
         {
             "type": "paragraph",
-            "content": "The \"Espresso Dance Challenge\" is the latest craze on TikTok, driven by Sabrina Carpenter's catchy summer hit. This challenge is all about fun, easy-to-follow dance moves that anyone can master. Join the trend by learning the simple choreography and adding your own unique twist. Whether you're a beginner or a seasoned dancer, this challenge is your chance to shine on social media!.",
+            "content": "The \"Please Please Please\" trend is sweeping across social media platforms, driven by the catchy and emotionally charged song by Sabrina Carpenter. This trend is all about expressing creativity through dance, lip syncs, and fan edits. It’s a perfect way to showcase your talent and connect with fellow fans of Sabrina Carpenter.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "🎶 Song: \"Please Please Please\" by Sabrina Carpenter.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "🔗 Hashtags: #PleasePleasePlease, #SabrinaCarpenter",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -198,15 +1174,31 @@
         },
         {
             "type": "subtitle",
-            "content": "Get Inspired and Join In",
+            "content": "Why It’s Hot",
             "style": {
                 "fontWeight": "bold",
-                "fontSize": 16
+                "fontSize": 17
             }
         },
         {
             "type": "paragraph",
-            "content": "Watch how top TikTok creators are adding their flair to the dance. Use props like coffee cups or try different settings to make your video stand out. Explore trending hashtags like #EspressoDance and #SabrinaCarpenter to see what others are doing and to get your video noticed.",
+            "content": "• Massive Engagement: The hashtag #PleasePleasePlease has amassed over 273 million views on TikTok alone, with countless videos generating millions of engagements.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Viral Audio: Sabrina Carpenter’s track is currently the #1 trending audio on Instagram, featuring in over 264,000 posts as of June 24.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Wide Appeal: The trend’s versatility makes it popular across various content types, from dance videos to lip syncs and even creative fan edits.",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -214,15 +1206,31 @@
         },
         {
             "type": "subtitle",
-            "content": "Customize Your Moves",
+            "content": "Insights",
             "style": {
                 "fontWeight": "bold",
-                "fontSize": 16
+                "fontSize": 17
             }
         },
         {
             "type": "paragraph",
-            "content": "Don't be afraid to add your personal touch. Whether it’s a cool filter or a creative location, make the dance your own. The key is to have fun and enjoy the process, so grab a friend and start dancing!",
+            "content": "• TikTok Views: 273 million+",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Instagram Posts: 264,000+",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Spotify Streams: 100 million+",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -230,7 +1238,15 @@
         },
         {
             "type": "subtitle",
-            "content": "Connect and Share",
+            "content": "How to Join the Trend",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "1. Choose Your Content",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 16
@@ -238,7 +1254,87 @@
         },
         {
             "type": "paragraph",
-            "content": "Post your version of the dance using the trending sounds and tags to reach a wider audience. Engage with other users by liking, commenting, and sharing their videos. This not only boosts your visibility but also helps you connect with the TikTok community.",
+            "content": "Decide if you want to create a dance video, a lip sync, or a fan edit.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "2. Get Inspired",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Search for \"Please Please Please\" on TikTok or YouTube to see what other creators are doing.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "3. Create Your Masterpiece",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Record your video or craft your content using the song.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "4. Boost Visibility",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Use the trending hashtags to make your content discoverable.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "💡 Pro Tip",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Leverage the song’s catchy lyrics to create unique and engaging content. For example, brands are using lines like “I know I have good judgement, I know I have good taste” to promote their products.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Get Started Now!",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Ready to dive into the \"Please Please Please\" trend? Grab your camera, get creative, and start sharing your love for Sabrina Carpenter’s hit song! Make sure to tag your posts with #PleasePleasePlease to join the community and boost your reach.",
             "style": {
                 "fontWeight": "normal",
                 "fontSize": 15
@@ -246,6 +1342,556 @@
         },
         {
             "type": "link",
+            "content": "Watch Videos",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Discover More",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "footnote",
+            "content": "Keep exploring our Discovery page for the latest trends and challenges. Sociagram is your go-to app for staying updated on what's hot and helping you create content that captures attention. Dive in and join the fun!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        }
+    ],
+    "instagram-ai-backdrop": [
+        {
+            "type": "title",
+            "content": "Instagram's AI Backdrop for Stories",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 18
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Instagram's new AI Backdrop feature brings a fresh and creative way to enhance your story photos with unique, AI-generated backgrounds. Whether you want a tropical beach or a cosmic scene, this tool lets you transform your photos into something truly special.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Key Features",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• AI-Powered Backgrounds: Change your story photo backgrounds with AI-generated imagery based on your text prompts.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Beta Testing: Currently in beta, this feature is expected to be widely available soon",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Creative Possibilities: From \"space scene\" to \"disco party\", the possibilities are endless for making your stories stand out.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "How to Use AI Backdrops:",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "1. Open Instagram and Create a Story",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Take a new photo or select one from your camera roll. Ensure your subject leaves some space for the AI backdrop.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "2. Find the AI Backdrop Button",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "On the story editing screen, look for the AI Backdrop button. It looks like a photo with a star icon in the top-right corner",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "3. Enter a Prompt",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Tap the AI Backdrop button and type in a specific prompt describing the background you want. Examples include \"underwater world\", \"forest path\", or \"retro diner\".",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "4. Generate the Background",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Instagram will analyze your photo and create a background based on your prompt. Feel free to experiment with different prompts until you find one that you love.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "5. Adjust and Save",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "You can reposition or resize the generated background to fit your story perfectly. Once satisfied, save your story and share it with your followers.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "💡 Tips for Using AI Backdrops",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Be Specific with Prompts: The more detailed your prompt, the better the AI will understand and generate the desired background.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Experiment: Try different prompts and see what creative backgrounds you can come up with.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Have Fun: This feature is a great way to make your stories more engaging and entertaining. Enjoy exploring the endless possibilities!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Get Started Now!",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Ready to try out the AI Backdrop feature? Open Instagram, create a story, and start playing with AI-generated backgrounds today! Remember to update your app regularly to access new features",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "link",
+            "content": "Watch Videos",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Discover More",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "footnote",
+            "content": "Keep exploring our Discovery page for the latest trends and challenges. Sociagram is your go-to app for staying updated on what's hot and helping you create content that captures attention. Dive in and join the fun!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        }
+    ],
+    "barbara-rhubarb-dance-challenge": [
+        {
+            "type": "title",
+            "content": "Barbara's Rhubarb Bar",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 18
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "🕺💃 The \"Barbara's Rhubarb Bar\" trend is taking TikTok and other social media platforms by storm! It all started with a catchy rap song by German comedian Bodo Wartke and music producer Marti Fischer. The song, based on a tongue-twister, narrates the quirky tale of Barbara and her love for rhubarb, with lyrics that get more intricate as the song progresses. The melody is infectious, and the lyrics, despite being in German, have captured the hearts of millions worldwide.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Why Is It A Hit?",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "🎶 Catchy Melody: The song is irresistibly catchy, making it a perfect candidate for a viral dance trend.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "🤣 Humor Factor: The playful and funny lyrics add a unique charm, even if you don’t understand German.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "How Did It Go Viral?",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "It all kicked off with Wartke and Fischer’s performance of the song, which quickly gained traction. Then, Australian TikTokers Stephanie and Christina took it to the next level by choreographing a dance routine in a public bathroom, sparking a wave of imitations. Now, millions of users, including popular choreographers, are putting their spin on the dance, making \"Barbara's Rhubarb Bar\" an international sensation.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Trend Insights",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "📅 Start Date: April 2024",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "📈 Peak Popularity: Over 10 million TikTok videos using the song",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "🌎 Global Reach: Featured on platforms like YouTube and Instagram",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "How to Join the Fun",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Learn the Dance",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Check out Stephanie and Christina’s original bathroom dance video for some inspiration. Remember, the funnier and more unique your location, the better!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Record Your Version",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Use the song \"Barbaras Rhabarberbar\" and create your dance routine. Be creative and try to add your twist to the trend.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Share on Social Media",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Post your video on TikTok, Instagram, or YouTube with the hashtag #BarbarasRhubarberbar. You could tag the original creators for a chance to get noticed!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Join the Trend",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "This is your chance to be part of a global sensation! Whether you're a dancer or just someone who loves a good laugh, \"Barbara's Rhubarb Bar\" has something for everyone. Ready to get started? Put on your dancing shoes, grab your phone, and join the fun!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "link",
+            "content": "Watch Videos",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Discover More",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "footnote",
+            "content": "Keep exploring our Discovery page for the latest trends and challenges. Sociagram is your go-to app for staying updated on what's hot and helping you create content that captures attention. Dive in and join the fun!",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        }
+    ],
+    "lets-dance-emma-stone": [
+        {
+            "type": "title",
+            "content": "Barbara's Rhubarb Bar",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 18
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The \"Let's Dance Emma Stone\" trend is taking over social media! Featuring a hilarious clip from the 2012 Oscars where Emma Stone playfully invites Jonah Hill to dance on stage, this trend has become a viral sensation on platforms like TikTok and Instagram. Users are getting creative by lip-syncing to the clip's audio or recreating the dance scene with their own twist.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Trend Insights",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• TikTok Views: Over 309.1 million",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Instagram Posts: More than 40,000",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "• Engagement: High levels of likes, shares, and comments, making it one of the most engaging trends of the year.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "Why It's Popular",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Emma Stone's infectious energy and the comedic context of the clip have struck a chord with users. The trend's simplicity and the ability to add a personal touch make it a hit, appealing to a wide range of audiences.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "How to Participate",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 17
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "1. Find the Clip",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Search for \"Let's Dance Emma Stone\" on TikTok or Instagram.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "2. Create Your Version",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Use the song \"Barbaras Rhabarberbar\" and create your dance routine. Be creative and try to add your twist to the trend.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "subtitle",
+            "content": "3. Share",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Post your video with the hashtags #LetsDanceEmmaStone and #DanceWithEmma to join the viral wave.",
+            "style": {
+                "fontWeight": "normal",
+                "fontSize": 15
+            }
+        },
+        {
+            "type": "link",
+            "content": "Watch Videos",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": 16
+            }
+        },
+        {
+            "type": "subtitle",
             "content": "Discover More",
             "style": {
                 "fontWeight": "bold",

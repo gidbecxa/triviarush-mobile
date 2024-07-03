@@ -20,6 +20,7 @@ export interface TrendingArticle {
   description: string;
   image: string;
   tags: string[];
+  stats?: string;
   content?: ContentBlock[]; // To conform to the JSON schema in data/schema/contentSchema.json
 }
 

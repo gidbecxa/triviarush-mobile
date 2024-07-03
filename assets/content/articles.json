@@ -1,44 +1,145 @@
 [
     {
         "id": 1,
-        "resourceId": "espresso-dance-challenge",
-        "title": "Espresso dance challenge",
+        "resourceId": "cottage-cheese-trend",
+        "title": "Cottage cheese Trend",
         "href": "/discovery/[article]",
-        "description": "This tune by Sabrina Carpenter is the song of summer!",
-        "image": "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGFuY2UlMjBjaGFsbGVuZ2V8ZW58MHx8MHx8fDA%3D",
+        "description": "Cottage cheese is taking the internet by storm, especially on TikTok!",
+        "image": "https://cdn.pixabay.com/photo/2022/04/18/09/57/cottage-cheese-7140007_1280.jpg",
         "tags": [
             "TikTok",
-            "Dance",
-            "New"
+            "Food",
+            "Trend"
         ],
-        "label": "New for you"
+        "label": "Trending on TikTok",
+        "stats": "470 million views"
     },
     {
         "id": 2,
+        "resourceId": "sabrina-please-please-please",
+        "title": "Please, Please, Please",
+        "href": "/discovery/[article]",
+        "description": "This trend is all about expressing creativity through dance, lip syncs, and fan edits.",
+        "image": "https://i.scdn.co/image/ab67616d0000b273de84adf0e48248ea2d769c3e",
+        "tags": [
+            "Instagram",
+            "Music",
+            "TikTok"
+        ],
+        "label": "1 audio on Instagram",
+        "stats": "273 million+ posts"
+    },
+    {
+        "id": 3,
+        "resourceId": "kitty-cut-haircut",
+        "title": "Kitty Cut Haircut Trend",
+        "href": "/discovery/[article]",
+        "description": "The Kitty Cut is the trending haircut of 2024.",
+        "image": "https://i.pinimg.com/564x/4c/cf/6f/4ccf6ffa257bd9e8707cd7d2c10ed7a7.jpg",
+        "tags": [
+            "TikTok",
+            "Instagram",
+            "Beauty"
+        ],
+        "label": "Hottest Haircut Trend"
+    },
+    {
+        "id": 4,
+        "resourceId": "reels-visual-replies",
+        "title": "Instagram Reels Visual Replies",
+        "href": "/discovery/[article]",
+        "description": "A fun and engaging way to interact with your audience on Instagram.",
+        "image": "https://techcrunch.com/wp-content/uploads/2021/12/instagram-reels-replies.jpeg?resize=1536,776",
+        "tags": [
+            "Instagram",
+            "Reels",
+            "Feature"
+        ],
+        "label": "New Instagram Feature"
+    },
+    {
+        "id": 5,
+        "resourceId": "espresso-dance-challenge",
+        "title": "The Espresso Dance Challenge",
+        "href": "/discovery/[article]",
+        "description": "The latest sensation taking over TikTok is the Espresso Dance Challenge",
+        "image": "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
+        "tags": [
+            "TikTok",
+            "Instagram",
+            "Dance"
+        ],
+        "label": "Trending in June"
+    },
+    {
+        "id": 6,
+        "resourceId": "bridgerton-photo-filter-trend",
+        "title": "Bridgerton Photo Filter",
+        "href": "/discovery/[article]",
+        "description": "Step into the Regency era with the Bridgerton Filter on TikTok!",
+        "image": "https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQf9Y-D6FTzsO1-KDKw_RKkaOb6omexs-3J3cH5zWuxBXP9IA_CAMOGlMXJM0T93FTBWOpdtvw8cvE_NXBgJKH3zPvR8sV6tMduAHjz7HWkXj1yO2BAe4h0PARj2czKnYHNQWvK1_9diZ_bVIr08tQbQ5XgM.jpg?r=43a",
+        "tags": [
+            "TikTok",
+            "Photo",
+            "Instagram"
+        ],
+        "label": "Trending in June",
+        "stats": "90.5 million posts"
+    },
+    {
+        "id": 7,
+        "resourceId": "kitty-cut-haircut",
+        "title": "Kitty Cut Haircut Trend",
+        "href": "/discovery/[article]",
+        "description": "The Kitty Cut is the trending haircut of 2024.",
+        "image": "https://i.pinimg.com/564x/4c/cf/6f/4ccf6ffa257bd9e8707cd7d2c10ed7a7.jpg",
+        "tags": [
+            "TikTok",
+            "Instagram",
+            "Beauty"
+        ],
+        "label": "Hottest Haircut Trend"
+    },
+    {
+        "id": 8,
+        "resourceId": "instagram-ai-backdrop",
+        "title": "Instagram's AI Backdrop",
+        "href": "/discovery/[article]",
+        "description": "Instagram's new AI Backdrop feature brings a fresh and creative way to enhance your story photos with unique, AI-generated backgrounds",
+        "image": "https://img.freepik.com/free-photo/woman-surrounded-by-pink-balloons_23-2148255315.jpg?t=st=1719889468~exp=1719893068~hmac=744031922eab3c06804cbb0a5951ec224557dfcde37506b99a4c8c8899ae4ece&w=996",
+        "tags": [
+            "Instagram",
+            "Feature",
+            "Stories"
+        ],
+        "label": "New on Instagram"
+    },
+    {
+        "id": 9,
         "resourceId": "barbars-rhubarb-dance-challenge",
-        "title": "'Barbara’s Rhubarb Bar' dance challenge",
+        "title": "Pops of Cherry Trend",
         "href": "/discovery/[article]",
         "description": "'Barbaras Rhabarberbar', is a trending German rap song on TikTok.",
-        "image": "https://images.unsplash.com/photo-1495791185843-c73f2269f669?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFuY2UlMjBjaGFsbGVuZ2V8ZW58MHx8MHx8fDA%3D",
+        "image": "https://img.freepik.com/free-photo/woman-surrounded-by-pink-balloons_23-2148255315.jpg?t=st=1719889468~exp=1719893068~hmac=744031922eab3c06804cbb0a5951ec224557dfcde37506b99a4c8c8899ae4ece&w=996",
         "tags": [
             "TikTok",
             "Dance",
             "Top Choice"
         ],
-        "label": "1 in June"
+        "label": "TikTok Fashion"
     },
     {
-        "id": 3,
-        "resourceId": "rock-paper-scissors-food-challenge",
-        "title": "'Rock, paper, scissors, shoot' food challenge",
+        "id": 10,
+        "resourceId": "lets-dance-emma-stone",
+        "title": "Let's Dance",
         "href": "/discovery/[article]",
         "description": "Grab some burgers, fries and a friend to join you in this viral TikTok food challenge.",
-        "image": "https://images.unsplash.com/photo-1564759224907-65b945ff0e84?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGVhdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
+        "image": "https://img.freepik.com/free-photo/woman-surrounded-by-pink-balloons_23-2148255315.jpg?t=st=1719889468~exp=1719893068~hmac=744031922eab3c06804cbb0a5951ec224557dfcde37506b99a4c8c8899ae4ece&w=996",
         "tags": [
             "TikTok",
             "Game",
             "Food"
         ],
-        "label": "Trending on TikTok"
+        "label": "40.8K Posts on Instagram"
     }
 ]

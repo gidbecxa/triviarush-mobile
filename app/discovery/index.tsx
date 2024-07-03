@@ -56,6 +56,8 @@ const TrendingFrontPage = () => {
         )
     };
 
+    console.log('Articles: ', articles)
+
     const data = selectedTag === 'All'
         ? articles.filter((article) =>
             article.title.toLowerCase().includes(searchTerm.toLowerCase())

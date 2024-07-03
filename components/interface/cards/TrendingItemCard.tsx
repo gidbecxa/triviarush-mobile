@@ -25,7 +25,7 @@ const TrendingItemCard: React.FC<TrendingCardProps> = ({ item, onPress }) => {
             <Fontisto name="hashtag" size={10} color={colors.tertiary} />
             {" "}{item.label}
           </Text>
-          <Text variant="body" style={[fontStyles.dmSansSemiBold, styles.title, { color: "white", verticalAlign: "top", height: 46 }]} className="leading-tight border-0 border-border" numberOfLines={2}>{item.title}</Text>
+          <Text variant="body" style={[fontStyles.dmSansSemiBold, styles.title, { color: "white", verticalAlign: "top" }]} className="leading-tight border-0 border-border">{item.title}</Text>
           <Text variant="caption1" style={[fontStyles.dmSansRegular, { color: "white" }]} numberOfLines={1}>{item.description}</Text>
         </LinearGradient>
         {/* </View> */}

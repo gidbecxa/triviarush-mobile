@@ -18,6 +18,7 @@ import { ActivityIndicator } from '~/components/nativewindui/ActivityIndicator';
 export default function ArticlePage() {
     const localParams = useLocalSearchParams();
     const { article: articleId } = localParams;
+    console.log('Article ID: ', articleId);
     const { width, height } = useWindowDimensions();
     const { colors } = useColorScheme();
 
@@ -58,7 +59,7 @@ export default function ArticlePage() {
     return (
         <ScrollView className='flex-1'>
             {/* <TopAppBar /> */}
-            <Image source={image} style={{ width, height: height * 0.4, position: "relative", zIndex: 1 }} className='object-cover' />
+            <Image source={{uri: image}} style={{ width, height: height * 0.4, position: "relative", zIndex: 1 }} className='object-cover' />
 
             <Link href="/discovery" style={{ position: "absolute", top: 40, left: 12, zIndex: 3, backgroundColor: 'rgba(205, 205, 205, 0.5)', borderRadius: 50 }} className='p-3 rounded-full'>
                 {/* <Ionicons name="chevron-back" size={24} color="#FFF" /> */}

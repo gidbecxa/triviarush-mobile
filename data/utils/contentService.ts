@@ -7,10 +7,11 @@ import { ContentBlock, TrendingArticle } from "../types";
  * local file import method
  */
 export async function fetchContentById(articleId: string): Promise<ContentBlock[]> {
+    console.log('Content ID: ', articleId);
     try {
         const articles = await import('../../assets/content/content.json');
         const content = articles[articleId];
-        // const content = articles.default[articleId]
+        // const content = articles.default[articleId];
         if (!content) {
             throw new Error(`Content not found for articleId: ${articleId}`);
         }

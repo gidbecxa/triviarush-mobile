@@ -32,7 +32,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
 
     useEffect(() => {
         if (section.id === 'discovery') {
-            setData(articlesMetaData);
+            setData(articlesMetaData.slice(0, 4));
         } else if (section.id === 'captions') {
             const filtered = captionsCategories.filter(
                 (category) =>
