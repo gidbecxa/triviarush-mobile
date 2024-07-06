@@ -1,4 +1,4 @@
-import ARTICLES_DATA from "../discovery";
+import ARTICLES_METADATA from "../discovery";
 // import { loadArticleContent } from "./contentLoader";
 import { ContentBlock, TrendingArticle } from "../types";
 
@@ -40,7 +40,7 @@ export async function fetchContentAPI(articleId: string): Promise<ContentBlock[]
 }
 
 /* export const getDiscoveryArticle = (articleId: string): TrendingArticle | null => {
-    const articleMetaData = ARTICLES_DATA.find((article) => article.articleId === articleId);
+    const articleMetaData = ARTICLES_METADATA.find((article) => article.articleId === articleId);
     if (!articleMetaData) {
         throw new Error(`Article with id ${articleId} not found`);
         return null;
@@ -53,7 +53,7 @@ export async function fetchContentAPI(articleId: string): Promise<ContentBlock[]
 }; */
 
 /* export async function fetchContentById(articleId: string): Promise<ContentBlock[]> {
-    const articleMetaData = ARTICLES_DATA.find((article) => article.articleId === articleId);
+    const articleMetaData = ARTICLES_METADATA.find((article) => article.articleId === articleId);
     if (!articleMetaData) {
         throw new Error(`Article with id ${articleId} not found`);
     }

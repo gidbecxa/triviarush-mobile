@@ -62,9 +62,9 @@ const ANDROID_COLORS = {
     root: 'rgb(255, 255, 255)',
     card: 'rgb(255, 255, 255)',
     destructive: 'rgb(237, 28, 36)', // changed. To be modified for the others
-    primary: 'rgb(58, 134, 255)',
-    secondary: 'rgb(131, 56, 236)',
-    tertiary: 'rgb(255, 0, 110)',
+    primary: 'rgb(255, 0, 110)',
+    secondary: 'rgb(58, 134, 255)',
+    tertiary: 'rgb(131, 56, 236)',
     greyalpha1: 'rgba(193, 198, 215, 0.85)',
     cardalpha1: 'rgba(255, 255, 255, 0.85)',
     cardalpha2: 'rgba(255, 255, 255, 0.55)',

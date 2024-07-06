@@ -112,20 +112,14 @@ const RichContentRenderer: React.FC<RichContentRendererProps> = ({ content }) =>
                         return <Image key={`${block.type}-${index}`} source={{ uri: block.content }} style={{ width: width - 20, height: 200, resizeMode: 'contain', marginBottom: 10 }} />;
                     case 'link':
                         return (
-                            <Link
+                            <Text
                                 key={`${block.type}-${index}`}
-                                href="#"
-                                style={[{ width: width / 2, color: colors.primary, borderColor: colors.primary, }, otherStyles.link]}
-                                className='flex-row items-center border-2 rounded-full py-2 box-border px-2'
-                                asChild
+                                variant="heading"
+                                style={[fontStyles.dmSansSemiBold, styles]}
+                                className='leading-loose mt-8 pt-4 border-t border-border'
                             >
-                                <Pressable>
-                                    <Text style={[fontStyles.dmSansMedium, styles, { color: colors.primary }]} className='border-0 border-border relative bottom-0.5'>
-                                        {block.content}
-                                    </Text>
-                                    <Icon name="chevron-right" color={colors.primary} size={24} />
-                                </Pressable>
-                            </Link>
+                                {block.content}
+                            </Text>
                         );
                     default:
                         return null;
@@ -140,3 +134,20 @@ const otherStyles = StyleSheet.create({
 })
 
 export default RichContentRenderer;
+
+/**
+ * <Link
+    key={`${block.type}-${index}`}
+    href="/playground"
+    style={[{ width: width / 2, color: colors.primary, borderColor: colors.primary, }, otherStyles.link]}
+    className='flex-row items-center border-2 rounded-full py-2 box-border px-2'
+    asChild
+>
+    <Pressable>
+        <Text style={[fontStyles.dmSansMedium, styles, { color: colors.primary }]} className='border-0 border-border relative bottom-0.5'>
+            {block.content}
+        </Text>
+        <Icon name="chevron-right" color={colors.primary} size={24} />
+    </Pressable>
+</Link>
+ */

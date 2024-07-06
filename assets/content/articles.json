@@ -31,17 +31,18 @@
     },
     {
         "id": 3,
-        "resourceId": "kitty-cut-haircut",
-        "title": "Kitty Cut Haircut Trend",
+        "resourceId": "tiktok-red-trend",
+        "title": "Red Trend on TikTok 2024",
         "href": "/discovery/[article]",
-        "description": "The Kitty Cut is the trending haircut of 2024.",
-        "image": "https://i.pinimg.com/564x/4c/cf/6f/4ccf6ffa257bd9e8707cd7d2c10ed7a7.jpg",
+        "description": "Embrace the Red Revolution!",
+        "image": "https://images.pexels.com/photos/1267369/pexels-photo-1267369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "tags": [
             "TikTok",
-            "Instagram",
-            "Beauty"
+            "Fashion",
+            "Interior Design"
         ],
-        "label": "Hottest Haircut Trend"
+        "label": "Trending in 2024",
+        "stats": "114.4 million+ posts"
     },
     {
         "id": 4,
@@ -55,21 +56,22 @@
             "Reels",
             "Feature"
         ],
-        "label": "New Instagram Feature"
+        "label": "For You"
     },
     {
         "id": 5,
         "resourceId": "espresso-dance-challenge",
-        "title": "The Espresso Dance Challenge",
+        "title": "Espresso Dance Challenge",
         "href": "/discovery/[article]",
         "description": "The latest sensation taking over TikTok is the Espresso Dance Challenge",
         "image": "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5",
         "tags": [
             "TikTok",
-            "Instagram",
+            "YouTube",
             "Dance"
         ],
-        "label": "Trending in June"
+        "label": "Trending in June",
+        "stats": "4.9 million posts"
     },
     {
         "id": 6,
@@ -98,7 +100,8 @@
             "Instagram",
             "Beauty"
         ],
-        "label": "Hottest Haircut Trend"
+        "label": "Hottest Haircut Trend",
+        "stats": "120 million+ posts"
     },
     {
         "id": 8,
@@ -106,7 +109,7 @@
         "title": "Instagram's AI Backdrop",
         "href": "/discovery/[article]",
         "description": "Instagram's new AI Backdrop feature brings a fresh and creative way to enhance your story photos with unique, AI-generated backgrounds",
-        "image": "https://img.freepik.com/free-photo/woman-surrounded-by-pink-balloons_23-2148255315.jpg?t=st=1719889468~exp=1719893068~hmac=744031922eab3c06804cbb0a5951ec224557dfcde37506b99a4c8c8899ae4ece&w=996",
+        "image": "https://media.licdn.com/dms/image/D4D12AQHbh7Ql1PsFgw/article-cover_image-shrink_720_1280/0/1702642524079?e=2147483647&v=beta&t=S5GetZnvScgKMUgtc_KCFX-LU2_zBK_xmj2hTLsIw0A",
         "tags": [
             "Instagram",
             "Feature",
@@ -116,17 +119,17 @@
     },
     {
         "id": 9,
-        "resourceId": "barbars-rhubarb-dance-challenge",
-        "title": "Pops of Cherry Trend",
+        "resourceId": "barbara-rhubarb-dance-challenge",
+        "title": "Barbara's Rhubarb Bar Trend",
         "href": "/discovery/[article]",
-        "description": "'Barbaras Rhabarberbar', is a trending German rap song on TikTok.",
-        "image": "https://img.freepik.com/free-photo/woman-surrounded-by-pink-balloons_23-2148255315.jpg?t=st=1719889468~exp=1719893068~hmac=744031922eab3c06804cbb0a5951ec224557dfcde37506b99a4c8c8899ae4ece&w=996",
+        "description": "The \"Barbara's Rhubarb Bar\" trend is taking TikTok and other social media platforms by storm!",
+        "image": "https://e3.365dm.com/24/05/1600x900/skynews-bodo-wartke-marti-fischer_6541877.jpg?20240503160026",
         "tags": [
             "TikTok",
-            "Dance",
-            "Top Choice"
+            "Dance"
         ],
-        "label": "TikTok Fashion"
+        "label": "Trending on TikTok",
+        "stats": "200 million+ posts"
     },
     {
         "id": 10,
@@ -134,12 +137,13 @@
         "title": "Let's Dance",
         "href": "/discovery/[article]",
         "description": "Grab some burgers, fries and a friend to join you in this viral TikTok food challenge.",
-        "image": "https://img.freepik.com/free-photo/woman-surrounded-by-pink-balloons_23-2148255315.jpg?t=st=1719889468~exp=1719893068~hmac=744031922eab3c06804cbb0a5951ec224557dfcde37506b99a4c8c8899ae4ece&w=996",
+        "image": "https://static3.mujerhoy.com/www/multimedia/202401/26/media/cortadas/emma-stone-cambios-look-pelo-kuRH-U2101349567837EqH-1248x1248@MujerHoy.jpg",
         "tags": [
             "TikTok",
-            "Game",
-            "Food"
+            "Instagram",
+            "Music"
         ],
-        "label": "40.8K Posts on Instagram"
+        "label": "40.8K Posts on Instagram",
+        "stats": "309.1 million+ views"
     }
 ]

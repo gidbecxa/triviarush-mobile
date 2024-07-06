@@ -24,10 +24,10 @@
       "tsconfigPaths": true
     },
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon_alt.png",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash_alt.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -40,9 +40,9 @@
     },
     "android": {
       "adaptiveIcon": {
-        "icon":"./assets/icon.png",
-        "foregroundImage": "./assets/icon.png",
-        "monochromeImage": "./assets/ic_monochrome.png",
+        "icon":"./assets/icon_alt.png",
+        "foregroundImage": "./assets/icon_alt.png",
+        "monochromeImage": "./assets/icon_alt_monochrome.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.captionsbank.app"

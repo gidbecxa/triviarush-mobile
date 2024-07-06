@@ -1,38 +1,56 @@
 import { Icon } from "@roninoss/icons";
 import {
     Image,
-    Pressable,
     useWindowDimensions,
     View,
     StyleSheet,
     ImageBackground
 } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useHeaderHeight } from "@react-navigation/elements";
 import { Text } from "~/components/nativewindui/Text";
 import { useColorScheme } from "~/lib/useColorScheme";
 import * as NavigationBar from 'expo-navigation-bar';
 import { useLayoutEffect, useState } from "react";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { TouchableOpacity } from "react-native";
 import { ActivityIndicator } from "~/components/nativewindui/ActivityIndicator";
 // import GoogleIcon from "~/components/interface/GoogleIcon";
 
+import { useAppContext } from "~/store/AppContext";
+import { Sheet, useSheetRef } from "~/components/nativewindui/Sheet";
+import { fontStyles } from "./_layout";
+
 export default function GetStarted() {
+    const { setIsFirstLaunch } = useAppContext();
+
     const { width, height } = useWindowDimensions();
-    const insets = useSafeAreaInsets();
-    const headerHeight = useHeaderHeight();
-    const vh = height - headerHeight - insets.bottom - insets.top;
     const { colors } = useColorScheme();
 
     const [loading, setLoading] = useState(false);
+    const bottomSheetModalRef = useSheetRef();
+    const sheetPoints = [400];
 
-    const load = () => {
+    const handleOpenSheet = () => {
+        bottomSheetModalRef.current?.present();
+    }
+
+    const handleSheetClose = () => {
+        setIsFirstLaunch(false);
+        setLoading(true);
+        bottomSheetModalRef.current?.close();
+        setTimeout(() => {
+            setLoading(false);
+            router.replace("/");
+        }, 3000);
+    };
+
+    const handleGetStartedNoSignIn = () => {
+        setIsFirstLaunch(false);
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
+            router.replace("/");
         }, 3000);
-    };
+    }
 
     useLayoutEffect(() => {
         NavigationBar.setVisibilityAsync('hidden');
@@ -50,7 +68,7 @@ export default function GetStarted() {
         >
             <View style={{ backgroundColor: "rgba(0,0,0,0.5)", flexDirection: "column", justifyContent: "space-between" }} className="flex-1 pb-3">
                 <View style={{ height: height * 0.45, flexDirection: "row", alignItems: "flex-end" }} className="justify-center">
-                    <Text style={[styles.borel, { color: colors.background }]} variant={"largeTitle"} className="text-center tracking-tighter">Soociagram</Text>
+                    <Text style={[styles.borel, { color: colors.background }]} variant={"largeTitle"} className="text-center tracking-tighter">Sociagram</Text>
                 </View>
 
                 {loading && (
@@ -59,25 +77,45 @@ export default function GetStarted() {
 
                 <View style={[styles.buttonsContainer, { height: height * 0.4 }]} className="gap-3">
                     <Text variant={"subhead"} style={{ color: colors.background }} className="font-medium text-center">Sign In</Text>
-                    <TouchableOpacity style={[styles.button, { elevation: 3, }]} className="bg-background flex-row gap-1" onPress={load}>
+                    <TouchableOpacity style={[styles.button, { elevation: 3, }]} className="bg-background flex-row gap-1" onPress={handleOpenSheet}>
                         <View style={{ width: 20, height: 20 }} className="flex items-center justify-center">
                             <Image source={require('~/assets/google_g_icon.png')} className="w-full h-full" resizeMode="center" />
                         </View>
                         <Text variant="subhead" className="text-black">{" "}Sign In With Google</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.button, { elevation: 3, }]} className="bg-foreground flex-row gap-1" onPress={load}>
+                    <TouchableOpacity style={[styles.button, { elevation: 3, }]} className="bg-foreground flex-row gap-1" onPress={handleOpenSheet}>
                         <Icon name="apple" size={20} color="#FFF" />
                         <Text variant="subhead" style={{ color: colors.background }}>{" "}Sign In With Apple</Text>
                     </TouchableOpacity>
-                    <Link href="/home" style={styles.button} asChild>
-                        <TouchableOpacity style={{ backgroundColor: colors.cardalpha2, paddingVertical: 10, }} className="flex-row border-2 border-border">
-                            <Text variant="subhead" className="text-background font-semibold">Get Started Without Sign In</Text>
-                        </TouchableOpacity>
-                    </Link>
+                    {/* <Link href="#" style={styles.button} asChild> */}
+                    <TouchableOpacity onPress={handleGetStartedNoSignIn} style={[styles.button, { backgroundColor: colors.cardalpha2, paddingVertical: 10, }]} className="flex-row border-2 border-border">
+                        <Text variant="subhead" className="text-background font-semibold">Get Started Without Sign In</Text>
+                    </TouchableOpacity>
+                    {/* </Link> */}
 
-                    <Text variant="footnote" style={{ color: colors.background }} className="text-center px-6 py-3">By signing up you agree to our Terms and conditions and Privacy Policy</Text>
+                    <Text variant="footnote" style={{ color: colors.background }} className="text-center px-6 py-3">By signing in you agree to our Terms of Service and Privacy Policy</Text>
                 </View>
             </View>
+
+            <Sheet
+                ref={bottomSheetModalRef}
+                snapPoints={sheetPoints}
+                handleIndicatorStyle={{ backgroundColor: colors.primary }}
+            >
+                <View className="flex-1 items-center justify-around px-8">
+                    <Text variant="title3" className="text-center mb-2" style={fontStyles.dmSansMedium}>
+                        We're currently working on the Sign-in feature.
+                    </Text>
+                    <Text variant="callout" className="text-center mb-4" style={fontStyles.dmSansRegular}>
+                        In the meantime, you can explore and enjoy the app's features without signing in. The sign-in and other exciting features will be available in our next release.
+                    </Text>
+                    <TouchableOpacity onPress={handleSheetClose} className="p-3 rounded-lg w-full items-center" style={{ backgroundColor: colors.primary }}>
+                        <Text variant="heading" style={[{ color: "#FFF" }, fontStyles.dmSansMedium]}>
+                            Continue
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+            </Sheet>
         </ImageBackground>
     )
 }

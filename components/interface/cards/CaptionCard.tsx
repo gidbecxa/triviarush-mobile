@@ -6,12 +6,14 @@ import { Caption } from '~/data/types';
 import { Card } from 'react-native-paper';
 import { useColorScheme } from '~/lib/useColorScheme';
 import { Text } from '~/components/nativewindui/Text';
+import * as Clipboard from 'expo-clipboard';
 
 import { COLORS } from '~/theme/colors';
 import categories from "~/assets/content/categories-all.json"
 import { fontStyles } from '~/app/_layout';
+import { router } from 'expo-router';
 
-const CaptionCard = ({ caption }: { caption: Caption }) => {
+const CaptionCard = ({ caption, showSnackbar }) => {
     const { width, height } = useWindowDimensions();
     const { colors, colorScheme } = useColorScheme();
     const theme = colorScheme === 'dark' ? 'dark' : 'light';
@@ -43,6 +45,11 @@ const CaptionCard = ({ caption }: { caption: Caption }) => {
         return str.replace(/\b\w/g, (match) => match.toUpperCase());
     };
 
+    const handleCopy = async (caption: string) => {
+        await Clipboard.setStringAsync(caption);
+        showSnackbar('Caption copied to clipboard!');
+    };
+
     return (
         <View className='px-4 mb-3'>
             <Card
@@ -59,10 +66,10 @@ const CaptionCard = ({ caption }: { caption: Caption }) => {
                 </View>
                 <Text variant="subhead" className='leading-snug border-0 border-border relative top-0'>{caption.value}</Text>
                 <View style={[styles.icons, { backgroundColor: colors.card }]} className='rounded-full border-0 border-border'>
-                    <TouchableOpacity style={styles.icon}>
+                    <TouchableOpacity onPress={() => router.push("/playground")} style={styles.icon}>
                         <Ionicons name="bookmark-outline" size={20} color="gray" />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.icon}>
+                    <TouchableOpacity style={styles.icon} onPress={() => handleCopy(caption.value)}>
                         <Ionicons name="copy-outline" size={20} color="gray" />
                     </TouchableOpacity>
                 </View>
@@ -83,7 +90,7 @@ const styles = StyleSheet.create({
     icons: {
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        gap: 6,
+        gap: 10,
         position: "relative",
         bottom: 4,
         // right: 12

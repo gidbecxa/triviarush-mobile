@@ -10,8 +10,8 @@ import { Pressable, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as SplashScreen from 'expo-splash-screen';
 import * as NavigationBar from 'expo-navigation-bar';
-import { useFonts } from "expo-font";
-import { Ionicons, AntDesign, Entypo } from "@expo/vector-icons";
+import { useFonts } from 'expo-font';
+import { Ionicons, AntDesign, Entypo } from '@expo/vector-icons';
 
 import { ThemeToggle } from '~/components/nativewindui/ThemeToggle';
 import { cn } from '~/lib/cn';
@@ -21,6 +21,8 @@ import { useEffect } from 'react';
 import { Text } from '~/components/nativewindui/Text';
 import { StyleSheet } from 'nativewind';
 import Hamburger from '~/components/illustrations/Hamburger';
+import { AppProvider, useAppContext } from '~/store/AppContext';
+import { Provider as PaperProvider } from 'react-native-paper';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -30,18 +32,29 @@ export {
 SplashScreen.preventAutoHideAsync();
 
 export default function AppLayout() {
-  // NavigationBar.setVisibilityAsync('hidden');
-  // NavigationBar.setPositionAsync('relative');
-  // NavigationBar.setBehaviorAsync('overlay-swipe');
+  NavigationBar.setVisibilityAsync('hidden');
+  NavigationBar.setPositionAsync('relative');
+  NavigationBar.setBehaviorAsync('overlay-swipe');
+
+  return (
+    <AppProvider>
+      <RootLayout />
+    </AppProvider>
+  );
+}
+
+function RootLayout() {
+  useInitialAndroidBarSync();
+  const { colorScheme, isDarkColorScheme } = useColorScheme();
 
   const [loaded, error] = useFonts({
     Borel: require('~/assets/fonts/Borel/Borel-Regular.ttf'),
-    "Alegreya-Bold": require('~/assets/fonts/AlegreyaSans/AlegreyaSans-Bold.ttf'),
-    "Alegreya-Med": require('~/assets/fonts/AlegreyaSans/AlegreyaSans-Medium.ttf'),
-    "DMSans-SemiBold": require('~/assets/fonts/DMSans/DMSans-SemiBold.ttf'),
-    "DMSans-Regular": require('~/assets/fonts/DMSans/DMSans-Regular.ttf'),
-    "DMSans-Medium": require('~/assets/fonts/DMSans/DMSans-Medium.ttf'),
-    "DMSans-Light": require('~/assets/fonts/DMSans/DMSans-Light.ttf'),
+    'Alegreya-Bold': require('~/assets/fonts/AlegreyaSans/AlegreyaSans-Bold.ttf'),
+    'Alegreya-Med': require('~/assets/fonts/AlegreyaSans/AlegreyaSans-Medium.ttf'),
+    'DMSans-SemiBold': require('~/assets/fonts/DMSans/DMSans-SemiBold.ttf'),
+    'DMSans-Regular': require('~/assets/fonts/DMSans/DMSans-Regular.ttf'),
+    'DMSans-Medium': require('~/assets/fonts/DMSans/DMSans-Medium.ttf'),
+    'DMSans-Light': require('~/assets/fonts/DMSans/DMSans-Light.ttf'),
     Imprima: require('~/assets/fonts/Imprima/Imprima-Regular.ttf'),
     ...AntDesign.font,
     ...Ionicons.font,
@@ -52,22 +65,20 @@ export default function AppLayout() {
     if (error) throw error;
   }, [error]);
 
+  const { loading, isFirstLaunch } = useAppContext();
+  console.log(
+    `Fonts loaded: ${loaded} | App\'s loading: ${loading} | First launch: ${isFirstLaunch}`
+  );
+
   useEffect(() => {
-    if (loaded) {
+    if (loaded && !loading) {
       SplashScreen.hideAsync();
     }
-  }, [loaded]);
+  }, [loaded, loading]);
 
-  if (!loaded) {
+  if (!loaded || loading) {
     return null;
   }
-
-  return <RootLayout />
-}
-
-function RootLayout() {
-  useInitialAndroidBarSync();
-  const { colorScheme, isDarkColorScheme } = useColorScheme();
 
   return (
     <>
@@ -76,28 +87,39 @@ function RootLayout() {
         style={isDarkColorScheme ? 'light' : 'dark'}
       />
 
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <BottomSheetModalProvider>
-          <ActionSheetProvider>
-            <NavThemeProvider value={NAV_THEME[colorScheme]}>
-              <Stack screenOptions={SCREEN_OPTIONS}>
-                <Stack.Screen name="index" options={HOME_OPTIONS} />
-                <Stack.Screen name="onboarding-one" options={ONBOARDING_OPTIONS} />
-                <Stack.Screen name="onboarding-two" options={ONBOARDING_OPTIONS} />
-                <Stack.Screen name="onboarding-three" options={ONBOARDING_OPTIONS} />
-                <Stack.Screen name="get-started" options={ONBOARDING_OPTIONS} />
-                <Stack.Screen name="captions" options={HOME_OPTIONS} />
-                <Stack.Screen name="hashtags" options={HOME_OPTIONS} />
-                <Stack.Screen name="discovery" options={HOME_OPTIONS} />
-                <Stack.Screen name="components-menu" options={INDEX_OPTIONS} />
-                <Stack.Screen name="modal" options={MODAL_OPTIONS} />
-                <Stack.Screen name="playground" options={HOME_OPTIONS} />
-              </Stack>
-            </NavThemeProvider>
-          </ActionSheetProvider>
-        </BottomSheetModalProvider>
-      </GestureHandlerRootView>
+      <PaperProvider>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <BottomSheetModalProvider>
+            <ActionSheetProvider>
+              <NavThemeProvider value={NAV_THEME[colorScheme]}>
+                <AppNavigator />
+              </NavThemeProvider>
+            </ActionSheetProvider>
+          </BottomSheetModalProvider>
+        </GestureHandlerRootView>
+      </PaperProvider>
     </>
+  );
+}
+
+/**<Stack.Screen name="components-menu" options={INDEX_OPTIONS} /> */
+
+function AppNavigator() {
+  return (
+    <Stack screenOptions={SCREEN_OPTIONS}>
+      <Stack.Screen name="index" options={HOME_OPTIONS} />
+      <Stack.Screen name="home" options={HOME_OPTIONS} />
+      <Stack.Screen name="captions" options={HOME_OPTIONS} />
+      <Stack.Screen name="hashtags" options={HOME_OPTIONS} />
+      <Stack.Screen name="discovery" options={HOME_OPTIONS} />
+      <Stack.Screen name="modal" options={MODAL_OPTIONS} />
+      <Stack.Screen name="playground" options={HOME_OPTIONS} />
+      {/* <Stack.Screen name="components-menu" options={INDEX_OPTIONS} /> */}
+      <Stack.Screen name="onboarding-one" options={ONBOARDING_OPTIONS} />
+      <Stack.Screen name="onboarding-two" options={ONBOARDING_OPTIONS} />
+      <Stack.Screen name="onboarding-three" options={ONBOARDING_OPTIONS} />
+      <Stack.Screen name="get-started" options={ONBOARDING_OPTIONS} />
+    </Stack>
   );
 }
 
@@ -127,9 +149,7 @@ const ONBOARDING_OPTIONS = {
 } as const;
 
 function HeaderTitle() {
-  return (
-    <Text style={{ fontFamily: 'Borel' }}>Sociagram</Text>
-  );
+  return <Text style={{ fontFamily: 'Borel' }}>Sociagram</Text>;
 }
 
 function HamburgerMenuIcon() {
@@ -171,15 +191,15 @@ const MODAL_OPTIONS = {
 
 export const fontStyles = StyleSheet.create({
   dmSansSemiBold: {
-    fontFamily: "DMSans-SemiBold",
+    fontFamily: 'DMSans-SemiBold',
   },
   dmSansMedium: {
-    fontFamily: "DMSans-Medium",
+    fontFamily: 'DMSans-Medium',
   },
   dmSansRegular: {
-    fontFamily: "DMSans-Regular",
+    fontFamily: 'DMSans-Regular',
   },
   dmSansLight: {
-    fontFamily: "DMSans-Light",
-  }
-})
+    fontFamily: 'DMSans-Light',
+  },
+});

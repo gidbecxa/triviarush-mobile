@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocalSearchParams } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { ActivityIndicator } from '~/components/nativewindui/ActivityIndicator';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
@@ -17,6 +17,8 @@ import { Sheet, useSheetRef } from '~/components/nativewindui/Sheet';
 
 import categories from "~/assets/content/categories-all.json"
 import { StyleSheet } from 'nativewind';
+import { Snackbar } from 'react-native-paper';
+import { Icon } from '@roninoss/icons';
 
 const CaptionsScreen = () => {
   const { category } = useLocalSearchParams();
@@ -26,6 +28,15 @@ const CaptionsScreen = () => {
   const { height } = useWindowDimensions();
   const bottomSheetModalRef = useSheetRef();
   const [subCategory, setSubCategory] = useState<SubCategory | null>(null);
+
+  // Snackbar states
+  const [snackbarVisible, setSnackbarVisible] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+
+  const showSnackbar = (message: string) => {
+    setSnackbarMessage(message);
+    setSnackbarVisible(true);
+  };
 
   const {
     data,
@@ -65,9 +76,13 @@ const CaptionsScreen = () => {
   return (
     <View className='flex-1'>
       <View className='flex flex-row justify-between items-center px-4 pt-3 pb-2 mt-6 border-0 border-border'>
-        <Text variant="title3" style={fontStyles.dmSansSemiBold}>Captions</Text>
+        <TouchableOpacity onPress={() => {router.back()}}>
+          <Icon name="chevron-left" size={28} color={colors.grey} />
+        </TouchableOpacity>
+
+        <Text variant="title3" className='flex-1 pl-1' style={fontStyles.dmSansSemiBold}>Captions</Text>
         <TouchableOpacity
-          containerStyle={{ backgroundColor: "rgba(58, 134, 255,0.45)", padding: 4, borderRadius: 12, }}
+          containerStyle={{ backgroundColor: "rgba(58, 134, 255,0.35)", padding: 4, borderRadius: 12, }}
           onPress={() => bottomSheetModalRef.current?.present()}
         >
           <Ionicons name='reorder-two' size={28} color={colors.grey} />
@@ -78,7 +93,7 @@ const CaptionsScreen = () => {
         contentInsetAdjustmentBehavior="automatic"
         keyboardShouldPersistTaps="handled"
         data={data?.pages.flatMap((page) => page.captions)}
-        renderItem={({ item }) => <CaptionCard caption={item} />}
+        renderItem={({ item }) => <CaptionCard caption={item} showSnackbar={showSnackbar} />}
         keyExtractor={keyExtractor}
         onEndReached={loadMore}
         onEndReachedThreshold={0.5}
@@ -101,8 +116,8 @@ const CaptionsScreen = () => {
         contentContainerClassName="py-4 android:pb-12"
       />
 
-      <Sheet ref={bottomSheetModalRef} snapPoints={[400, height * 0.55]}>
-        <View className="flex-1 items-center pb-4">
+      <Sheet ref={bottomSheetModalRef} snapPoints={[400, height * 0.6]}>
+        <View className="flex-1 items-center pb-8">
           <Text variant="heading" className='leading-loose' style={fontStyles.dmSansSemiBold}>Filter by Sub-Category</Text>
           {subCategories.map((subCat: SubCategory) => (
             <TouchableOpacity
@@ -115,6 +130,20 @@ const CaptionsScreen = () => {
           ))}
         </View>
       </Sheet>
+
+      <Snackbar
+        visible={snackbarVisible}
+        onDismiss={() => setSnackbarVisible(false)}
+        duration={Snackbar.DURATION_SHORT}
+        action={{
+          label: 'OK',
+          onPress: () => {
+            setSnackbarVisible(false);
+          },
+        }}
+      >
+        {snackbarMessage}
+      </Snackbar>
     </View>
   );
 };

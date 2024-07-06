@@ -162,14 +162,6 @@
         },
         {
             "type": "link",
-            "content": "Watch Videos",
-            "style": {
-                "fontWeight": "bold",
-                "fontSize": 16
-            }
-        },
-        {
-            "type": "subtitle",
             "content": "Discover More",
             "style": {
                 "fontWeight": "bold",
@@ -1116,14 +1108,6 @@
         },
         {
             "type": "link",
-            "content": "Watch Videos",
-            "style": {
-                "fontWeight": "bold",
-                "fontSize": 16
-            }
-        },
-        {
-            "type": "subtitle",
             "content": "Discover More",
             "style": {
                 "fontWeight": "bold",
@@ -1342,14 +1326,6 @@
         },
         {
             "type": "link",
-            "content": "Watch Videos",
-            "style": {
-                "fontWeight": "bold",
-                "fontSize": 16
-            }
-        },
-        {
-            "type": "subtitle",
             "content": "Discover More",
             "style": {
                 "fontWeight": "bold",
@@ -1550,16 +1526,9 @@
                 "fontSize": 15
             }
         },
+        
         {
             "type": "link",
-            "content": "Watch Videos",
-            "style": {
-                "fontWeight": "bold",
-                "fontSize": 16
-            }
-        },
-        {
-            "type": "subtitle",
             "content": "Discover More",
             "style": {
                 "fontWeight": "bold",
@@ -1578,7 +1547,7 @@
     "barbara-rhubarb-dance-challenge": [
         {
             "type": "title",
-            "content": "Barbara's Rhubarb Bar",
+            "content": "The \"Barbara's Rhubarb Bar\" trend is taking TikTok and other social media platforms by storm!",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 18
@@ -1738,14 +1707,6 @@
         },
         {
             "type": "link",
-            "content": "Watch Videos",
-            "style": {
-                "fontWeight": "bold",
-                "fontSize": 16
-            }
-        },
-        {
-            "type": "subtitle",
             "content": "Discover More",
             "style": {
                 "fontWeight": "bold",
@@ -1764,7 +1725,7 @@
     "lets-dance-emma-stone": [
         {
             "type": "title",
-            "content": "Barbara's Rhubarb Bar",
+            "content": "Emma Stone's Let's Dance",
             "style": {
                 "fontWeight": "bold",
                 "fontSize": 18
@@ -1884,14 +1845,6 @@
         },
         {
             "type": "link",
-            "content": "Watch Videos",
-            "style": {
-                "fontWeight": "bold",
-                "fontSize": 16
-            }
-        },
-        {
-            "type": "subtitle",
             "content": "Discover More",
             "style": {
                 "fontWeight": "bold",

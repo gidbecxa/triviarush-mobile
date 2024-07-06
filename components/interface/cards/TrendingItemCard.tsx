@@ -18,7 +18,7 @@ const TrendingItemCard: React.FC<TrendingCardProps> = ({ item, onPress }) => {
 
   return (
     <Pressable onPress={onPress} style={[styles.container, { width: width * 0.75 }]}>
-      <ImageBackground source={{ uri: item?.image }} style={styles.image} imageClassName='rounded-xl'>
+      <ImageBackground source={{ uri: item?.image }} style={[styles.image, {backgroundColor: colors.card}]} imageClassName='rounded-xl'>
         {/* <View style={styles.contentContainer}> */}
         <LinearGradient colors={['rgba(0, 0, 0, 0.6)', 'transparent']} style={styles.contentContainer} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }}>
           <Text variant="caption1" style={[fontStyles.dmSansMedium, styles.label, { color: colors.foreground, backgroundColor: colors.cardalpha1 }]} className='py-1 px-2 rounded-full'>

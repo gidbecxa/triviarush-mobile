@@ -34,8 +34,8 @@ const CategoryItemCard: React.FC<CategoryItemCardProps> = ({ item, onPress }) =>
             accessibilityHint="Tap to view category details"
         >
             <View className="h-full border-0 border-border" style={styles.content}>
-                <Text variant="caption1" style={[fontStyles.dmSansMedium, { color: colors.primary, position: "absolute", top: 0 }]} accessibilityLabel={`Category: ${item.label}`}>
-                    <Fontisto name="hashtag" size={10} color={colors.primary} />
+                <Text variant="caption1" style={[fontStyles.dmSansMedium, { color: colors.tertiary, position: "absolute", top: 0 }]} accessibilityLabel={`Category: ${item.label}`}>
+                    <Fontisto name="hashtag" size={10} color={colors.tertiary} />
                     {" "}{item.label}
                 </Text>
                 <Text variant="subhead" style={[fontStyles.dmSansSemiBold, styles.itemTitle]} className="leading-tight">{item.title}</Text>

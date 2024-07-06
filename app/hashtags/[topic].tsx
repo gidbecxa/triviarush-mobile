@@ -9,11 +9,12 @@ import { Snackbar } from 'react-native-paper';
 
 import hashtags from "~/assets/content/hashtags.json"
 import { Hashtag } from '~/data/types';
-import { useLocalSearchParams } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { Text } from '~/components/nativewindui/Text';
 import { fontStyles } from '../_layout';
 import { StyleSheet } from 'nativewind';
 import { ActivityIndicator } from '~/components/nativewindui/ActivityIndicator';
+import { Icon } from '@roninoss/icons';
 
 export default function HashtagsScreen() {
     const { topic } = useLocalSearchParams();
@@ -135,7 +136,11 @@ export default function HashtagsScreen() {
     return (
         <View className='flex-1'>
             <View className='flex-row justify-between items-center px-4 pt-3 pb-2 mt-6 border-0 border-border'>
-                <Text variant="title3" style={fontStyles.dmSansSemiBold}>Hashtags</Text>
+                <TouchableOpacity onPress={() => { router.back() }}>
+                    <Icon name="chevron-left" size={28} color={colors.grey} />
+                </TouchableOpacity>
+
+                <Text variant="title3" className='flex-1 pl-1' style={fontStyles.dmSansSemiBold}>Hashtags</Text>
                 <GHTouchableOpacity
                     containerStyle={{ backgroundColor: "rgba(58, 134, 255,0.45)", padding: 8, borderRadius: 12, }}
                     onPress={handleHeaderIconPress}
@@ -168,7 +173,7 @@ export default function HashtagsScreen() {
                                     key={hashtag.id}
                                     style={[
                                         styles.hashtagButton,
-                                        selectedHashtags.includes(hashtag.value) && { borderColor: colors.tertiary }
+                                        selectedHashtags.includes(hashtag.value) && { borderColor: colors.primary }
                                     ]}
                                     onPress={() => handleHashtagSelect(hashtag.value)}
                                     className='p-2 m-1 border border-border rounded-full'
@@ -185,7 +190,7 @@ export default function HashtagsScreen() {
                                         {hashtag.value}
                                     </Text>
                                     {selectedHashtags.includes(hashtag.value) && (
-                                        <SimpleLineIcons name='check' size={18} color={colors.tertiary} />
+                                        <SimpleLineIcons name='check' size={18} color={colors.primary} />
                                     )}
                                 </TouchableOpacity>
                             ))}

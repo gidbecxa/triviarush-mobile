@@ -10,7 +10,6 @@ import { Feather } from '@expo/vector-icons';
 import TopAppBar from '~/components/interface/AppBar';
 import { fontStyles } from '../_layout';
 import { TrendingArticle } from '~/data/types';
-import ARTICLES_DATA from '~/data/discovery';
 import Thumbnail from '~/components/interface/Thumbnail';
 import articlesMetaData from '~/assets/content/articles.json';
 
@@ -41,7 +40,10 @@ const TrendingFrontPage = () => {
 
     const searchField = () => {
         return (
-            <View style={[styles.searchContainer, { backgroundColor: colors.card }]} className='mx-4 my-2 px-2 py-2.5 rounded-2xl'>
+            <View
+                style={[styles.searchContainer, { backgroundColor: colors.card }]}
+                className='mx-4 my-2 px-2 py-2.5 rounded-2xl'
+            >
                 <Feather name="search" size={18} color={colors.grey3} style={styles.searchIcon} />
                 <TextInput
                     style={styles.searchInput}
@@ -50,13 +52,18 @@ const TrendingFrontPage = () => {
                     onChangeText={handleSearch}
                 />
                 {searchTerm.length > 0 && (
-                    <Feather name="x" size={20} color={colors.grey3} style={styles.cancelIcon} onPress={clearSearch} />
+                    <Feather
+                        name="x"
+                        size={20}
+                        color={colors.grey3}
+                        style={styles.cancelIcon} onPress={clearSearch}
+                    />
                 )}
             </View>
         )
     };
 
-    console.log('Articles: ', articles)
+    /* console.log('Articles: ', articles) */
 
     const data = selectedTag === 'All'
         ? articles.filter((article) =>
@@ -103,14 +110,30 @@ const TrendingFrontPage = () => {
             onPress={() => navigateToArticle(item)}
         >
             <View style={styles.cardContent} className='p-1 border-0 border-border'>
-                <Thumbnail source={{ uri: item.image }} width={height / 9} height={height / 9} backgroundColor={colors.grey6} />
+                <Thumbnail
+                    source={{ uri: item.image }}
+                    width={height / 9}
+                    height={height / 9}
+                    backgroundColor={colors.grey6}
+                />
 
                 <View style={[styles.textContainer, { height: height / 9 }]} className='border-0 border-border'>
                     <Text variant="caption2" style={fontStyles.dmSansMedium}>
                         {item.tags.map((desc) => capitalizeWords(desc)).join(', ')}
                     </Text>
-                    <Text variant="subhead" style={fontStyles.dmSansSemiBold} className='text-text leading-tight capitalize'>{item.title}</Text>
-                    <Text variant="caption1" style={fontStyles.dmSansRegular} numberOfLines={1} className='text-text'>
+                    <Text
+                        variant="subhead"
+                        style={fontStyles.dmSansSemiBold}
+                        className='text-text leading-tight capitalize'
+                    >
+                        {item.title}
+                    </Text>
+                    <Text
+                        variant="caption1"
+                        style={fontStyles.dmSansRegular}
+                        numberOfLines={1}
+                        className='text-text'
+                    >
                         {item.description}
                     </Text>
                 </View>

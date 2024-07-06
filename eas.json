@@ -8,9 +8,22 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "credentialsSource": "remote",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug",
+        "env": {
+          "ENVIRONMENT": "preview",
+          "EXPO_PUBLIC_SUPABASE_URL": "https://tykfitdqyvyygrnkykou.supabase.co",
+          "EXPO_PUBLIC_SUPABASE_ANON": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR5a2ZpdGRxeXZ5eWdybmt5a291Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA4NDcxNDQsImV4cCI6MjAyNjQyMzE0NH0.UVjITjPkKZVVUbohWb8XfE_Cs6mkVdbPWSYLD5re8A0"
+        }
+      }
     },
-    "production": {}
+    "production": {
+      "distribution": "store",
+      "autoIncrement": true
+    }
   },
   "submit": {
     "production": {}

@@ -3,7 +3,6 @@ import { Link, useRouter } from "expo-router";
 import { SectionItem } from "~/data/types";
 import TrendingItemCard from "./TrendingItemCard";
 import CategoryItemCard from "./CategoryItemCard";
-// import CategoryItemCard from "./CategoryItemCard3";
 import TemplatesItemCard from "./TemplateItemCard";
 
 interface SectionItemCardProps {
@@ -20,6 +19,10 @@ const SectionItemCard: React.FC<SectionItemCardProps> = ({ item, section }) => {
             router.push({ pathname: item.href, params: { category: item.id } })
         } else if (section === 'hashtags') {
             router.push({ pathname: item.href, params: { topic: item.id } })
+        } else if (section === 'discovery') {
+            router.push({pathname: item.href, params: {article: item.resourceId}})
+        } else {
+            router.push('/playground')
         }
     };
 
