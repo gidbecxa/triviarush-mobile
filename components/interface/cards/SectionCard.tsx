@@ -63,7 +63,11 @@ const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
 
         <Link href={section.href} asChild>
           <Pressable
-            className="p-1"
+            className="p-3 min-h-12 min-w-12 items-center justify-center"
+            android_ripple={{
+              color: colors.grey6,
+              radius: 15
+            }}
             accessibilityLabel={`Go to ${section.title}`}
             accessibilityRole="button">
             <Icon name="chevron-right" size={25} color={colors.grey} />
