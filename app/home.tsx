@@ -17,27 +17,6 @@ cssInterop(FlashList, {
 });
 
 export default function HomeScreen() {
-  const [modalVisible, setModalVisible] = React.useState(false);
-  const { colors } = useColorScheme();
-
-  React.useEffect(() => {
-    const backAction = () => {
-      //   setModalVisible(true);
-      BackHandler.exitApp();
-      return true;
-    };
-
-    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
-
-    return () => backHandler.remove();
-  }, []);
-
-  const hideModal = () => setModalVisible(false);
-  const exitApp = () => {
-    setModalVisible(false);
-    BackHandler.exitApp();
-  };
-
   return (
     <View className="flex-1">
       <TopAppBar />
@@ -53,41 +32,6 @@ export default function HomeScreen() {
         // ListHeaderComponent={<TopAppBar />}
         /**ItemSeparatorComponent={renderItemSeparator*/
       />
-      <Portal>
-        <Modal
-          visible={modalVisible}
-          onDismiss={hideModal}
-          contentContainerStyle={modalStyles.container}>
-          <Text
-            variant="body"
-            className="mb-2"
-            style={[fontStyles.dmSansSemiBold, { color: colors.grey2 }]}>
-            Confirm Exit
-          </Text>
-          <Text
-            variant="subhead"
-            className="mb-3"
-            style={[fontStyles.dmSansRegular, { color: colors.grey3 }]}>
-            Are you sure you want to exit the app?
-          </Text>
-          <View style={modalStyles.buttonsContainer}>
-            <Button
-              mode="text"
-              onPress={hideModal}
-              textColor={colors.destructive}
-              style={modalStyles.button}>
-              Cancel
-            </Button>
-            <Button
-              mode="text"
-              onPress={exitApp}
-              textColor={colors.grey2}
-              style={modalStyles.button}>
-              Exit
-            </Button>
-          </View>
-        </Modal>
-      </Portal>
     </View>
   );
 }
@@ -269,37 +213,8 @@ const SECTIONS: Section[] = [
         href: '/templates/[theme]', // OR /templates/ig-essentials
         description: 'Eye-catching filters, stunning presets, and engaging caption prompts', // Elevate your Instagram game with our collection of eye-catching filters, stunning presets, and engaging caption prompts that will make your feed pop and attract a loyal following.
         label: 'Trending',
-        image: 'https://cdn.pixabay.com/photo/2021/01/10/10/54/woman-5904731_1280.jpg', // https://cdn.pixabay.com/photo/2017/03/22/22/26/instagram-2166645_1280.jpg
+        image: 'https://cdn.pixabay.com/photo/2017/03/22/22/26/instagram-2166645_1280.jpg', // https://cdn.pixabay.com/photo/2017/03/22/22/26/instagram-2166645_1280.jpg
       },
     ],
   },
 ];
-
-const modalStyles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    padding: 20,
-    borderRadius: 10,
-    marginHorizontal: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  message: {
-    fontSize: 16,
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  buttonsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  button: {
-    marginHorizontal: 10,
-    paddingHorizontal: 20,
-  },
-});

@@ -6,7 +6,6 @@ const NAV_THEME: { light: Theme; dark: Theme } = {
   light: {
     dark: false,
     colors: {
-      // background: COLORS.light.background,
       background: COLORS.light.root,
       border: COLORS.light.grey2,
       card: COLORS.light.card,

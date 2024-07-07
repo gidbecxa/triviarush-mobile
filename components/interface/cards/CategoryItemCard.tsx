@@ -58,13 +58,13 @@ const CategoryItemCard: React.FC<CategoryItemCardProps> = ({
         </Text>
         <Text
           variant="subhead"
-          style={[fontStyles.dmSansSemiBold, styles.itemTitle]}
+          style={[fontStyles.dmSansSemiBold, styles.itemTitle, { color: colors.foreground }]}
           className="leading-tight">
           {item.title}
         </Text>
         <Text
           variant="caption1"
-          style={[fontStyles.dmSansRegular, { marginTop: 4 }]}
+          style={[fontStyles.dmSansRegular, { marginTop: 4, color: colors.foreground }]}
           className="border-0 border-border leading-tight">
           {item.description}
         </Text>

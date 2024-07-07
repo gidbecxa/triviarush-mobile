@@ -41,7 +41,7 @@ const TemplatesItemCard: React.FC<TemplatesItemCardProps> = ({ item, onPress }) 
 
 const styles = StyleSheet.create({
   card: {
-    marginRight: 12,
+    marginRight: 16,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
     shadowRadius: 8,

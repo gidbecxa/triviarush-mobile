@@ -102,14 +102,15 @@ export default function HashtagsScreen() {
 
   const renderTag = ({ item }: { item: string }) => (
     <TouchableOpacity
-      style={{ backgroundColor: colors.card, minHeight: 48, minWidth: 48 }}
-      className="mr-1 rounded-full border-0 border-border px-2 items-center justify-center"
+      style={{ backgroundColor: "transparent", minHeight: 48, minWidth: 48 }}
+      className="mr-1 items-center justify-center rounded-full border-0 border-border px-2"
       onPress={() => handleTagSelect(item)}
       accessibilityRole="button"
       accessibilityHint="Find hashtags for a specific social media app">
       <Text
         style={[
           fontStyles.dmSansRegular,
+          {color: colors.foreground},
           selectedTag === item && [fontStyles.dmSansMedium, { fontSize: 15 }],
         ]}
         variant="footnote">
@@ -143,7 +144,7 @@ export default function HashtagsScreen() {
 
   return (
     <View className="flex-1">
-      <View className="mt-6 flex-row items-center justify-between border-0 border-border py-1 pr-4">
+      <View className="mt-6 h-20 flex-row items-center justify-between border-0 border-border py-1 pr-4">
         <TouchableOpacity
           style={styles.headerButtonStyle}
           onPress={() => {
@@ -155,6 +156,7 @@ export default function HashtagsScreen() {
         <Text variant="title3" className="flex-1 pl-1" style={fontStyles.dmSansSemiBold}>
           Hashtags
         </Text>
+
         <GHTouchableOpacity
           containerStyle={[
             styles.headerButtonStyle,
@@ -199,7 +201,7 @@ export default function HashtagsScreen() {
                   variant="footnote"
                   className="mr-1"
                   style={[
-                    { color: colors.grey },
+                    { color: colors.foreground },
                     fontStyles.dmSansRegular,
                     selectedHashtags.includes(hashtag.value) && { color: colors.grey2 },
                   ]}>

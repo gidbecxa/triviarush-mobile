@@ -24,7 +24,7 @@ function keyExtractor(item: SectionItem) {
 
 const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
   const router = useRouter();
-  const { colors } = useColorScheme();
+  const { colors, isDarkColorScheme } = useColorScheme();
   const { width, height } = useWindowDimensions();
   // console.log(`Items for section ${section.id}: `, section.items);
 
@@ -50,7 +50,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
     <View style={styles.sectionCard} className="border-t-0 border-border bg-card">
       <View style={{ paddingLeft: 16 }} className="flex-row items-center justify-between">
         <View className="flex-col">
-          <Text variant="heading" style={fontStyles.dmSansMedium}>
+          <Text variant="heading" style={[fontStyles.dmSansMedium, {color: colors.foreground}]}>
             {section.title}
           </Text>
           <Text
@@ -70,7 +70,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ section }) => {
             }}
             accessibilityLabel={`Go to ${section.title}`}
             accessibilityRole="button">
-            <Icon name="chevron-right" size={25} color={colors.grey} />
+            <Icon name="chevron-right" size={25} color={isDarkColorScheme ? colors.foreground : colors.grey} />
           </Pressable>
         </Link>
       </View>

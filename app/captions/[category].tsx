@@ -15,7 +15,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useColorScheme } from '~/lib/useColorScheme';
 import { Sheet, useSheetRef } from '~/components/nativewindui/Sheet';
 
-import categories from "~/assets/content/categories-all.json"
+import categories from '~/assets/content/categories-all.json';
 import { StyleSheet } from 'nativewind';
 import { Snackbar } from 'react-native-paper';
 import { Icon } from '@roninoss/icons';
@@ -38,21 +38,15 @@ const CaptionsScreen = () => {
     setSnackbarVisible(true);
   };
 
-  const {
-    data,
-    isLoading,
-    isError,
-    error,
-    hasNextPage,
-    fetchNextPage,
-    isFetchingNextPage,
-  } = useInfiniteQuery({
-    queryKey: ['captions', category, subCategory?.id],
-    /* queryFn: fetchCaptions, */
-    queryFn: ({ pageParam }) => fetchCaptions({ category, pageParam, subCategoryId: subCategory?.id }),
-    initialPageParam: 0,
-    getNextPageParam: (lastPage) => lastPage.nextPage
-  });
+  const { data, isLoading, isError, error, hasNextPage, fetchNextPage, isFetchingNextPage } =
+    useInfiniteQuery({
+      queryKey: ['captions', category, subCategory?.id],
+      /* queryFn: fetchCaptions, */
+      queryFn: ({ pageParam }) =>
+        fetchCaptions({ category, pageParam, subCategoryId: subCategory?.id }),
+      initialPageParam: 0,
+      getNextPageParam: (lastPage) => lastPage.nextPage,
+    });
 
   const loadMore = () => {
     if (hasNextPage) {
@@ -74,18 +68,26 @@ const CaptionsScreen = () => {
   /* console.log('Data fetched: ', data?.pages.flatMap((page) => page.captions)); */
 
   return (
-    <View className='flex-1'>
-      <View className='flex flex-row justify-between items-center px-4 pt-3 pb-2 mt-6 border-0 border-border'>
-        <TouchableOpacity onPress={() => {router.back()}}>
+    <View className="flex-1">
+      <View className="mt-6 flex h-16 flex-row items-center justify-between border-0 border-border py-1 pr-4">
+        <TouchableOpacity
+          style={styles.headerButtonStyle}
+          onPress={() => {
+            router.back();
+          }}>
           <Icon name="chevron-left" size={28} color={colors.grey} />
         </TouchableOpacity>
 
-        <Text variant="title3" className='flex-1 pl-1' style={fontStyles.dmSansSemiBold}>Captions</Text>
+        <Text variant="title3" className="flex-1 pl-1" style={fontStyles.dmSansSemiBold}>
+          Captions
+        </Text>
         <TouchableOpacity
-          containerStyle={{ backgroundColor: "rgba(58, 134, 255,0.35)", padding: 4, borderRadius: 12, }}
-          onPress={() => bottomSheetModalRef.current?.present()}
-        >
-          <Ionicons name='reorder-two' size={28} color={colors.grey} />
+          containerStyle={[
+            styles.headerButtonStyle,
+            // { backgroundColor: 'rgba(58, 134, 255,0.5)' },
+          ]}
+          onPress={() => bottomSheetModalRef.current?.present()}>
+          <Ionicons name="reorder-two" size={28} color={colors.grey} />
         </TouchableOpacity>
       </View>
 
@@ -97,17 +99,17 @@ const CaptionsScreen = () => {
         keyExtractor={keyExtractor}
         onEndReached={loadMore}
         onEndReachedThreshold={0.5}
-        ListFooterComponent={
-          isFetchingNextPage ? <ActivityIndicator size={48} /> : null
-        }
+        ListFooterComponent={isFetchingNextPage ? <ActivityIndicator size={48} /> : null}
         ListEmptyComponent={
           isLoading ? (
-            <View className='flex-1 h-screen items-center justify-center'>
+            <View className="h-screen flex-1 items-center justify-center">
               <ActivityIndicator size={48} />
             </View>
           ) : (
-            <View className='flex-1 h-screen items-center justify-center'>
-              <Text variant="title3" style={fontStyles.dmSansSemiBold}>Captions not yet available.</Text>
+            <View className="h-screen flex-1 items-center justify-center">
+              <Text variant="title3" style={fontStyles.dmSansSemiBold}>
+                Captions not yet available.
+              </Text>
             </View>
           )
         }
@@ -118,14 +120,17 @@ const CaptionsScreen = () => {
 
       <Sheet ref={bottomSheetModalRef} snapPoints={[400, height * 0.6]}>
         <View className="flex-1 items-center pb-8">
-          <Text variant="heading" className='leading-loose' style={fontStyles.dmSansSemiBold}>Filter by Sub-Category</Text>
+          <Text variant="heading" className="leading-loose" style={fontStyles.dmSansSemiBold}>
+            Filter by Sub-Category
+          </Text>
           {subCategories.map((subCat: SubCategory) => (
             <TouchableOpacity
               key={subCat.id}
               containerStyle={styles.filterOptionContainer}
-              onPress={() => handleSubCategorySelect(subCat)}
-            >
-              <Text variant='callout' style={fontStyles.dmSansRegular}>{subCat.title}</Text>
+              onPress={() => handleSubCategorySelect(subCat)}>
+              <Text variant="callout" style={fontStyles.dmSansRegular}>
+                {subCat.title}
+              </Text>
             </TouchableOpacity>
           ))}
         </View>
@@ -140,8 +145,7 @@ const CaptionsScreen = () => {
           onPress: () => {
             setSnackbarVisible(false);
           },
-        }}
-      >
+        }}>
         {snackbarMessage}
       </Snackbar>
     </View>
@@ -149,18 +153,26 @@ const CaptionsScreen = () => {
 };
 
 function renderItemSeparator() {
-  return <View className="p-1.5 border-0 border-border" />;
+  return <View className="border-0 border-border p-1.5" />;
 }
 
 export default CaptionsScreen;
 
 const styles = StyleSheet.create({
+  headerButtonStyle: {
+    padding: 4,
+    borderRadius: 12,
+    minHeight: 48,
+    minWidth: 48,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   filterOptionContainer: {
-    width: "95%",
+    width: '95%',
     padding: 8,
     marginVertical: 2,
     borderWidth: 0,
-    borderColor: "#CCC",
-    borderRadius: 12
-  }
-})
+    borderColor: '#CCC',
+    borderRadius: 12,
+  },
+});

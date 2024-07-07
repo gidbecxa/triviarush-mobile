@@ -15,7 +15,7 @@ import { Icon } from '@roninoss/icons';
 
 const TopAppBar = () => {
   const pathname = usePathname();
-  const { colors } = useColorScheme();
+  const { colors, isDarkColorScheme } = useColorScheme();
 
   console.log('Route and params', pathname);
   const isIndexRoute = pathname === '/home';
@@ -29,12 +29,28 @@ const TopAppBar = () => {
         onPress={() => (isIndexRoute ? router.push('/playground') : router.back())}
         icon={() =>
           isIndexRoute ? (
-            <Pressable disabled className="h-12 w-12 items-start justify-center">
-              <Hamburger width={24} height={24} stroke={colors.grey} />
+            <Pressable
+              accessibilityHint="Tap to view menu"
+              disabled
+              className="h-12 w-12"
+              style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
+              <Hamburger
+                width={24}
+                height={24}
+                stroke={isDarkColorScheme ? colors.foreground : colors.grey}
+              />
             </Pressable>
           ) : (
-            <Pressable disabled className="h-12 w-12 items-start justify-center">
-              <Icon name="chevron-left" size={28} color={colors.grey} />
+            <Pressable
+              accessibilityHint="Tap to go back"
+              disabled
+              className="h-12 w-12"
+              style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
+              <Icon
+                name="chevron-left"
+                size={28}
+                color={isDarkColorScheme ? colors.foreground : colors.grey}
+              />
             </Pressable>
           )
         }
@@ -46,9 +62,18 @@ const TopAppBar = () => {
         {!isPlaygroundRoute && (
           <Appbar.Action
             size={48}
+            rippleColor="transparent"
             icon={() => (
-              <Pressable disabled className="h-12 w-12 items-end justify-center">
-                <AntDesign name="setting" size={24} color={colors.grey} />
+              <Pressable
+                accessibilityHint="Tap to go to app settings"
+                disabled
+                className="h-12 w-12"
+                style={{ alignItems: 'flex-end', justifyContent: 'center' }}>
+                <AntDesign
+                  name="setting"
+                  size={24}
+                  color={isDarkColorScheme ? colors.foreground : colors.grey}
+                />
               </Pressable>
             )}
           />
