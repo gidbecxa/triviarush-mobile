@@ -40,12 +40,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "icon":"./assets/icon_alt.png",
+        "icon": "./assets/icon_alt.png",
         "foregroundImage": "./assets/icon_alt.png",
         "monochromeImage": "./assets/icon_alt_monochrome.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.captionsbank.app"
+      "package": "com.captionsbank.app",
+      "versionCode": 2
     },
     "extra": {
       "router": {

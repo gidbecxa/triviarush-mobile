@@ -1,42 +1,44 @@
-import React from "react";
-import { Link, useRouter } from "expo-router";
-import { SectionItem } from "~/data/types";
-import TrendingItemCard from "./TrendingItemCard";
-import CategoryItemCard from "./CategoryItemCard";
-import TemplatesItemCard from "./TemplateItemCard";
+import React from 'react';
+import { Link, useRouter } from 'expo-router';
+import { SectionItem } from '~/data/types';
+import TrendingItemCard from './TrendingItemCard';
+import CategoryItemCard from './CategoryItemCard';
+import TemplatesItemCard from './TemplateItemCard';
 
 interface SectionItemCardProps {
-    item: SectionItem;
-    section: string;
+  item: SectionItem;
+  section: string;
 }
 
 const SectionItemCard: React.FC<SectionItemCardProps> = ({ item, section }) => {
-    const router = useRouter();
-    // console.log(`Items for section ${section}: `, item);
+  const router = useRouter();
+  // console.log(`Items for section ${section}: `, item);
 
-    const handleItemPress = () => {
-        if (section === 'captions') {
-            router.push({ pathname: item.href, params: { category: item.id } })
-        } else if (section === 'hashtags') {
-            router.push({ pathname: item.href, params: { topic: item.id } })
-        } else if (section === 'discovery') {
-            router.push({pathname: item.href, params: {article: item.resourceId}})
-        } else {
-            router.push('/playground')
-        }
-    };
+  const handleItemPress = () => {
+    if (section === 'captions') {
+      router.push({ pathname: item.href, params: { category: item.id } });
+    } else if (section === 'hashtags') {
+      router.push({ pathname: item.href, params: { topic: item.id } });
+    } else if (section === 'discovery') {
+      router.push({ pathname: item.href, params: { article: item.resourceId } });
+    } else {
+      router.push('/playground');
+    }
+  };
 
-    return (
-        <>
-            {section === 'discovery' ? (
-                <TrendingItemCard item={item} onPress={handleItemPress} />
-            ) : section === 'templates' ? (
-                <TemplatesItemCard item={item} onPress={handleItemPress} />
-            ) : (
-                <CategoryItemCard item={item} onPress={handleItemPress} />
-            )}
-        </>
-    );
+  return (
+    <>
+      {section === 'discovery' ? (
+        <TrendingItemCard item={item} onPress={handleItemPress} />
+      ) : section === 'templates' ? (
+        <TemplatesItemCard item={item} onPress={handleItemPress} />
+      ) : section === 'captions' ? (
+        <CategoryItemCard item={item} onPress={handleItemPress} accessibilityLabel='captions' />
+      ) : (
+        <CategoryItemCard item={item} onPress={handleItemPress} accessibilityLabel='hashtags' />
+      )}
+    </>
+  );
 };
 
 export default SectionItemCard;
