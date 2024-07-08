@@ -24,6 +24,7 @@ const TopAppBar = () => {
   return (
     <Appbar.Header style={{ backgroundColor: colors.card }} className="border-0 border-border">
       <Appbar.Action
+        accessibilityLabel="App Menu Icon"
         size={48}
         rippleColor="transparent"
         onPress={() => (isIndexRoute ? router.push('/playground') : router.back())}
