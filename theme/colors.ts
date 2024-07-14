@@ -15,8 +15,8 @@ const SYSTEM_COLORS = {
     root: 'rgb(18, 18, 19)', // Adjusted for dark mode
     card: 'rgb(28, 28, 30)', // Adjusted for dark mode
     destructive: 'rgb(255, 69, 58)', // Adjusted to be more vibrant
-    primary: 'rgb(58, 175, 255)', // Extracted and enhanced from image
-    secondary: 'rgb(48, 209, 88)', // Extracted and enhanced from image
+    primary: 'rgb(48, 209, 88)', // Extracted and enhanced from image
+    secondary: 'rgb(58, 175, 255)', // Extracted and enhanced from image
     tertiary: 'rgb(255, 214, 10)', // Extracted and enhanced from image
     accent: 'rgb(255, 55, 95)', // Extracted and enhanced from image
   },

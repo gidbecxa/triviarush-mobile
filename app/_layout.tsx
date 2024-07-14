@@ -43,7 +43,7 @@ export default function AppLayout() {
 
 function RootLayout() {
   useInitialAndroidBarSync();
-  const { colorScheme, isDarkColorScheme } = useColorScheme();
+  const { colorScheme, isDarkColorScheme, setColorScheme } = useColorScheme();
 
   const [loaded, error] = useFonts({
     Borel: require('~/assets/fonts/Borel/Borel-Regular.ttf'),
@@ -58,6 +58,10 @@ function RootLayout() {
     ...Ionicons.font,
     ...Entypo.font,
   });
+
+  useEffect(() => {
+    setColorScheme("dark");
+  })
 
   useEffect(() => {
     if (error) throw error;
@@ -107,9 +111,6 @@ function AppNavigator() {
     <Stack screenOptions={SCREEN_OPTIONS}>
       <Stack.Screen name="index" options={HOME_OPTIONS} />
       <Stack.Screen name="home" options={HOME_OPTIONS} />
-      <Stack.Screen name="captions" options={HOME_OPTIONS} />
-      <Stack.Screen name="hashtags" options={HOME_OPTIONS} />
-      <Stack.Screen name="discovery" options={HOME_OPTIONS} />
       <Stack.Screen name="modal" options={MODAL_OPTIONS} />
       <Stack.Screen name="playground" options={HOME_OPTIONS} />
       <Stack.Screen name="components-menu" options={INDEX_OPTIONS} />

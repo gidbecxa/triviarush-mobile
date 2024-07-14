@@ -3,7 +3,6 @@ import { View, Pressable } from 'react-native';
 import { Appbar, useTheme } from 'react-native-paper';
 import { Ionicons, AntDesign, FontAwesome5 } from '@expo/vector-icons';
 import { useColorScheme } from '~/lib/useColorScheme';
-import Hamburger from '~/components/illustrations/Hamburger';
 import {
   Link,
   router,
@@ -35,11 +34,7 @@ const TopAppBar = () => {
               disabled
               className="h-12 w-12"
               style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-              <Hamburger
-                width={24}
-                height={24}
-                stroke={isDarkColorScheme ? colors.foreground : colors.grey}
-              />
+              <Ionicons name="menu" size={24} color={colors.foreground} />
             </Pressable>
           ) : (
             <Pressable

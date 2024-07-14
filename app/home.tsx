@@ -2,14 +2,12 @@ import * as React from 'react';
 import { Alert, BackHandler, View } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 import { StyleSheet, cssInterop } from 'nativewind';
-import SectionCard from '~/components/interface/cards/SectionCard';
 
 import TopAppBar from '~/components/interface/AppBar';
 import { SectionItem } from '~/data/types';
 import { Button, Modal, Portal } from 'react-native-paper';
 import { Text } from '~/components/nativewindui/Text';
 import { fontStyles } from './_layout';
-import { useColorScheme } from '~/lib/useColorScheme';
 
 cssInterop(FlashList, {
   className: 'style',
@@ -27,7 +25,24 @@ export default function HomeScreen() {
         estimatedItemSize={132}
         contentContainerClassName="py-0 android:pb-12"
         keyExtractor={keyExtractor}
-        renderItem={({ item }) => <SectionCard section={item} />}
+        renderItem={({ item }) => {
+          return (
+            <View className="flex-row justify-between items-center px-4 py-2">
+              <View className="flex-1">
+                <Text className="text-lg font-semibold">{item.title}</Text>
+                <Text className="text-sm text-gray-500">{item.subtitle}</Text>
+              </View>
+              <Button
+                mode="outlined"
+                onPress={() => {
+                  Alert.alert('Pressed...');
+                }}
+              >
+                View All
+              </Button>
+            </View>
+          );
+        }}
         showsVerticalScrollIndicator={false}
         // ListHeaderComponent={<TopAppBar />}
         /**ItemSeparatorComponent={renderItemSeparator*/
