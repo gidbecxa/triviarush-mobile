@@ -12,7 +12,7 @@ function useColorScheme() {
     setNativeWindColorScheme(colorScheme);
     if (Platform.OS !== 'android') return;
     try {
-      await setNavigationBar(colorScheme);
+      await setNavigationBar();
     } catch (error) {
       console.error('useColorScheme.tsx", "setColorScheme', error);
     }
@@ -23,11 +23,11 @@ function useColorScheme() {
   }
 
   return {
-    colorScheme: colorScheme ?? 'light',
+    colorScheme: colorScheme ?? 'dark',
     isDarkColorScheme: colorScheme === 'dark',
     setColorScheme,
     toggleColorScheme,
-    colors: COLORS[colorScheme ?? 'light'],
+    colors: COLORS.common,
   };
 }
 
@@ -38,7 +38,7 @@ function useInitialAndroidBarSync() {
   const { colorScheme } = useColorScheme();
   React.useEffect(() => {
     if (Platform.OS !== 'android') return;
-    setNavigationBar(colorScheme).catch((error) => {
+    setNavigationBar().catch((error) => {
       console.error('useColorScheme.tsx", "useInitialColorScheme', error);
     });
   }, []);
@@ -46,10 +46,10 @@ function useInitialAndroidBarSync() {
 
 export { useColorScheme, useInitialAndroidBarSync };
 
-function setNavigationBar(colorScheme: 'light' | 'dark') {
+function setNavigationBar() {
   return Promise.all([
-    NavigationBar.setButtonStyleAsync(colorScheme === 'dark' ? 'light' : 'dark'),
+    NavigationBar.setButtonStyleAsync('light'),
     NavigationBar.setPositionAsync('absolute'),
-    NavigationBar.setBackgroundColorAsync(colorScheme === 'dark' ? '#00000030' : '#ffffff80'),
+    NavigationBar.setBackgroundColorAsync('#00000030'),
   ]);
 }

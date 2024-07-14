@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Sociagram",
-    "slug": "captions-bank",
-    "version": "1.0.0",
-    "scheme": "sociagran-mobile",
+    "name": "TriviaRush",
+    "slug": "triviarush-game",
+    "version": "0.1.0",
+    "scheme": "triviarush-game",
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -24,37 +24,38 @@
       "tsconfigPaths": true
     },
     "orientation": "portrait",
-    "icon": "./assets/icon_alt.png",
+    "icon": "./assets/ic_launcher.png",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash_alt.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1C1C1E"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.captionsbank.app"
+      "bundleIdentifier": "com.triviarush.mobile"
     },
     "android": {
       "adaptiveIcon": {
-        "icon": "./assets/icon_alt.png",
-        "foregroundImage": "./assets/icon_alt.png",
-        "monochromeImage": "./assets/icon_alt_monochrome.png",
-        "backgroundColor": "#ffffff"
+        "icon": "./assets/ic_launcher.png",
+        "foregroundImage": "./assets/ic_launcher_foreground.png",
+        "monochromeImage": "./assets/ic_launcher_monochrome.png",
+        "backgroundImage": "./assets/ic_launcher_background.png"
       },
-      "package": "com.captionsbank.app",
-      "versionCode": 3
+      "package": "com.triviarush.mobile",
+      "versionCode": 0
     },
     "extra": {
       "router": {
         "origin": false
       },
       "eas": {
-        "projectId": "d885afe9-7a87-4a53-b0fa-68c8b73da0cf"
+        "projectId": "baafd255-7b10-4230-a086-62318555c317"
       }
-    }
+    },
+    "owner": "thegideona"
   }
 }

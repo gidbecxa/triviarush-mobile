@@ -18,9 +18,7 @@ import { cn } from '~/lib/cn';
 import { useColorScheme, useInitialAndroidBarSync } from '~/lib/useColorScheme';
 import { NAV_THEME } from '~/theme';
 import { useEffect } from 'react';
-import { Text } from '~/components/nativewindui/Text';
 import { StyleSheet } from 'nativewind';
-import Hamburger from '~/components/illustrations/Hamburger';
 import { AppProvider, useAppContext } from '~/store/AppContext';
 import { Provider as PaperProvider } from 'react-native-paper';
 
@@ -114,7 +112,7 @@ function AppNavigator() {
       <Stack.Screen name="discovery" options={HOME_OPTIONS} />
       <Stack.Screen name="modal" options={MODAL_OPTIONS} />
       <Stack.Screen name="playground" options={HOME_OPTIONS} />
-      {/* <Stack.Screen name="components-menu" options={INDEX_OPTIONS} /> */}
+      <Stack.Screen name="components-menu" options={INDEX_OPTIONS} />
       <Stack.Screen name="onboarding-one" options={ONBOARDING_OPTIONS} />
       <Stack.Screen name="onboarding-two" options={ONBOARDING_OPTIONS} />
       <Stack.Screen name="onboarding-three" options={ONBOARDING_OPTIONS} />
@@ -129,14 +127,13 @@ const SCREEN_OPTIONS = {
 
 const INDEX_OPTIONS = {
   headerLargeTitle: true,
-  title: 'Sociagram',
+  title: 'TriviaRush',
   headerRight: () => <SettingsIcon />,
 } as const;
 
 const HOME_OPTIONS = {
   headerLargeTitle: true,
   title: '',
-  // headerTitle: () => <HeaderTitle />,
   headerRight: () => <SettingsIcon />,
   headerLeft: () => <HamburgerMenuIcon />,
   headerShadowVisible: false,
@@ -148,9 +145,6 @@ const ONBOARDING_OPTIONS = {
   headerShown: false,
 } as const;
 
-function HeaderTitle() {
-  return <Text style={{ fontFamily: 'Borel' }}>Sociagram</Text>;
-}
 
 function HamburgerMenuIcon() {
   const { colors } = useColorScheme();
@@ -159,8 +153,7 @@ function HamburgerMenuIcon() {
     <Pressable className="opacity-80">
       {({ pressed }) => (
         <View className={cn(pressed ? 'opacity-50' : 'opacity-90')}>
-          {/* <Ionicons name="menu" size={24} color={colors.foreground} /> */}
-          <Hamburger width={24} height={24} />
+          <Ionicons name="menu" size={24} color={colors.foreground} />
         </View>
       )}
     </Pressable>
@@ -170,7 +163,7 @@ function HamburgerMenuIcon() {
 function SettingsIcon() {
   const { colors } = useColorScheme();
   return (
-    <Link href="/onboarding-one" asChild>
+    <Link href="/modal" asChild>
       <Pressable className="opacity-80">
         {({ pressed }) => (
           <View className={cn(pressed ? 'opacity-50' : 'opacity-90')}>

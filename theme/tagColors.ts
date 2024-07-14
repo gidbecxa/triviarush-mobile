@@ -10,7 +10,7 @@ categories.forEach((category) => {
 });
 
 // A mapping of colors to tags
-const tagColors = {};
+const extracolors = {};
 const palette = ['ff006e', '8338ec', '3a86ff', 'ffbe0b', 'fb5607',];
 
 // Generate rgba color with alpha 0.55
@@ -25,10 +25,10 @@ const getRgba = (hex, alpha = 0.55) => {
 // Assigning colors to tags for light/dark modes
 Array.from(uniqueTags).forEach((tag: string, index) => {
     const color = palette[index % palette.length];
-    tagColors[tag] = {
+    extracolors[tag] = {
         light: getRgba(color, 0.45),
         dark: getRgba(color, 0.75),
     };
 });
 
-export { tagColors };
+export { extracolors };

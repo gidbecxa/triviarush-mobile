@@ -7,7 +7,7 @@ export default function Screen() {
     const { isFirstLaunch } = useAppContext();
     return isFirstLaunch
         ?
-        <Redirect href="/onboarding-one" />
+        <Redirect href="/components-menu" />
         :
-        <Redirect href="/home" />;
+        <Redirect href="/playground" />;
 }

@@ -1,99 +1,28 @@
 import { Platform } from 'react-native';
-import { tagColors } from './tagColors';
 
-const IOS_SYSTEM_COLORS = {
+const SYSTEM_COLORS = {
   white: 'rgb(255, 255, 255)',
   black: 'rgb(0, 0, 0)',
-  light: {
-    grey6: 'rgb(242, 242, 247)',
-    grey5: 'rgb(230, 230, 235)',
-    grey4: 'rgb(210, 210, 215)',
-    grey3: 'rgb(199, 199, 204)',
-    grey2: 'rgb(175, 176, 180)',
+  common: {
+    grey6: 'rgb(28, 28, 30)', // Adjusted for dark mode
+    grey5: 'rgb(44, 44, 46)', // Adjusted for dark mode
+    grey4: 'rgb(58, 58, 60)', // Adjusted for dark mode
+    grey3: 'rgb(72, 72, 74)', // Adjusted for dark mode
+    grey2: 'rgb(99, 99, 102)', // Adjusted for dark mode
     grey: 'rgb(142, 142, 147)',
-    background: 'rgb(242, 242, 247)',
-    foreground: 'rgb(0, 0, 0)',
-    root: 'rgb(255, 255, 255)',
-    card: 'rgb(255, 255, 255)',
-    destructive: 'rgb(255, 56, 43)',
-    primary: 'rgb(255, 0, 110)',
-    secondary: 'rgb(58, 134, 255)',
-    tertiary: 'rgb(131, 56, 236)',
-    greyalpha1: 'rgba(210, 210, 215, 0.85)',
-    cardalpha1: 'rgba(255, 255, 255, 0.85)',
-    cardalpha2: 'rgba(255, 255, 255, 0.55)',
-  },
-  dark: {
-    grey6: 'rgb(21, 21, 24)',
-    grey5: 'rgb(40, 40, 42)',
-    grey4: 'rgb(55, 55, 57)',
-    grey3: 'rgb(70, 70, 73)',
-    grey2: 'rgb(99, 99, 102)',
-    grey: 'rgb(142, 142, 147)',
-    background: 'rgb(0, 0, 0)',
+    background: 'rgb(18, 18, 19)', // Adjusted for dark mode
     foreground: 'rgb(255, 255, 255)',
-    root: 'rgb(0, 0, 0)',
-    card: 'rgb(28, 28, 30)',
-    destructive: 'rgb(254, 67, 54)',
-    primary: 'rgb(255, 0, 110)', // to be modified
-    secondary: 'rgb(58, 134, 255)', // to be modified
-    tertiary: 'rgb(131, 56, 236)', // to be modified
-    greyalpha1: 'rgba(16, 19, 27, 0.5)',
-    cardalpha1: 'rgba(28, 28, 30, 0.85)',
-    cardalpha2: 'rgba(28, 28, 30, 0.55)',
+    root: 'rgb(18, 18, 19)', // Adjusted for dark mode
+    card: 'rgb(28, 28, 30)', // Adjusted for dark mode
+    destructive: 'rgb(255, 69, 58)', // Adjusted to be more vibrant
+    primary: 'rgb(58, 175, 255)', // Extracted and enhanced from image
+    secondary: 'rgb(48, 209, 88)', // Extracted and enhanced from image
+    tertiary: 'rgb(255, 214, 10)', // Extracted and enhanced from image
+    accent: 'rgb(255, 55, 95)', // Extracted and enhanced from image
   },
-  tagColors: {
-    ...tagColors
-  }
 } as const;
 
-const ANDROID_COLORS = {
-  white: 'rgb(255, 255, 255)',
-  black: 'rgb(0, 0, 0)',
-  light: {
-    grey6: 'rgb(240, 240, 240)', // grey100 is 235
-    grey5: 'rgb(215, 217, 228)',
-    grey4: 'rgb(193, 198, 215)',
-    grey3: 'rgb(113, 119, 134)',
-    grey2: 'rgb(65, 71, 84)',
-    grey: 'rgb(24, 28, 35)',
-    background: 'rgb(249, 249, 255)',
-    foreground: 'rgb(0, 0, 0)',
-    root: 'rgb(255, 255, 255)',
-    card: 'rgb(255, 255, 255)',
-    destructive: 'rgb(237, 28, 36)', // changed. To be modified for the others
-    primary: 'rgb(255, 0, 110)',
-    secondary: 'rgb(58, 134, 255)',
-    tertiary: 'rgb(131, 56, 236)',
-    greyalpha1: 'rgba(193, 198, 215, 0.85)',
-    cardalpha1: 'rgba(255, 255, 255, 0.85)',
-    cardalpha2: 'rgba(255, 255, 255, 0.55)',
-  },
-  dark: {
-    grey6: 'rgb(16, 19, 27)',
-    grey5: 'rgb(39, 42, 50)',
-    grey4: 'rgb(49, 53, 61)',
-    grey3: 'rgb(54, 57, 66)',
-    grey2: 'rgb(139, 144, 160)',
-    grey: 'rgb(193, 198, 215)',
-    background: 'rgb(0, 0, 0)',
-    foreground: 'rgb(255, 255, 255)',
-    root: 'rgb(0, 0, 0)',
-    card: 'rgb(16, 19, 27)',
-    destructive: 'rgb(147, 0, 10)',
-    primary: 'rgb(255, 0, 110)', // to be modified
-    secondary: 'rgb(58, 134, 255)', // to be modified
-    tertiary: 'rgb(131, 56, 236)', // to be modified
-    greyalpha1: 'rgba(16, 19, 27, 0.5)',
-    cardalpha1: 'rgba(16, 19, 27, 0.85)',
-    cardalpha2: 'rgba(16, 19, 27, 0.8)',
-  },
-  tagColors: {
-    ...tagColors
-  }
-} as const;
-
-const COLORS = Platform.OS === 'ios' ? IOS_SYSTEM_COLORS : ANDROID_COLORS;
+const COLORS = SYSTEM_COLORS;
 
 export { COLORS };
 
