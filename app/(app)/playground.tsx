@@ -6,7 +6,7 @@ import { Text } from '~/components/nativewindui/Text';
 import { Feather } from '@expo/vector-icons';
 
 import TopAppBar from '~/components/interface/AppBar';
-import { fontStyles } from './_layout';
+import { fontStyles } from '../_layout';
 
 const Playground = () => {
     const route = useRouter();

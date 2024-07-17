@@ -15,3 +15,22 @@ GeniusTrivia (geniustrivia.com - Available)
 QuizSphere (quizsphere.com - Available)
 TriviaTrek (triviatrek.com - Available)
 QuizChase (quizchase.com - Available)
+
+├── api
+│   └── api.ts
+├── app
+│   ├── (auth)
+│   │   ├── _layout.tsx
+│   │   ├── get-started.tsx
+│   │   ├── onboarding.tsx
+│   │   └── signin.tsx
+│   ├── (app)
+│   │   ├── _layout.tsx
+│   │   ├── home.tsx
+│   │   ├── components-menu.tsx
+│   │   ├── modal.tsx
+│   │   └── playground.tsx
+│   ├── index.tsx
+│   ├── _layout.tsx
+│   ├── +not-found.tsx
+// other folders omitted...

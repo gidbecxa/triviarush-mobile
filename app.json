@@ -10,6 +10,7 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
+      "@react-native-google-signin/google-signin",
       "expo-router",
       [
         "expo-dev-launcher",
@@ -17,7 +18,8 @@
           "launchMode": "most-recent"
         }
       ],
-      "expo-font"
+      "expo-font",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true,
@@ -39,6 +41,7 @@
       "bundleIdentifier": "com.triviarush.mobile"
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "icon": "./assets/ic_launcher.png",
         "foregroundImage": "./assets/ic_launcher_foreground.png",

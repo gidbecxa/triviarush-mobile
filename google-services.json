@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "859861605837",
+    "project_id": "triviarush-mobile",
+    "storage_bucket": "triviarush-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859861605837:android:ed94f63647f47082a17884",
+        "android_client_info": {
+          "package_name": "com.triviarush.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468860184245-m94e5ino89p5e45emjfpp7fllhqa3ogm.apps.googleusercontent.com",
+          "project_id": "triviarush",
+          "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+          "token_uri": "https://oauth2.googleapis.com/token",
+          "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs"
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPQnA-IF7f6tEqGCYqUz7RCZFVm24u6XQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

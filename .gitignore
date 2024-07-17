@@ -25,3 +25,7 @@ android
 .metro-health-check*
 
 .env*
+
+credentials/
+credentials.json
+# google-services.json

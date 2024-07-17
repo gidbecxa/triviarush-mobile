@@ -1,0 +1,19 @@
+{
+    "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjBlMzQ1ZmQ3ZTRhOTcyNzFkZmZhOTkxZjVhODkzY2QxNmI4ZTA4MjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI0Njg4NjAxODQyNDUtbTk0ZTVpbm84OXA1ZTQ1ZW1qZnBwN2ZsbGhxYTNvZ20uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI0Njg4NjAxODQyNDUtcTFva3JiaGdkdjJtcGY5ZTVpcGo2NXRra2VrbjFoYjMuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDcyNjEyNTI3NTMzOTUzMjMzNDAiLCJlbWFpbCI6ImdpZGVvbmFvbmliZWNzZW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJPbmktQmVjc2VuIEdpZGVvbiBBZGVqYXJlIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0x2U21RSHNvZ3dUZUNreVNES3ZmS0x2SzY0dExoVHU1em4xbE1xUlZ3OUJFNXZsOHM9czk2LWMiLCJnaXZlbl9uYW1lIjoiT25pLUJlY3NlbiIsImZhbWlseV9uYW1lIjoiR2lkZW9uIEFkZWphcmUiLCJpYXQiOjE3MjExMjE0MTEsImV4cCI6MTcyMTEyNTAxMX0.Pf0uJe_-SmiUjmbeOwUVL2RgCYv6YkP5w_rdwaIwTgGKd2J4qdGbrCPwLzo4SR7O410d4zBFLJRyKdHnc_P-V7FtqLcORgggBeSd03UAUTp7uIv9943l1lMkCmmhkDV5cp0jYdAU3IG6FLwizG8z2gpwc2F62v4btrEN6obvNBx2GKxn47K2kKF_fJ6w-BSoClh9Iq4f2bxI2zb3ONZQq3QftMzUae0EWQa4K8-cnJ8i166y1b_TLvS5fMOEvUiweckVUo4AvOqr_954xt4WvSz1XUZo_gXoVkVBo8lI3ULnvZojxzLB3aH7HT-D-VUsBepJSHG5yy0akGJe8lw3cQ",
+    "scopes": [
+        "https://www.googleapis.com/auth/userinfo.profile",
+        "https://www.googleapis.com/auth/userinfo.email",
+        "openid",
+        "profile",
+        "email"
+    ],
+    "serverAuthCode": null,
+    "user": {
+        "email": "gideonaonibecsen@gmail.com",
+        "familyName": "Gideon Adejare",
+        "givenName": "Oni-Becsen",
+        "id": "107261252753395323340",
+        "name": "Oni-Becsen Gideon Adejare",
+        "photo": "https://lh3.googleusercontent.com/a/ACg8ocLvSmQHsogwTeCkySDKvfKLvK64tLhTu5zn1lMqRVw9BE5vl8s=s96-c"
+    }
+}
