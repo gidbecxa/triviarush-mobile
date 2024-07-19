@@ -24,6 +24,13 @@ interface AuthResponse {
   newUser: boolean;
 }
 
+export interface TopicsResponse {
+  id: number;
+  title: string;
+  slug: string;
+  description: string;
+}
+
 // types for the decoded token
 type DecodedToken = {
   sub: string;
@@ -115,7 +122,7 @@ export const AuthApi = {
       // user: params.user,
     });
 
-    console.log('API Response | Google user signed in:');
+    console.log('API Response | Google user signed in:', response.data);
     return response.data;
   },
   googleWebSignIn: async (params: GoogleSignInParams): Promise<AuthResponse> => {
@@ -151,15 +158,43 @@ export const AuthApi = {
 };
 
 export const UserApi = {
-  getUser: async (): Promise<any> => {
-    const response = await axiosInstance.get('/auth/me');
+  getUser: async (id: number): Promise<any> => {
+    const response = await axiosInstance.get(`/users/user/${id}`);
     return response.data;
   },
-  updateUser: async (userData: any): Promise<any> => {
-    const response = await axiosInstance.put('/auth/me', userData);
+  updateUser: async (userData: any, id: number): Promise<any> => {
+    const response = await axiosInstance.patch(`/users/user/${id}`, userData);
     return response.data;
   },
-  deleteUser: async (): Promise<void> => {
-    await axiosInstance.delete('/auth/me');
+  deleteUser: async (id: number): Promise<void> => {
+    await axiosInstance.delete(`/users/user/${id}`);
+  },
+}
+
+export const TopicsApi = {
+  getTopics: async (page = 1, limit = 10): Promise<TopicsResponse[]> => {
+    const response = await axiosInstance.get('/topics', {
+      params: {
+        skip: (page - 1) * limit,
+        take: limit,
+      },
+    });
+    console.log('API Response | Topics: ', response.data);
+    return response.data;
+  },
+  getTopic: async (id: number): Promise<TopicsResponse> => {
+    const response = await axiosInstance.get(`/topics/${id}`);
+    return response.data;
+  },
+  createTopic: async (topicData: any): Promise<TopicsResponse> => {
+    const response = await axiosInstance.post('/topics/new-topic', topicData);
+    return response.data;
+  },
+  updateTopic: async (id: number, topicData: any): Promise<TopicsResponse> => {
+    const response = await axiosInstance.put(`/topics/${id}`, topicData);
+    return response.data;
+  },
+  deleteTopic: async (id: number): Promise<void> => {
+    await axiosInstance.delete(`/topics/${id}`);
   },
 }

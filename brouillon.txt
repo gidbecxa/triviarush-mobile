@@ -34,3 +34,7 @@ QuizChase (quizchase.com - Available)
 │   ├── _layout.tsx
 │   ├── +not-found.tsx
 // other folders omitted...
+
+https://www.figma.com/community/file/1218106194031559683
+
+https://365webresources.com/best-avatar-icons-packs-for-free-download/#google_vignette

@@ -32,8 +32,10 @@ export default function AppLayout() {
     );
   }
 
-  if (isFirstLaunch) {
+  if (isFirstLaunch && !isLoggedIn) {
     return <Redirect href="/get-started" />;
+  } else if (!isLoggedIn) {
+    return <Redirect href="/signin" />;
   } else if (isNewUser) {
     return <Redirect href="/onboarding" />;
   }

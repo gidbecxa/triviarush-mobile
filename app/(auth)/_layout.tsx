@@ -1,11 +1,16 @@
 import { Stack } from 'expo-router';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export const unstable_settings = {
   initialRouteName: 'signin',
 };
 
 export default function AuthLayout() {
-  return <AuthNavigator />;
+  return (
+    <QueryClientProvider client={new QueryClient()}>
+      <AuthNavigator />
+    </QueryClientProvider>
+  );
 }
 
 function AuthNavigator() {

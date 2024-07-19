@@ -53,8 +53,12 @@ export default function SignInOptions() {
         return AuthApi.signInWithGoogle({ idToken });
       })
       .then(async ({ accessToken, refreshToken, user, newUser }) => {
-        console.log('User successfully signed in: ', user);
         await storeUserData(accessToken, refreshToken, user);
+
+        if (!user) {
+          return;
+        }
+        console.log('User successfully signed in: ', user);
         setIsLoggedIn(true);
         setIsFirstLaunch(false);
         if (!newUser) {
