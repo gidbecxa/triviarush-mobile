@@ -9,6 +9,7 @@ import { useColorScheme } from '~/lib/useColorScheme';
 import { Text } from '~/components/nativewindui/Text';
 import { fontStyles } from '../_layout';
 import { useAuthContext } from '~/store/ctx';
+import { SocketProvider } from '~/utils/socket/socketContext';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -40,13 +41,20 @@ export default function AppLayout() {
     return <Redirect href="/onboarding" />;
   }
 
-  return <AppNavigator />;
+  return (
+    <SocketProvider>
+      <AppNavigator />
+    </SocketProvider>
+  );
 }
 
 function AppNavigator() {
   return (
     <Stack screenOptions={SCREEN_OPTIONS}>
       <Stack.Screen name="index" options={HOME_OPTIONS} />
+      <Stack.Screen name="rooms" options={HOME_OPTIONS} />
+      <Stack.Screen name="special" options={HOME_OPTIONS} />
+      <Stack.Screen name="profile" options={HOME_OPTIONS} />
       <Stack.Screen name="modal" options={MODAL_OPTIONS} />
       <Stack.Screen name="playground" options={HOME_OPTIONS} />
     </Stack>

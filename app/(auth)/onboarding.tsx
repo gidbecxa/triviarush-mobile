@@ -7,6 +7,8 @@ import {
   Animated,
   Pressable,
   ScrollView,
+  FlatList,
+  ActivityIndicator,
 } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 import { router } from 'expo-router';
@@ -17,7 +19,7 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 import { Text } from '~/components/nativewindui/Text';
 import { useColorScheme } from '~/lib/useColorScheme';
 import { fontStyles } from '../_layout';
-import { avatars } from '~/data/avatars';
+import { avatars as avatarsData } from '~/data/avatars';
 import { TopicsApi, TopicsResponse, UserApi } from '~/api/api';
 import { StyleSheet } from 'nativewind';
 import { useAuthContext } from '~/store/ctx';
@@ -25,6 +27,12 @@ import { useAuthContext } from '~/store/ctx';
 const fetchTopics = async ({ pageParam = 1 }) => {
   const response = await TopicsApi.getTopics(pageParam, 10);
   return response;
+};
+
+const fetchAvatars = async ({ pageParam = 1 }) => {
+  const pageSize = 18;
+  const startIndex = (pageParam - 1) * pageSize;
+  return avatarsData.slice(startIndex, startIndex + pageSize);
 };
 
 export default function UserOnboarding() {
@@ -38,6 +46,9 @@ export default function UserOnboarding() {
   const slideAnim = useRef(new Animated.Value(0)).current;
 
   const { setIsNewUser } = useAuthContext();
+
+  const blurhash =
+    '|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[';
 
   React.useEffect(() => {
     setColorScheme('dark');
@@ -92,13 +103,13 @@ export default function UserOnboarding() {
         const parsedUser = JSON.parse(user);
         parsedUser.topics = topics;
         await SecureStore.setItemAsync('profile', JSON.stringify(parsedUser));
-        console.log('Topics stored!')
+        console.log('Topics stored!');
         return parsedUser;
       }
     } catch (error) {
       console.error('Error storing user data:', error);
     }
-  }
+  };
 
   const animateToSlide = (slideIndex: any) => {
     Animated.timing(slideAnim, {
@@ -111,8 +122,23 @@ export default function UserOnboarding() {
   };
 
   const handleAvatarPress = (avatar: string) => {
+    console.log('Avatar selected', avatar);
     setSelectedAvatar(avatar);
   };
+
+  const {
+    data: avatars,
+    fetchNextPage: fetchNextAvatarsPage,
+    hasNextPage: hasNextAvatarsPage,
+    isFetchingNextPage: isFetchingNextAvatarsPage,
+  } = useInfiniteQuery({
+    queryKey: ['avatars'],
+    queryFn: fetchAvatars,
+    initialPageParam: 1,
+    getNextPageParam: (lastPage, pages) => {
+      return lastPage.length === 24 ? pages.length + 1 : undefined;
+    },
+  });
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage } = useInfiniteQuery({
     queryKey: ['topics'],
@@ -127,7 +153,7 @@ export default function UserOnboarding() {
   });
 
   const handleTopicSelect = (topic: any) => {
-    console.log('Selected!')
+    console.log('Selected!');
     setSelectedTopcs((prevSelectedTopics) => {
       if (prevSelectedTopics.includes(topic)) {
         return prevSelectedTopics.filter((t) => t !== topic);
@@ -142,15 +168,20 @@ export default function UserOnboarding() {
   const topicIsSelected = (topic: any) => selectedTopics.includes(topic);
 
   const renderItem = ({ item }: { item: TopicsResponse }) => (
-    <Pressable className="flex-row" onPress={() => handleTopicSelect(item.title)}>
+    <Pressable className="flex-row" onPress={() => handleTopicSelect(item.slug)}>
       <View className="mr-3 border-0 border-white py-3">
-        <View style={topicIsSelected(item.title) ? styles.checkboxSelected : styles.checkboxUnselected} />
+        <View
+          style={topicIsSelected(item.slug) ? styles.checkboxSelected : styles.checkboxUnselected}
+        />
       </View>
       <View className="flex-1 p-2">
-        <Text variant="callout" className='mb-1.5' style={fontStyles.promptMedium}>
+        <Text variant="callout" className="mb-1.5" style={fontStyles.promptMedium}>
           {item.title}
         </Text>
-        <Text variant="subhead" style={[fontStyles.promptRegular, { color: colors.grey, fontSize: 14 }]} className='leading-tight'>
+        <Text
+          variant="subhead"
+          style={[fontStyles.promptRegular, { color: colors.grey, fontSize: 14 }]}
+          className="leading-tight">
           {item.description}
         </Text>
       </View>
@@ -167,18 +198,48 @@ export default function UserOnboarding() {
   };
 
   const handleContinue = async () => {
-    console.log('Continue!');
+    if (selectedTopics.length === 0) {
+      console.log('No topics selected!');
+      return;
+    }
     const userData = await storeTopics(selectedTopics);
     try {
       // console.log('User data:', userData);
-      await UserApi.updateUser(userData, userData.id)
-      .then((res) => {
-        console.log('User update response:', res)
+      await UserApi.updateUser(userData, userData.id).then((res) => {
+        console.log('User update response:', res);
         setIsNewUser(false);
         router.replace('/');
-      })
+      });
     } catch (error) {
       console.error('Error updating user:', error);
+    }
+  };
+
+  const renderAvatarItem = ({ item }) => (
+    <Pressable
+      onPress={() => handleAvatarPress(item.url)}
+      style={{
+        width: width / 3 - width * 0.05, // 3 items per row with padding
+        height: 100,
+        margin: 8,
+        borderRadius: 50,
+        overflow: 'hidden',
+        borderColor: selectedAvatar === item.url ? colors.primary : colors.tertiary,
+        borderWidth: 2,
+      }}>
+      <Image source={{ uri: item.url }} style={{ width: '100%', height: '100%' }} alt={`Avatar`} />
+    </Pressable>
+  );
+
+  const handleScroll = ({ nativeEvent }) => {
+    const { layoutMeasurement, contentOffset, contentSize } = nativeEvent;
+    const isNearEnd = layoutMeasurement.height + contentOffset.y >= contentSize.height - 20;
+
+    console.log('Scrolling:', { isNearEnd, hasNextAvatarsPage, isFetchingNextAvatarsPage });
+
+    if (isNearEnd && hasNextAvatarsPage && !isFetchingNextAvatarsPage) {
+      console.log('Fetching next page...');
+      fetchNextAvatarsPage();
     }
   };
 
@@ -200,16 +261,18 @@ export default function UserOnboarding() {
               </Text>
             </View>
 
-            <View className="flex-1 justify-center border-0 border-white" style={{ width, padding: 12 }}>
+            <View
+              className="flex-1 justify-center border-0 border-white"
+              style={{ width, padding: 12 }}>
               <View className="w-full" style={{ position: 'absolute', left: 12, top: '22.5%' }}>
-                <Text variant="title3" className="mb-4 text-left" style={fontStyles.promptRegular}>
+                <Text variant="title2" className="mb-4 text-left" style={fontStyles.promptSemiBold}>
                   Hi, {username}!
                 </Text>
 
                 {/* Instructions */}
                 <Text
-                  variant="subhead"
-                  className="mb-7 text-left leading-tight"
+                  variant="callout"
+                  className="mb-4 text-left leading-normal"
                   style={fontStyles.promptRegular}>
                   Choose a username or keep the current. You can always change it later in your
                   profile settings
@@ -224,8 +287,10 @@ export default function UserOnboarding() {
                 onChangeText={setUsername}
                 style={{
                   borderColor: colors.grey,
-                  borderWidth: 1.5,
+                  borderWidth: 2,
                   color: colors.foreground,
+                  fontFamily: 'Prompt-Regular',
+                  fontSize: 16,
                 }}
               />
 
@@ -233,7 +298,10 @@ export default function UserOnboarding() {
                 onPress={handleNext}
                 className="w-full items-center py-4"
                 style={{ borderRadius: 0, backgroundColor: colors.primary }}>
-                <Text variant="heading" className="text-text" style={fontStyles.promptMedium}>
+                <Text
+                  variant="heading"
+                  className="text-text uppercase"
+                  style={fontStyles.promptSemiBold}>
                   Next
                 </Text>
               </TouchableOpacity>
@@ -245,44 +313,46 @@ export default function UserOnboarding() {
           <View
             className="flex-1 items-start justify-start border-0 border-white p-5"
             style={{ width }}>
-            <ScrollView contentContainerStyle={{ paddingHorizontal: '30%' }}>
-              <View className="w-full border-0 border-white">
-                <Text
-                  variant="title3"
-                  className="py-4 text-center"
-                  style={[fontStyles.promptMedium, { color: colors.foreground }]}>
-                  Choose your avatar
-                </Text>
-              </View>
-              <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-                {avatars.map((avatar, index) => (
-                  <Pressable
-                    key={index}
-                    onPress={() => handleAvatarPress(avatar.url)}
-                    style={{
-                      width: 100,
-                      height: 100,
-                      margin: 8,
-                      borderRadius: 50,
-                      overflow: 'hidden',
-                      borderColor: selectedAvatar === avatar.url ? colors.primary : colors.tertiary,
-                      borderWidth: 2,
-                    }}>
-                    <Image
-                      source={{ uri: avatar.url }}
-                      style={{ width: '100%', height: '100%' }}
-                      alt={`Avatar ${index}`}
-                    />
-                  </Pressable>
-                ))}
-              </View>
-            </ScrollView>
-            <View className="w-full" style={{ paddingHorizontal: '34%' }}>
+            <View style={{ paddingHorizontal: '30%', alignItems: 'center' }}>
+              <FlatList
+                data={avatars?.pages.flatMap((page) => page) || []}
+                renderItem={renderAvatarItem}
+                keyExtractor={(item) => item.url}
+                numColumns={3}
+                columnWrapperStyle={{ justifyContent: 'space-between' }}
+                onEndReached={() => {
+                  if (hasNextAvatarsPage && !isFetchingNextAvatarsPage) {
+                    fetchNextAvatarsPage();
+                  }
+                }}
+                onEndReachedThreshold={0.5}
+                ListHeaderComponent={
+                  <View className="w-full border-0 border-white">
+                    <Text
+                      variant="title3"
+                      className="py-4 text-center"
+                      style={[fontStyles.promptMedium, { color: colors.foreground }]}>
+                      Choose your avatar
+                    </Text>
+                  </View>
+                }
+                ListFooterComponent={
+                  isFetchingNextAvatarsPage ? (
+                    <ActivityIndicator size="large" color={colors.primary} />
+                  ) : null
+                }
+                contentContainerStyle={{ paddingHorizontal: width * 0.085, paddingBottom: 64 }}
+              />
+            </View>
+            <View className="w-full" style={{ paddingHorizontal: width, position: 'relative', bottom: height * 0.075 }}>
               <TouchableOpacity
                 onPress={handleNext}
                 className="w-full items-center py-4"
                 style={{ borderRadius: 0, backgroundColor: colors.primary }}>
-                <Text variant="heading" className="text-text" style={fontStyles.promptMedium}>
+                <Text
+                  variant="heading"
+                  className="text-text uppercase"
+                  style={fontStyles.promptSemiBold}>
                   Next
                 </Text>
               </TouchableOpacity>
@@ -294,7 +364,9 @@ export default function UserOnboarding() {
           <View
             className="flex-1 items-end justify-start border-0 border-white px-0 py-5"
             style={{ width }}>
-            <View className="border-0 border-white" style={{borderColor: '#ccc', borderWidth: 0, width: width}}>
+            <View
+              className="border-0 border-white"
+              style={{ borderColor: '#ccc', borderWidth: 0, width: width }}>
               <Text
                 variant="title3"
                 className="py-4 text-center"
@@ -303,7 +375,7 @@ export default function UserOnboarding() {
               </Text>
             </View>
 
-            <View className="flex-1 border-0 border-white  px-2" style={{width}}>
+            <View className="flex-1 border-0 border-white  px-2" style={{ width }}>
               <FlashList
                 data={data?.pages.flatMap((page) => page) || []}
                 renderItem={renderItem}
@@ -319,12 +391,15 @@ export default function UserOnboarding() {
               />
             </View>
 
-            <View className="w-1/3 border-0 border-white" style={{paddingHorizontal: "1%"}}>
+            <View className="w-1/3 border-0 border-white" style={{ paddingHorizontal: '1%' }}>
               <TouchableOpacity
                 onPress={handleContinue}
                 className="w-full items-center py-4"
                 style={{ borderRadius: 0, backgroundColor: colors.primary }}>
-                <Text variant="heading" className="text-text" style={fontStyles.promptMedium}>
+                <Text
+                  variant="heading"
+                  className="text-text uppercase"
+                  style={fontStyles.promptSemiBold}>
                   Continue
                 </Text>
               </TouchableOpacity>
@@ -352,7 +427,7 @@ export default function UserOnboarding() {
 }
 
 function renderItemSeparator(color: string) {
-  return <View style={{height: 1, marginLeft: "10%", backgroundColor: color}} />;
+  return <View style={{ height: 1, marginLeft: '10%', backgroundColor: color }} />;
 }
 
 const styles = StyleSheet.create({
@@ -367,26 +442,6 @@ const styles = StyleSheet.create({
     height: 18,
     borderRadius: 50,
     borderWidth: 0,
-    backgroundColor: 'rgb(72, 72, 74)'
+    backgroundColor: 'rgb(72, 72, 74)',
   },
 });
-
-/* {avatars.map((avatar) => (
-  <TouchableOpacity
-    key={avatar.id}
-    onPress={() => handleAvatarPress(avatar)}
-    style={{
-      borderWidth: selectedAvatar?.id === avatar.id ? 2 : 0,
-      borderColor: selectedAvatar?.id === avatar.id ? colors.primary : 'transparent',
-      margin: 8,
-    }}>
-    <Image
-      source={{ uri: avatar.url }}
-      style={{
-        width: 80,
-        height: 80,
-        borderRadius: 40,
-      }}
-    />
-  </TouchableOpacity>
-))} */

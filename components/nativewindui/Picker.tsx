@@ -23,8 +23,10 @@ export function Picker<T>({
         mode={mode}
         style={
           style ?? {
-            backgroundColor: colors.root,
+            backgroundColor: colors.card,
             borderRadius: 8,
+            borderColor: colors.grey,
+            borderWidth: 1,
           }
         }
         dropdownIconColor={dropdownIconColor ?? colors.foreground}

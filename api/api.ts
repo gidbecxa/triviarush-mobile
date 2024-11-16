@@ -1,6 +1,8 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { jwtDecode } from 'jwt-decode';
 import * as SecureStore from 'expo-secure-store';
+import { BasicUserData, RoomParticipant, UserProfile } from '~/data/types';
+import { gamePalsPlaceholder } from '~/data/schema/placeholder';
 
 // types for the user info and API response
 export interface GoogleUser {
@@ -133,14 +135,6 @@ export const AuthApi = {
       },
     };
     const response = await axiosInstance.get<AuthResponse>('/auth/google', config);
-    return response.data
-  },
-  signUp: async (userData: any): Promise<AuthResponse> => {
-    const response = await axiosInstance.post('/auth/signup', userData);
-    return response.data;
-  },
-  signIn: async (credentials: { email: string; password: string }): Promise<AuthResponse> => {
-    const response = await axiosInstance.post('/auth/login', credentials);
     return response.data;
   },
   signOut: async (): Promise<void> => {
@@ -157,6 +151,19 @@ export const AuthApi = {
   getTokenFromStore: getTokenFromStore,
 };
 
+// Get the user's ID from the store
+export const getUserIdFromStore = async (): Promise<UserProfile | null> => {
+  try {
+    const user = await SecureStore.getItemAsync('profile');
+    if (user) {
+      return JSON.parse(user);
+    }
+  } catch (error) {
+    console.error('Error retrieving user ID from store:', error);
+    return null;
+  }
+};
+
 export const UserApi = {
   getUser: async (id: number): Promise<any> => {
     const response = await axiosInstance.get(`/users/user/${id}`);
@@ -167,9 +174,22 @@ export const UserApi = {
     return response.data;
   },
   deleteUser: async (id: number): Promise<void> => {
-    await axiosInstance.delete(`/users/user/${id}`);
+    console.log('API: Deleting user with ID:', id);
+    // await axiosInstance.delete(`/users/user/${id}`);
   },
-}
+  getGamePals: async (page: number, take = 10): Promise<BasicUserData[]> => {
+    const id = (await getUserIdFromStore()).id;
+    const skip = (page - 1) * take;
+    const response = await axiosInstance.get(`users/user/${id}/game-pals`, {
+      params: {
+        skip,
+        take,
+      },
+    });
+    console.log('API Response | Game Pals: ', response.data);
+    return gamePalsPlaceholder;
+  },
+};
 
 export const TopicsApi = {
   getTopics: async (page = 1, limit = 10): Promise<TopicsResponse[]> => {
@@ -179,7 +199,7 @@ export const TopicsApi = {
         take: limit,
       },
     });
-    console.log('API Response | Topics: ', response.data);
+    // console.log('API Response | Topics: ', response.data);
     return response.data;
   },
   getTopic: async (id: number): Promise<TopicsResponse> => {
@@ -197,4 +217,12 @@ export const TopicsApi = {
   deleteTopic: async (id: number): Promise<void> => {
     await axiosInstance.delete(`/topics/${id}`);
   },
-}
+};
+
+export const RoomApi = {
+  getPlayersInRoom: async (roomId: string): Promise<any[]> => {
+    const response = await axiosInstance.get(`/rooms/:id/players?roomId=${roomId}`);
+    /* console.log('API Response | Players in this room: ', response.data); */
+    return response.data;
+  },
+};

@@ -51,7 +51,7 @@ export default function GetStarted() {
             Welcome to TriviaRush!
           </Text>
 
-          <Text variant="callout" className="mb-7 text-center" style={fontStyles.promptRegular}>
+          <Text variant="body" className="mb-7 text-center p-1" style={fontStyles.promptRegular}>
             Fastest Finger First! Challenge yourself to answer trivia questions as fast as possible
             and earn great rewards.{' '}
             <Text variant="callout" className="font-medium">
@@ -65,7 +65,7 @@ export default function GetStarted() {
             }}
             className="w-full items-center py-4"
             style={{ borderRadius: 0, backgroundColor: colors.primary }}>
-            <Text variant="heading" className="text-text" style={fontStyles.promptMedium}>
+            <Text variant="heading" className="text-text uppercase" style={fontStyles.promptSemiBold}>
               Get Started
             </Text>
           </TouchableOpacity>

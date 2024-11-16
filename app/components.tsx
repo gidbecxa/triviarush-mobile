@@ -217,7 +217,7 @@ const COMPONENTS: ComponentItem[] = [
     },
   },
 
-  {
+  /* {
     name: 'Context Menu',
     component: function ContextMenuExample() {
       const [isChecked, setIsChecked] = React.useState(true);
@@ -254,7 +254,7 @@ const COMPONENTS: ComponentItem[] = [
         </View>
       );
     },
-  },
+  }, */
 
   {
     name: 'Dropdown Menu',
@@ -275,7 +275,15 @@ const COMPONENTS: ComponentItem[] = [
                 </View>
               </Pressable>
             </DropdownMenu.Trigger>
-            <DropdownMenu.Content>
+            <DropdownMenu.Content
+              align="center" 
+              side="bottom"
+              sideOffset={5}
+              alignOffset={0}
+              collisionPadding={5}
+              loop={false}
+              avoidCollisions={true}
+            >
               <DropdownMenu.CheckboxItem
                 key="destructive"
                 value={menu === 'destructive'}

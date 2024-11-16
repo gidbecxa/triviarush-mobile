@@ -50,6 +50,7 @@ function RootLayout() {
     'Prompt-Regular': require('~/assets/fonts/Prompt/Prompt-Regular.ttf'),
     'Prompt-Medium': require('~/assets/fonts/Prompt/Prompt-Medium.ttf'),
     'Prompt-Light': require('~/assets/fonts/Prompt/Prompt-Light.ttf'),
+    'Prompt-Light-Italic': require('~/assets/fonts/Prompt/Prompt-LightItalic.ttf'),
     ...AntDesign.font,
     ...Ionicons.font,
     ...Entypo.font,
@@ -111,6 +112,9 @@ export const fontStyles = StyleSheet.create({
   promptLight: {
     fontFamily: 'Prompt-Light',
   },
+  promptLightItalic: {
+    fontFamily: 'Prompt-LightItalic'
+  }
 });
 
 /**

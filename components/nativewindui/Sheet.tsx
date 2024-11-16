@@ -24,14 +24,17 @@ const Sheet = React.forwardRef<
       backgroundStyle={
         backgroundStyle ?? {
           backgroundColor: colors.card,
+          borderTopStartRadius: 32,
+          borderTopEndRadius: 32,
+          // padding: 0
         }
       }
       style={
         style ?? {
           borderWidth: 1,
           borderColor: colors.grey5,
-          borderTopStartRadius: 16,
-          borderTopEndRadius: 16,
+          borderTopStartRadius: 32,
+          borderTopEndRadius: 32,
         }
       }
       handleIndicatorStyle={

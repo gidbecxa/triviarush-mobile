@@ -1,82 +1,92 @@
 import React from 'react';
-import { View, Pressable } from 'react-native';
-import { Appbar, useTheme } from 'react-native-paper';
-import { Ionicons, AntDesign, FontAwesome5 } from '@expo/vector-icons';
+import { TouchableOpacity, View } from 'react-native';
+import { AntDesign, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
+import { Text } from '~/components/nativewindui/Text';
 import { useColorScheme } from '~/lib/useColorScheme';
-import {
-  Link,
-  router,
-  useGlobalSearchParams,
-  useLocalSearchParams,
-  usePathname,
-} from 'expo-router';
-import { Icon } from '@roninoss/icons';
+import { router, usePathname } from 'expo-router';
+import { fontStyles } from '~/app/_layout';
+import { UserProfile } from '~/data/types';
 
-const TopAppBar = () => {
+interface AppHeaderProps {
+  profile: UserProfile;
+}
+
+const AppHeader: React.FC<AppHeaderProps> = ({ profile }) => {
+  const { colors } = useColorScheme();
   const pathname = usePathname();
-  const { colors, isDarkColorScheme } = useColorScheme();
-
-  console.log('Route and params', pathname);
-  const isIndexRoute = pathname === '/home';
-  const isPlaygroundRoute = pathname === '/playground';
+  const isHomeScreen = pathname === '/';
+  const { promptMedium, promptRegular, promptSemiBold } = fontStyles;
 
   return (
-    <Appbar.Header style={{ backgroundColor: colors.card }} className="border-0 border-border">
-      <Appbar.Action
-        accessibilityLabel="App Menu Icon"
-        size={48}
-        rippleColor="transparent"
-        onPress={() => (isIndexRoute ? router.push('/playground') : router.back())}
-        icon={() =>
-          isIndexRoute ? (
-            <Pressable
-              accessibilityHint="Tap to view menu"
-              disabled
-              className="h-12 w-12"
-              style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-              <Ionicons name="menu" size={24} color={colors.foreground} />
-            </Pressable>
-          ) : (
-            <Pressable
-              accessibilityHint="Tap to go back"
-              disabled
-              className="h-12 w-12"
-              style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-              <Icon
-                name="chevron-left"
-                size={28}
-                color={isDarkColorScheme ? colors.foreground : colors.grey}
-              />
-            </Pressable>
-          )
-        }
-      />
+    <View
+      className="w-full justify-between border-0 border-white"
+      style={{ flexDirection: 'row', padding: 8, alignItems: 'center' }}>
+      {isHomeScreen ? (
+        <TouchableOpacity
+          className="rounded-full border-0 border-white bg-white/15 p-3"
+          onPress={() => console.log('Game menu!')}>
+          <AntDesign name="appstore1" size={24} color={colors.foreground} />
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity
+          className="rounded-full border-0 border-white bg-white/15 p-2"
+          onPress={() => console.log('Game menu!')}>
+          <MaterialCommunityIcons name="arrow-up-thin" size={25} color={colors.primary} />
+        </TouchableOpacity>
+      )}
 
-      <Appbar.Content title="" />
-
-      <Link href="/playground" asChild>
-        {!isPlaygroundRoute && (
-          <Appbar.Action
-            size={48}
-            rippleColor="transparent"
-            icon={() => (
-              <Pressable
-                accessibilityHint="Tap to go to app settings"
-                disabled
-                className="h-12 w-12"
-                style={{ alignItems: 'flex-end', justifyContent: 'center' }}>
-                <AntDesign
-                  name="setting"
-                  size={24}
-                  color={isDarkColorScheme ? colors.foreground : colors.grey}
-                />
-              </Pressable>
-            )}
-          />
+      <View className="flex-1 flex-row items-center justify-center border-0 border-white">
+        {isHomeScreen ? (
+          <>
+            <Text variant="heading" style={[promptMedium, { position: 'relative', top: 1 }]}>
+              {profile && profile.points}
+              {'2,345'}{' '}
+            </Text>
+            <AntDesign name="star" size={20} color={colors.tertiary} />
+          </>
+        ) : (
+          <Text
+            variant="title3"
+            style={[promptSemiBold, { position: 'relative', top: 1, left: '-8%' }]}>
+            {profile && profile.username}
+          </Text>
         )}
-      </Link>
-    </Appbar.Header>
+      </View>
+
+      {isHomeScreen ? (
+        <TouchableOpacity
+          className="z-10 h-12 w-12 rounded-full"
+          onPress={() => router.push('/profile')}>
+          <Image
+            source={{ uri: profile.avatar }}
+            style={{ width: '100%', height: '100%', borderRadius: 100 }}
+            contentFit="cover"
+            alt="Profile avatar"
+            cachePolicy="memory-disk"
+          />
+          <View
+            className="absolute bottom-0 right-0 z-20 h-3 w-3 rounded-full"
+            style={{ backgroundColor: profile.isOnline ? colors.primary : colors.destructive }}
+          />
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity
+          className="rounded-full border-0 border-white bg-white/0 p-3"
+          onPress={() => console.log('Notifications!')}>
+          <Ionicons name="notifications" size={24} color={colors.foreground} />
+          <View
+            className="absolute right-2 top-3 z-20 h-3 w-3 rounded-full"
+            style={{ backgroundColor: colors.destructive }}
+          />
+        </TouchableOpacity>
+      )}
+    </View>
   );
 };
 
-export default TopAppBar;
+export default AppHeader;
+
+/**
+ * 
+ */
